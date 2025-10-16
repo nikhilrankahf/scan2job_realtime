@@ -19,11 +19,11 @@ def _set_query_param_t():
 # 0) PAGE & REFRESH
 # ---------------------------
 st.set_page_config(page_title="Live Floor Presence", layout="wide")
-st.title("Who’s Where (Live) — Production · Warehouse · Shipping")
+st.title("Live Floor Presence")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
-REFRESH_SEC = 5
-st.caption(f"Data refreshes every {REFRESH_SEC}s")
+LAST_UPDATED = 2025-10-16 21:45:38
+st.caption(f"Last Updated at {LAST_UPDATED}")
 st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
@@ -37,11 +37,10 @@ time.sleep(REFRESH_SEC * 0.0)  # no-op; keep it simple. Use st_autorefresh if yo
 
 # Map sub-dept -> process (edit to your taxonomy)
 SUBDEPT_TO_PROCESS = {
-    "Assembly": "PRODUCTION", "Kitting": "PRODUCTION", "Repack": "PRODUCTION",
+    "Assembly": "PRODUCTION", "Kitting": "PRODUCTION", "Prep": "PRODUCTION",
     "Labeling": "PRODUCTION",
-    "Pick": "WAREHOUSE", "Putaway": "WAREHOUSE", "Inventory": "WAREHOUSE",
-    "Returns": "WAREHOUSE",
-    "Dock": "SHIPPING", "Staging": "SHIPPING", "Load": "SHIPPING",
+    "Inventory": "WAREHOUSE", "Replenishment": "WAREHOUSE",
+    "Loading": "SHIPPING", "Putaway": "SHIPPING",
 }
 
 # Simulated "live" rows; replace with your DB/Kafka view.
@@ -51,11 +50,11 @@ def get_live_associate_rows() -> pd.DataFrame:
     data = [
         # id, name, WD dept, scanned_dept, work_pos, last_activity_ts, has_clock, has_scan
         ("A12345", "Jane Doe",  "Shipping",   "Assembly", "Bay-2", now - timedelta(seconds=90),  True,  True),
-        ("A11772", "Sam Patel", "Assembly",   None,        None,    now - timedelta(seconds=120), True,  False),
-        ("A10998", "Li Wang",   "Kitting",    "Kitting",  "Line-1", now - timedelta(seconds=40),  True,  True),
+        ("A11772", "Sam Patel", "Production",   None,        None,    now - timedelta(seconds=120), True,  False),
+        ("A10998", "Li Wang",   "Production",    "Kitting",  "Line-1", now - timedelta(seconds=40),  True,  True),
         ("A20111", "Alex Ross", "Repack",     "Repack",   "Bay-1",  now - timedelta(seconds=61),  False, True),
         ("A55555", "Mia Khan",  "Quality",    "Dock",     "Dock-3", now - timedelta(seconds=25),  True,  True),
-        ("A77777", "Ola Ibe",   "Inventory",  None,        None,    now - timedelta(minutes=7),   True,  False),
+        ("A77777", "Ola Ibe",   "Warehouse",  "Inventory",        None,    now - timedelta(minutes=7),   True,  False),
         ("A88888", "Nina T",    "Returns",    "Labeling", "Tbl-2",  now - timedelta(seconds=55),  True,  True),
     ]
     df = pd.DataFrame(data, columns=[
