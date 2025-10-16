@@ -14,7 +14,7 @@ st.title("Who’s Where (Live) — Production · Warehouse · Shipping")
 REFRESH_SEC = 5
 st.caption(f"Data refreshes every {REFRESH_SEC}s")
 st_autorefresh = st.experimental_rerun if False else None
-st.experimental_data_editor  # noqa: just to ensure Streamlit >=1.31
+_ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
 # Optional: simple auto-refresh
 st.experimental_set_query_params(t=str(int(time.time())))
