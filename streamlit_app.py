@@ -22,8 +22,8 @@ st.set_page_config(page_title="Live Floor Presence", layout="wide")
 st.title("Live Floor Presence")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
-LAST_UPDATED = '2025-10-16 21:45:38'
-st.caption(f"Last Updated at {LAST_UPDATED}")
+REFRESH_SEC = 5
+st.caption(f"Data updates every {REFRESH_SEC}s")
 st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
