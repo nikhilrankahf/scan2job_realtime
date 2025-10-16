@@ -143,19 +143,60 @@ with left:
 
 # RIGHT: Widgets — On Floor / Scanned In / Unscanned
 with right:
-    st.subheader("Live Widgets")
-    on_floor = int(people_df["on_floor"].sum())
-    scanned_in = int(people_df["in_position"].sum())
-    unscanned = int(people_df["unscanned"].sum())
+    st.subheader("Live Tiles")
+    on_floor_count = int(people_df["on_floor"].sum())
+    scanned_in_count = int(people_df["in_position"].sum())
+    unscanned_count = int(people_df["unscanned"].sum())
 
-    m1, m2, m3 = st.columns(3)
-    m1.metric("On Floor", on_floor)
-    m2.metric("Scanned In", scanned_in)
-    m3.metric("Unscanned", unscanned)
+    c1, c2, c3 = st.columns(3)
 
-    # Last updated and health
+    with c1:
+        st.markdown("### On Floor")
+        st.markdown(f"<h2 style='margin-top:0'>{on_floor_count}</h2>", unsafe_allow_html=True)
+        with st.expander("Hiring department breakdown"):
+            of_breakdown = (
+                people_df[people_df["on_floor"]]
+                .fillna({"wd_department": "—"})
+                .groupby("wd_department")["associate_id"]
+                .count()
+                .sort_values(ascending=False)
+                .reset_index()
+                .rename(columns={"wd_department": "Hiring Dept", "associate_id": "Count"})
+            )
+            st.dataframe(of_breakdown, use_container_width=True, hide_index=True)
+
+    with c2:
+        st.markdown("### Scanned In")
+        st.markdown(f"<h2 style='margin-top:0'>{scanned_in_count}</h2>", unsafe_allow_html=True)
+        with st.expander("Hiring department breakdown"):
+            si_breakdown = (
+                people_df[people_df["in_position"]]
+                .fillna({"wd_department": "—"})
+                .groupby("wd_department")["associate_id"]
+                .count()
+                .sort_values(ascending=False)
+                .reset_index()
+                .rename(columns={"wd_department": "Hiring Dept", "associate_id": "Count"})
+            )
+            st.dataframe(si_breakdown, use_container_width=True, hide_index=True)
+
+    with c3:
+        st.markdown("### Unscanned")
+        st.markdown(f"<h2 style='margin-top:0'>{unscanned_count}</h2>", unsafe_allow_html=True)
+        with st.expander("Hiring department breakdown"):
+            us_breakdown = (
+                people_df[people_df["unscanned"]]
+                .fillna({"wd_department": "—"})
+                .groupby("wd_department")["associate_id"]
+                .count()
+                .sort_values(ascending=False)
+                .reset_index()
+                .rename(columns={"wd_department": "Hiring Dept", "associate_id": "Count"})
+            )
+            st.dataframe(us_breakdown, use_container_width=True, hide_index=True)
+
     st.caption(f"Data as of **{last_update}** (local time)")
-    st.caption(f"P95 freshness (placeholder): 40–60s · Completeness (placeholder): 95–97%")
+    st.caption("P95 freshness (placeholder): 40–60s · Completeness (placeholder): 95–97%")
 
 # ---------------------------
 # 4) BOTTOM: PEOPLE TABLE (detail)
