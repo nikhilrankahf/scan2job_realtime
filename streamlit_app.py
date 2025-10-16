@@ -4,6 +4,17 @@ from datetime import datetime, timedelta, timezone
 import pandas as pd
 import streamlit as st
 
+def _set_query_param_t():
+    ts = str(int(time.time()))
+    try:
+        st.query_params["t"] = ts
+    except Exception:
+        try:
+            st.experimental_set_query_params(t=ts)
+        except Exception:
+            pass
+
+
 # ---------------------------
 # 0) PAGE & REFRESH
 # ---------------------------
@@ -17,7 +28,7 @@ st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
 # Optional: simple auto-refresh
-st.experimental_set_query_params(t=str(int(time.time())))
+_set_query_param_t()
 time.sleep(REFRESH_SEC * 0.0)  # no-op; keep it simple. Use st_autorefresh if you prefer.
 
 # ---------------------------
