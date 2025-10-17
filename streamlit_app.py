@@ -138,12 +138,14 @@ def metric_tile(
     else:
         events = "Clock, Scan"
 
-    # Header row: left expander (title/count), right smaller freshness note
-    header_left, header_right = st.columns([1, 1])
-    with header_left:
-        header_text = f"{title} — {total_associates}"
-        with st.expander(header_text, expanded=False):
-            group_options_map = {
+    # Single expander header; place secondary freshness note inside the content
+    header_text = f"{title} — {total_associates}"
+    with st.expander(header_text, expanded=False):
+        st.markdown(
+            f"<div style='font-size:0.85rem; color:#6b7280; margin-bottom:6px'>Freshness {freshness_text} · Events: {events}</div>",
+            unsafe_allow_html=True,
+        )
+        group_options_map = {
             "Hiring Department": "job_department",
             "Work Department": "work_department",
             "Work Position": "work_position",
@@ -167,11 +169,6 @@ def metric_tile(
         else:
             breakdown_df = pd.DataFrame({chosen_label: [], "Associates": []})
         st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
-    with header_right:
-        st.markdown(
-            f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>Freshness {freshness_text} · Events: {events}</div>",
-            unsafe_allow_html=True,
-        )
 
 # No legacy clock/scan rules; CSV defines the categories
 
