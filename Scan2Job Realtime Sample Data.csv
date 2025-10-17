@@ -1,0 +1,1505 @@
+ASSOCIATE_ID,Name,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WORK_POSITION,START_TIME_LOCAL
+3625527,Associate 1,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+2811895,Associate 2,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+3641796,Associate 3,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+3409186,Associate 4,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+3204983,Associate 5,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+3320603,Associate 6,Production,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+3388596,Associate 7,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 5:55:00
+2650446,Associate 8,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 5:58:00
+3599457,Associate 9,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 5:59:00
+1010991,Associate 10,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:00:00
+3592615,Associate 11,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:03:00
+3628365,Associate 12,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:05:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:06:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:08:00
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:11:08
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:12:00
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:17:26
+3612694,Associate 13,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:18:04
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:19:14
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:20:00
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:20:54
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:21:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:21:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 6:21:44
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:24:23
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:24:24
+3210952,Associate 14,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3596387,Associate 15,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3039864,Associate 16,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3501697,Associate 17,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3451269,Associate 18,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+2932662,Associate 19,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3622284,Associate 20,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3612694,Associate 13,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:25:00
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:25:00
+3627105,Associate 21,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:26:00
+3461139,Associate 22,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:26:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:26:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:26:00
+3612363,Associate 23,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:27:00
+3591493,Associate 24,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:27:00
+3612694,Associate 13,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:27:14
+3612694,Associate 13,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:27:14
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:27:24
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:27:24
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:28:00
+3501648,Associate 25,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:28:00
+3612694,Associate 13,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:28:00
+3627710,Associate 26,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:28:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:28:35
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:28:35
+3434648,Associate 27,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:29:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:29:00
+3602526,Associate 28,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:29:00
+3623696,Associate 29,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:30:00
+3622114,Associate 30,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3545667,Associate 31,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3609637,Associate 32,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+2950425,Associate 33,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+2934040,Associate 34,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3210991,Associate 35,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3609446,Associate 36,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3643101,Associate 37,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+3567251,Associate 38,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:30:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:30:31
+3480044,Associate 39,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:31:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:31:00
+3329048,Associate 40,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:31:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:31:51
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:31:51
+3626262,Associate 41,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:32:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:32:00
+3626239,Associate 42,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:33:00
+3627105,Associate 21,Quality,Badgr,FSQ,Kitting Line Auditor,2025-10-15 6:33:20
+2934040,Associate 34,Quality,Badgr,FSQ,Kitting Line Auditor,2025-10-15 6:33:32
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:33:53
+3597415,Associate 43,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:34:00
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:34:00
+3635133,Associate 44,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:34:00
+3597415,Associate 43,Warehouse,Workday,Timecard Punch,Punch Out,2025-10-15 6:34:00
+3329048,Associate 40,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:34:46
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:35:00
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:35:32
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:36:00
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:36:12
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:36:12
+3625527,Associate 1,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:37:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:37:00
+3612363,Associate 23,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 6:37:12
+3434648,Associate 27,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:37:27
+3451269,Associate 18,Quality,Badgr,FSQ,Discard Processing,2025-10-15 6:37:54
+3596387,Associate 15,Quality,Badgr,FSQ,Kitting Line Auditor,2025-10-15 6:38:08
+2932662,Associate 19,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 6:38:14
+3622284,Associate 20,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:38:42
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:39:31
+3626239,Associate 42,Quality,Badgr,FSQ,Inbound Quality Inspector,2025-10-15 6:39:38
+3545667,Associate 31,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 6:39:52
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:40:00
+2940281,Associate 45,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:40:00
+3602526,Associate 28,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:40:57
+2636851,Associate 46,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:41:00
+3627710,Associate 26,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 6:41:11
+3500723,Associate 47,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:42:00
+3461139,Associate 22,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:42:08
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:42:37
+2950425,Associate 33,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 6:42:47
+3480044,Associate 39,Quality,Badgr,FSQ,GMP Check,2025-10-15 6:43:19
+3677974,Associate 48,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:44:00
+3626262,Associate 41,Quality,Badgr,FSQ,Quality Lead,2025-10-15 6:44:10
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 6:44:16
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:44:44
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:44:44
+3204983,Associate 5,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:45:00
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:46:31
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:49:00
+3501648,Associate 25,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:49:41
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 6:49:44
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:50:00
+3232214,Associate 49,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:51:00
+2908391,Associate 50,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:51:00
+3501648,Associate 25,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 6:53:00
+3549587,Associate 51,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:54:00
+3504664,Associate 52,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3630952,Associate 53,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3552207,Associate 54,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3634708,Associate 55,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597621,Associate 56,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3179234,Associate 57,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3105062,Associate 58,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3331386,Associate 59,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3202173,Associate 60,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3324948,Associate 61,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3497072,Associate 62,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3628676,Associate 63,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3221185,Associate 64,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3235568,Associate 65,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3627546,Associate 66,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3106061,Associate 67,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3626214,Associate 68,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3602292,Associate 69,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2844861,Associate 70,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501674,Associate 71,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3246139,Associate 72,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+1011716,Associate 73,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3708027,Associate 74,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3626653,Associate 75,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3202451,Associate 76,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3632363,Associate 77,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3633709,Associate 78,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3627220,Associate 79,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2646143,Associate 80,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629306,Associate 81,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2911764,Associate 82,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3621957,Associate 83,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3731528,Associate 84,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3644326,Associate 85,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501702,Associate 86,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3518198,Associate 87,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3616397,Associate 88,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3602207,Associate 89,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2574065,Associate 90,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3707363,Associate 91,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+1011579,Associate 92,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3623194,Associate 93,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629929,Associate 94,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3562423,Associate 95,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629104,Associate 96,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3510732,Associate 97,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3630616,Associate 98,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3420036,Associate 99,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3626656,Associate 100,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3596161,Associate 101,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3213223,Associate 102,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2669657,Associate 103,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3611363,Associate 104,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3630258,Associate 105,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3548031,Associate 106,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3022602,Associate 107,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3548049,Associate 108,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3624002,Associate 109,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597155,Associate 110,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3627532,Associate 111,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3614445,Associate 112,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597148,Associate 113,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3610257,Associate 114,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629539,Associate 115,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3118697,Associate 116,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3370717,Associate 117,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597993,Associate 118,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3431389,Associate 119,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629287,Associate 120,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3625897,Associate 121,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3620558,Associate 122,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2970732,Associate 123,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+1012881,Associate 124,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3335803,Associate 125,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2680895,Associate 126,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3311169,Associate 127,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3617484,Associate 128,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3622771,Associate 129,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3382597,Associate 130,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629965,Associate 131,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3221204,Associate 132,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2934092,Associate 133,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3632041,Associate 134,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3620590,Associate 135,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3622772,Associate 136,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3497887,Associate 137,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3629118,Associate 138,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597151,Associate 139,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3370698,Associate 140,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3627400,Associate 141,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3636961,Associate 142,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3642402,Associate 143,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3612455,Associate 144,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3643684,Associate 145,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3616979,Associate 146,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3625403,Associate 147,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3617722,Associate 148,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3622496,Associate 149,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3469779,Associate 150,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3618853,Associate 151,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2670989,Associate 152,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+1011827,Associate 153,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3594843,Associate 154,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3625308,Associate 155,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3408434,Associate 156,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501703,Associate 157,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501681,Associate 158,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3555297,Associate 159,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3567239,Associate 160,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3246096,Associate 161,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3334466,Associate 162,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3494862,Associate 163,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3603980,Associate 164,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3612456,Associate 165,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3595208,Associate 166,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3617721,Associate 167,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3626052,Associate 168,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3469652,Associate 169,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3736971,Associate 170,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3340341,Associate 171,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3631144,Associate 172,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3608508,Associate 173,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3640091,Associate 174,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+2650457,Associate 175,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3517559,Associate 176,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501662,Associate 177,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3630407,Associate 178,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3615973,Associate 179,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3597160,Associate 180,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3680134,Associate 181,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3412027,Associate 182,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3425207,Associate 183,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3311931,Associate 184,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3501705,Associate 185,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:55:00
+3497049,Associate 186,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3640822,Associate 187,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3631589,Associate 188,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3627294,Associate 189,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3754376,Associate 190,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3559247,Associate 191,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3621866,Associate 192,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3644003,Associate 193,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3629928,Associate 194,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3630299,Associate 195,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3480036,Associate 196,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3517816,Associate 197,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3201833,Associate 198,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3631152,Associate 199,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+1012940,Associate 200,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3201612,Associate 201,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3634506,Associate 202,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3628397,Associate 203,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3597622,Associate 204,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3630072,Associate 205,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3754033,Associate 206,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3594852,Associate 207,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3620838,Associate 208,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3628836,Associate 209,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3555214,Associate 210,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3622786,Associate 211,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3497068,Associate 212,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3555314,Associate 213,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+2932669,Associate 214,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3213272,Associate 215,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3552211,Associate 216,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3632133,Associate 217,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3431392,Associate 218,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+1011662,Associate 219,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+2955852,Associate 220,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3602908,Associate 221,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+1012917,Associate 222,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3629112,Associate 223,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3457802,Associate 224,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3338477,Associate 225,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3382633,Associate 226,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3431109,Associate 227,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3486740,Associate 228,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3610283,Associate 229,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3634766,Associate 230,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3567233,Associate 231,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3567249,Associate 232,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3608118,Associate 233,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3709288,Associate 234,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3636049,Associate 235,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3736974,Associate 236,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3600128,Associate 237,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3597990,Associate 238,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+2835206,Associate 239,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3559245,Associate 240,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3202254,Associate 241,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3336648,Associate 242,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3644775,Associate 243,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3626758,Associate 244,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3626554,Associate 245,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+2817371,Associate 246,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:56:00
+3552208,Associate 247,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3502783,Associate 248,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3622116,Associate 249,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3594663,Associate 250,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3621873,Associate 251,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3396457,Associate 252,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3014555,Associate 253,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2849981,Associate 254,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3337826,Associate 255,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3621557,Associate 256,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3555235,Associate 257,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3195243,Associate 258,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2994919,Associate 259,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3633706,Associate 260,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3325748,Associate 261,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3351499,Associate 262,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3498167,Associate 263,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3513684,Associate 264,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3353765,Associate 265,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2694884,Associate 266,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3351688,Associate 267,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3627389,Associate 268,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3629267,Associate 269,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3371939,Associate 270,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3624152,Associate 271,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3555135,Associate 272,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2668327,Associate 273,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3636638,Associate 274,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3625097,Associate 275,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3629615,Associate 276,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2569016,Associate 277,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2833738,Associate 278,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3626490,Associate 279,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3628179,Associate 280,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3630857,Associate 281,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3621452,Associate 282,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2853212,Associate 283,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3630432,Associate 284,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3626449,Associate 285,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3396484,Associate 286,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3592614,Associate 287,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3622123,Associate 288,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3201689,Associate 289,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3312271,Associate 290,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+1010938,Associate 291,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3328769,Associate 292,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3641168,Associate 293,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3562416,Associate 294,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+1012916,Associate 295,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3600861,Associate 296,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3629606,Associate 297,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+2996353,Associate 298,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:57:00
+3611535,Associate 299,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+2949721,Associate 300,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3466360,Associate 301,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3596259,Associate 302,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3596557,Associate 303,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3710817,Associate 304,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3682666,Associate 305,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3509867,Associate 306,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3039858,Associate 307,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3213276,Associate 308,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3630728,Associate 309,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3630524,Associate 310,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3633723,Associate 311,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3600054,Associate 312,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3592668,Associate 313,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3595701,Associate 314,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3599659,Associate 315,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:58:00
+2834935,Associate 316,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3646626,Associate 317,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+2950801,Associate 318,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:58:00
+3353774,Associate 319,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3633393,Associate 320,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3635229,Associate 321,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3626077,Associate 322,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3634474,Associate 323,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3625274,Associate 324,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3602375,Associate 325,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3754377,Associate 326,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3735392,Associate 327,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3246113,Associate 328,Quality,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3490939,Associate 329,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3616702,Associate 330,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3400655,Associate 331,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3633175,Associate 332,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3631951,Associate 333,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+3480048,Associate 334,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:58:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 6:58:31
+3330897,Associate 335,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3624425,Associate 336,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3118701,Associate 337,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3597596,Associate 338,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3624254,Associate 339,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3631177,Associate 340,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3597948,Associate 341,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3371969,Associate 342,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+1012921,Associate 343,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3636179,Associate 344,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3641683,Associate 345,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3594853,Associate 346,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3437171,Associate 347,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3334829,Associate 348,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3707371,Associate 349,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+2913808,Associate 350,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 6:59:00
+3627795,Associate 351,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3437215,Associate 352,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3486879,Associate 353,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+3627410,Associate 354,Production,Workday,Timecard Punch,Punch In,2025-10-15 6:59:00
+2669657,Associate 103,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3420036,Associate 99,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3616397,Associate 88,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3311169,Associate 127,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3626214,Associate 68,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3627400,Associate 141,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3643684,Associate 145,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3628676,Associate 63,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3517559,Associate 176,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3633709,Associate 78,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+1012881,Associate 124,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3631144,Associate 172,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3602908,Associate 221,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3621957,Associate 83,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3412027,Associate 182,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3642402,Associate 143,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+2680895,Associate 126,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3501703,Associate 157,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+1011716,Associate 73,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3548049,Associate 108,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3221185,Associate 64,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3626052,Associate 168,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3602207,Associate 89,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3179234,Associate 57,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3597993,Associate 118,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3632041,Associate 134,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:12
+3626656,Associate 100,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3567239,Associate 160,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3610257,Associate 114,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3382597,Associate 130,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3334466,Associate 162,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3497887,Associate 137,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3408434,Associate 156,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3625897,Associate 121,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3497072,Associate 62,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3622772,Associate 136,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3555297,Associate 159,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3731528,Associate 84,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3627532,Associate 111,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3501702,Associate 86,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3596161,Associate 101,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+2844861,Associate 70,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3221204,Associate 132,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3597151,Associate 139,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3469779,Associate 150,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3627546,Associate 66,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3634708,Associate 55,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3625308,Associate 155,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3611363,Associate 104,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3629104,Associate 96,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3636961,Associate 142,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3597160,Associate 180,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3501681,Associate 158,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3246096,Associate 161,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3620590,Associate 135,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3501674,Associate 71,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3370698,Associate 140,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3324948,Associate 61,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3617722,Associate 148,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3425207,Associate 183,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3629287,Associate 120,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3594852,Associate 207,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3736971,Associate 170,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3612456,Associate 165,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3707363,Associate 91,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3595208,Associate 166,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3630616,Associate 98,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3105062,Associate 58,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+2934092,Associate 133,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3106061,Associate 67,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+2911764,Associate 82,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3602292,Associate 69,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3494862,Associate 163,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3629965,Associate 131,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3623194,Associate 93,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3518198,Associate 87,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+1012917,Associate 222,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3594843,Associate 154,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3335803,Associate 125,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3559247,Associate 191,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3457802,Associate 224,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 6:59:13
+3404421,Associate 355,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+2819444,Associate 356,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3633340,Associate 357,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3628651,Associate 358,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3431149,Associate 359,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:00:00
+3593345,Associate 360,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3628507,Associate 361,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3486422,Associate 362,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3711220,Associate 363,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+1011946,Associate 364,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3629310,Associate 365,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:00:00
+2994912,Associate 366,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3622370,Associate 367,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3609517,Associate 368,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3608496,Associate 369,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3101064,Associate 370,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+2996289,Associate 371,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3630421,Associate 372,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3601034,Associate 373,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:00:00
+3620558,Associate 122,Production,Pick to Light,Assembly,Picker,2025-10-15 7:00:28
+3559239,Associate 374,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3608859,Associate 375,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3443362,Associate 376,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3326246,Associate 377,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3221190,Associate 378,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3594832,Associate 379,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3631464,Associate 380,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3636713,Associate 381,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3623697,Associate 382,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3624129,Associate 383,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3622180,Associate 384,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3369178,Associate 385,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3594608,Associate 386,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:01:00
+3600806,Associate 387,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3603162,Associate 388,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3497047,Associate 389,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3600806,Associate 387,Production,Workday,Timecard Punch,Punch Out,2025-10-15 7:02:00
+3706114,Associate 390,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3603548,Associate 391,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3625287,Associate 392,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3382665,Associate 393,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3431379,Associate 394,Shipping,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3609559,Associate 395,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3708917,Associate 396,Sanitation,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3628839,Associate 397,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3480025,Associate 398,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:02:00
+3501662,Associate 177,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3311931,Associate 184,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3630407,Associate 178,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3600128,Associate 237,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3340341,Associate 171,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3552207,Associate 54,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3617484,Associate 128,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3626653,Associate 75,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3501705,Associate 185,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+2970732,Associate 123,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3597621,Associate 56,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:00
+3680134,Associate 181,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3617721,Associate 167,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3562423,Associate 95,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+1010938,Associate 291,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3338477,Associate 225,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3624002,Associate 109,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3629118,Associate 138,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3616979,Associate 146,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3469652,Associate 169,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3608508,Associate 173,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3627220,Associate 79,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+2646143,Associate 80,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3708027,Associate 74,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3597622,Associate 204,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3615973,Associate 179,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3754376,Associate 190,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+1011827,Associate 153,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3603980,Associate 164,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3620558,Associate 122,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3246139,Associate 72,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3504664,Associate 52,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3497049,Associate 186,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3517816,Associate 197,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3622771,Associate 129,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3480036,Associate 196,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3629929,Associate 94,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3351499,Associate 262,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3614445,Associate 112,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3502783,Associate 248,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3201612,Associate 201,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3555235,Associate 257,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3625403,Associate 147,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3636049,Associate 235,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3634506,Associate 202,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3396457,Associate 252,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3630952,Associate 53,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+2569016,Associate 277,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3630299,Associate 195,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3382633,Associate 226,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3644775,Associate 243,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3202173,Associate 60,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3640091,Associate 174,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3629267,Associate 269,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3567233,Associate 231,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3213272,Associate 215,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3022602,Associate 107,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3552208,Associate 247,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3466360,Associate 301,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3594663,Associate 250,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3201833,Associate 198,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3118697,Associate 116,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:01
+3235568,Associate 65,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3626758,Associate 244,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+2835206,Associate 239,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3707371,Associate 349,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3596557,Associate 303,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3201689,Associate 289,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3594853,Associate 346,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3610283,Associate 229,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3596259,Associate 302,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3624152,Associate 271,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3480048,Associate 334,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3633175,Associate 332,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3337826,Associate 255,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3548031,Associate 106,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3630258,Associate 105,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+2668327,Associate 273,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3232214,Associate 49,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+2932669,Associate 214,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3353765,Associate 265,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+1011579,Associate 92,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+2853212,Associate 283,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3431149,Associate 359,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3630728,Associate 309,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+2950801,Associate 318,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3498167,Associate 263,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3631951,Associate 333,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+1012921,Associate 343,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3437215,Associate 352,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3599659,Associate 315,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3195243,Associate 258,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3630524,Associate 310,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3334829,Associate 348,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3628507,Associate 361,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3628397,Associate 203,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3552211,Associate 216,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3709288,Associate 234,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3736974,Associate 236,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:02:02
+3630299,Associate 195,Production,Pick to Light,Assembly,Picker,2025-10-15 7:02:06
+3630299,Associate 195,Production,Pick to Light,Assembly,Picker,2025-10-15 7:02:16
+3567245,Associate 399,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3330883,Associate 400,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+2858313,Associate 401,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3625823,Associate 402,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3408444,Associate 403,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+2955723,Associate 404,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3627096,Associate 405,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3473494,Associate 406,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3202246,Associate 407,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3431124,Associate 408,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:03:00
+3631589,Associate 188,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:39
+3555314,Associate 213,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:39
+3336648,Associate 242,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:39
+3630857,Associate 281,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:39
+3593345,Associate 360,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+2834935,Associate 316,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3754033,Associate 206,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3682666,Associate 305,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3628651,Associate 358,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3633706,Associate 260,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3632133,Associate 217,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:03:40
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:03:48
+3629231,Associate 409,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3628840,Associate 410,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3626224,Associate 411,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3483163,Associate 412,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3628973,Associate 413,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3622756,Associate 414,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+1010991,Associate 10,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:04:00
+3629538,Associate 415,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3024662,Associate 416,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3360031,Associate 417,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3603955,Associate 418,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3644965,Associate 419,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:04:00
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:07
+3517559,Associate 176,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:10
+3517559,Associate 176,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:12
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:14
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:04:21
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:04:21
+3497047,Associate 389,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:34
+3486422,Associate 362,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:34
+3711220,Associate 363,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:34
+3396484,Associate 286,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:34
+2994912,Associate 366,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:34
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:39
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:04:55
+3641796,Associate 3,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+3500723,Associate 47,Production,Badgr,Shipping,Loader,2025-10-15 7:04:56
+2650446,Associate 8,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+2940281,Associate 45,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+2811895,Associate 2,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+3504664,Associate 52,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+2955852,Associate 220,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+3630524,Associate 310,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+3628651,Associate 358,Shipping,Badgr,Shipping,Loader,2025-10-15 7:04:56
+2955723,Associate 404,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:57
+3483163,Associate 412,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:57
+2849981,Associate 254,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:57
+3641683,Associate 345,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:04:57
+3626052,Associate 168,Production,Pick to Light,Assembly,Picker,2025-10-15 7:04:59
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:04:59
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:05:00
+2976006,Associate 420,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:05:00
+3431166,Associate 421,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3643605,Associate 422,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3431409,Associate 423,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3105135,Associate 424,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3628182,Associate 425,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3598052,Associate 426,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:05:00
+3626052,Associate 168,Production,Pick to Light,Assembly,Picker,2025-10-15 7:05:02
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:05:03
+3608118,Associate 233,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3431109,Associate 227,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3567249,Associate 232,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3627294,Associate 189,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3597148,Associate 113,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3328769,Associate 292,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3431392,Associate 218,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+1012940,Associate 200,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+1011662,Associate 219,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3630072,Associate 205,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3600861,Associate 296,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3626490,Associate 279,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+2650457,Associate 175,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3621873,Associate 251,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3641168,Associate 293,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3497068,Associate 212,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3351688,Associate 267,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3621452,Associate 282,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+2955852,Associate 220,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3626449,Associate 285,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+2574065,Associate 90,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3555135,Associate 272,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3629606,Associate 297,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3629928,Associate 194,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3627389,Associate 268,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+1012916,Associate 295,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3622786,Associate 211,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+1011946,Associate 364,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3592614,Associate 287,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3625097,Associate 275,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3622123,Associate 288,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+2817371,Associate 246,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3213223,Associate 102,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3622116,Associate 249,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3621866,Associate 192,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3549587,Associate 51,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3612455,Associate 144,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3621557,Associate 256,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3400655,Associate 331,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:07
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:05:09
+2694884,Associate 266,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3600054,Associate 312,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3559245,Associate 240,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3616702,Associate 330,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3312271,Associate 290,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3626554,Associate 245,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3635229,Associate 321,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3631177,Associate 340,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3431389,Associate 119,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3710817,Associate 304,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3486740,Associate 228,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3202254,Associate 241,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3626077,Associate 322,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3490939,Associate 329,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3371969,Associate 342,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3625274,Associate 324,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3039858,Associate 307,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3624425,Associate 336,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3633340,Associate 357,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3636713,Associate 381,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3646626,Associate 317,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+2996353,Associate 298,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3624254,Associate 339,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3486879,Associate 353,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3513684,Associate 264,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3629112,Associate 223,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3634474,Associate 323,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+2996289,Associate 371,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+2913808,Associate 350,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3370717,Associate 117,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3633393,Associate 320,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+2833738,Associate 278,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3221190,Associate 378,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3382665,Associate 393,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3369178,Associate 385,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3634766,Associate 230,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3326246,Associate 377,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3631152,Associate 199,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3597596,Associate 338,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3353774,Associate 319,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3627410,Associate 354,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3630432,Associate 284,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:10
+3623697,Associate 382,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3628179,Associate 280,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3559239,Associate 374,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3630421,Associate 372,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3437171,Associate 347,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3331386,Associate 59,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3597948,Associate 341,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3627795,Associate 351,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3628836,Associate 209,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3622180,Associate 384,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3628839,Associate 397,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3431124,Associate 408,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:11
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:05:12
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:05:12
+3626490,Associate 279,Production,Pick to Light,Assembly,Picker,2025-10-15 7:05:26
+3640822,Associate 187,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:30
+3608859,Associate 375,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:30
+3118701,Associate 337,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:31
+3626490,Associate 279,Production,Pick to Light,Assembly,Picker,2025-10-15 7:05:32
+3202246,Associate 407,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:33
+3609559,Associate 395,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:33
+3625823,Associate 402,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:05:33
+3396484,Associate 286,Shipping,Badgr,Shipping,Loader,2025-10-15 7:05:41
+3559239,Associate 374,Shipping,Badgr,Shipping,Loader,2025-10-15 7:05:41
+3721509,Associate 427,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:06:00
+3643684,Associate 145,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:06:00
+3454347,Associate 428,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:06:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:06:05
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:06:05
+3632041,Associate 134,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:06
+3630421,Associate 372,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:15
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:15
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:17
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:19
+3630421,Associate 372,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:25
+3640822,Associate 187,Shipping,Badgr,Shipping,Loader,2025-10-15 7:06:41
+3437171,Associate 347,Shipping,Badgr,Shipping,Loader,2025-10-15 7:06:41
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:06:42
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:06:42
+3620558,Associate 122,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:52
+3620558,Associate 122,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:53
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:54
+3626224,Associate 411,Quality,Badgr,FSQ,Quality Lead,2025-10-15 7:06:58
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:06:58
+3629606,Associate 297,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:07:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:07:00
+3634752,Associate 429,Fulfillment Training,Workday,Timecard Punch,Punch In,2025-10-15 7:07:00
+3210952,Associate 14,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:07:00
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:07:04
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:07:04
+3633723,Associate 311,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3014555,Associate 253,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3330897,Associate 335,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3628973,Associate 413,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3480025,Associate 398,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3509867,Associate 306,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3636638,Associate 274,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3622756,Associate 414,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3567245,Associate 399,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3644003,Associate 193,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:06
+3632041,Associate 134,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:09
+3603548,Associate 391,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3622370,Associate 367,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3330883,Associate 400,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3601034,Associate 373,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3595701,Associate 314,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3631464,Associate 380,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3404421,Associate 355,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+2670989,Associate 152,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3706114,Associate 390,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3611535,Associate 299,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3602375,Associate 325,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:11
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:07:12
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:07:12
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:15
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:20
+3382633,Associate 226,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:24
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:25
+3382633,Associate 226,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:27
+3369178,Associate 385,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 7:07:43
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:44
+3598052,Associate 426,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:49
+3643605,Associate 422,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:50
+3024662,Associate 416,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:50
+3628840,Associate 410,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:50
+3627096,Associate 405,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:50
+3325748,Associate 261,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:07:50
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:07:55
+3622370,Associate 367,Quality,Badgr,FSQ,Inbound Quality Inspector,2025-10-15 7:08:00
+3631381,Associate 430,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:08:00
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:00
+3628397,Associate 203,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:08:00
+3628846,Associate 431,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:08:00
+3612455,Associate 144,Production,HighJump,Warehouse,Putaway,2025-10-15 7:08:01
+3612455,Associate 144,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:08:01
+3644326,Associate 85,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:08:06
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:20
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:25
+3611535,Associate 299,Shipping,Badgr,Shipping,Loader,2025-10-15 7:08:26
+3628182,Associate 425,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:08:28
+2976006,Associate 420,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:08:28
+3625287,Associate 392,Quality,Badgr,FSQ,Inbound Quality Inspector,2025-10-15 7:08:35
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:38
+3629104,Associate 96,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:43
+3486422,Associate 362,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:08:46
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:51
+3603162,Associate 388,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:08:56
+3626656,Associate 100,Production,Pick to Light,Assembly,Picker,2025-10-15 7:08:58
+3626656,Associate 100,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:00
+3612455,Associate 144,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:09:00
+3634506,Associate 202,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:09:00
+3629104,Associate 96,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:03
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:09
+3431379,Associate 394,Shipping,Badgr,Shipping,Loader,2025-10-15 7:09:13
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:14
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:09:21
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:27
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:27
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:09:29
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:09:29
+3598052,Associate 426,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 7:09:31
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:33
+3625287,Associate 392,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3431379,Associate 394,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3754377,Associate 326,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3473494,Associate 406,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3624129,Associate 383,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3721509,Associate 427,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3644965,Associate 419,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3628507,Associate 361,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3608496,Associate 369,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3594608,Associate 386,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3431409,Associate 423,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:34
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:37
+3735392,Associate 327,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:38
+3620838,Associate 208,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:38
+3632363,Associate 77,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:38
+3246113,Associate 328,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 7:09:45
+2994919,Associate 259,Shipping,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:09:46
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:09:59
+3626214,Associate 68,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:10:00
+3644003,Associate 193,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:10:00
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:10:09
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:10:09
+3353774,Associate 319,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:10:18
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:29
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:31
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:35
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:10:38
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:10:38
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:10:39
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:50
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:54
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:56
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:10:57
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 7:10:58
+2865325,Associate 432,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:11:00
+3517559,Associate 176,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:11:00
+3629287,Associate 120,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:11:00
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:11:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:11:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:11:04
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:11:05
+3602908,Associate 221,Production,Pick to Light,Assembly,Picker,2025-10-15 7:11:10
+3602908,Associate 221,Production,Pick to Light,Assembly,Picker,2025-10-15 7:11:13
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:11:27
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:11:27
+3629112,Associate 223,Production,HighJump,Kitting,Stacker,2025-10-15 7:11:28
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:11:29
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:11:29
+3632363,Associate 77,Shipping,Badgr,Shipping,Loader,2025-10-15 7:11:37
+3608496,Associate 369,Shipping,Badgr,Shipping,Loader,2025-10-15 7:11:37
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:12:00
+3707363,Associate 91,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:12:00
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:12:08
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:12:10
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:12:10
+3618853,Associate 151,Production,Badgr,Admin,HR-Support In,2025-10-15 7:12:18
+3510732,Associate 97,Production,Badgr,Admin,HR-Support In,2025-10-15 7:12:18
+3600806,Associate 387,Production,Badgr,Admin,HR-Support In,2025-10-15 7:12:18
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:12:30
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:12:30
+3408444,Associate 403,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3629310,Associate 365,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3629538,Associate 415,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3628846,Associate 431,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3631381,Associate 430,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3626224,Associate 411,Quality,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3708917,Associate 396,Sanitation,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:12:35
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:12:37
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:12:37
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:12:57
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:12:59
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:13:00
+3605013,Associate 433,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:13:00
+3707371,Associate 349,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:13:00
+3597155,Associate 110,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:13:00
+3616802,Associate 434,Quality,Workday,Timecard Punch,Punch In,2025-10-15 7:13:00
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:01
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:01
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:11
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:17
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:19
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:21
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:22
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:24
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:43
+3627294,Associate 189,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:43
+3754377,Associate 326,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:43
+3754377,Associate 326,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:43
+3627294,Associate 189,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:43
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:43
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:46
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:48
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:52
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:13:53
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:13:53
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:13:57
+3627294,Associate 189,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:14:00
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:00
+3707371,Associate 349,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:14:00
+3754377,Associate 326,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:14:00
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:14:08
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:14:08
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:08
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:10
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:14:11
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:14:11
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:12
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:15
+2819444,Associate 356,Warehouse,Badgr,Admin,HR-Support In,2025-10-15 7:14:19
+3592668,Associate 313,Production,Badgr,Admin,HR-Support In,2025-10-15 7:14:19
+3431166,Associate 421,Production,Badgr,Admin,HR-Support In,2025-10-15 7:14:19
+3555214,Associate 210,Production,Badgr,Admin,HR-Support In,2025-10-15 7:14:19
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:23
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:23
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:23
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:26
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:29
+3360031,Associate 417,Warehouse,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:14:32
+3454347,Associate 428,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:14:32
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:35
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:39
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:51
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:55
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:14:59
+3626214,Associate 68,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:15:00
+3628397,Associate 203,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:15:00
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:00
+3425207,Associate 183,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:15:00
+3643684,Associate 145,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:15:00
+3634506,Associate 202,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:15:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:00
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:04
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:11
+3612455,Associate 144,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:15:15
+3612455,Associate 144,Production,HighJump,Warehouse,Putaway,2025-10-15 7:15:15
+3603955,Associate 418,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:15:24
+3605013,Associate 433,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:15:24
+3644003,Associate 193,Production,HighJump,Warehouse,Inventory,2025-10-15 7:15:25
+3707363,Associate 91,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:29
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:41
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:15:57
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:15:57
+3457800,Associate 435,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:57
+3629231,Associate 409,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:15:57
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:15:58
+3612455,Associate 144,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:16:00
+3616397,Associate 88,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:16:00
+3644003,Associate 193,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:16:00
+3707363,Associate 91,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:16:00
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:16:11
+3707371,Associate 349,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:20
+3567233,Associate 231,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:28
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:33
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:37
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:39
+3625197,Associate 436,Production,HighJump,Warehouse,Putaway,2025-10-15 7:16:47
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:51
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:54
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:55
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:55
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:58
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:58
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:16:59
+3567233,Associate 231,Production,Pick to Light,Assembly,Picker,2025-10-15 7:16:59
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:17:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:17:00
+3567233,Associate 231,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:17:00
+3707371,Associate 349,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:17:00
+3425207,Associate 183,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:17:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:10
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:11
+3627294,Associate 189,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:17:13
+3627294,Associate 189,Production,HighJump,Warehouse,Putaway,2025-10-15 7:17:14
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:15
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:22
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:23
+3597990,Associate 238,Production,HighJump,Warehouse,Putaway,2025-10-15 7:17:23
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:27
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:30
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:34
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:37
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:45
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:47
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:48
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:50
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:54
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:55
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:17:58
+3627294,Associate 189,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:18:00
+3548049,Associate 108,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:18:00
+3626656,Associate 100,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:18:00
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:18:00
+3597990,Associate 238,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:18:00
+3597155,Associate 110,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:18:00
+3643684,Associate 145,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:18:00
+3754376,Associate 190,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:18:00
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:07
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:08
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:14
+3101064,Associate 370,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:18:16
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:17
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:18
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:18
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:20
+2668327,Associate 273,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:18:30
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:41
+3497049,Associate 186,Production,HighJump,Warehouse,Inventory,2025-10-15 7:18:42
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:42
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:45
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:45
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:53
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:18:54
+1011716,Associate 73,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3629112,Associate 223,Production,HighJump,Kitting,Transition Time,2025-10-15 7:19:00
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:19:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3353774,Associate 319,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:19:00
+3101064,Associate 370,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:19:00
+3629606,Associate 297,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3611363,Associate 104,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3626052,Associate 168,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3486422,Associate 362,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:19:00
+3602908,Associate 221,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3630299,Associate 195,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3638306,Associate 437,Warehouse,Workday,Timecard Punch,Punch In,2025-10-15 7:19:00
+3630421,Associate 372,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3629104,Associate 96,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3626490,Associate 279,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:19:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:00
+3624066,Associate 438,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:19:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:06
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:09
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:12
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:14
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:15
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:21
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:25
+3501697,Associate 17,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:19:26
+3501697,Associate 17,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:19:26
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:28
+3597990,Associate 238,Production,HighJump,Warehouse,Putaway,2025-10-15 7:19:33
+3597990,Associate 238,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:19:33
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:37
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:41
+2853212,Associate 283,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:42
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:44
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:19:49
+3431124,Associate 408,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:19:50
+3620558,Associate 122,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3382633,Associate 226,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3632041,Associate 134,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3512781,Associate 439,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:20:00
+3101064,Associate 370,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:20:00
+3597990,Associate 238,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:20:00
+3501697,Associate 17,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:20:00
+3501681,Associate 158,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3629287,Associate 120,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3627546,Associate 66,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:20:00
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:20:01
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:20:01
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:04
+2853212,Associate 283,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:07
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:08
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:15
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:16
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:18
+2835206,Associate 239,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:20:25
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:42
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:45
+2819444,Associate 356,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:20:49
+2819444,Associate 356,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:20:50
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:52
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:54
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:20:57
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:20:57
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:20:57
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:58
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:58
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:20:59
+3634506,Associate 202,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:21:00
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:21:00
+3627546,Associate 66,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:21:00
+2819444,Associate 356,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:21:00
+1010899,Associate 440,Production,Workday,Timecard Punch,Punch In,2025-10-15 7:21:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:01
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:02
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:03
+3431166,Associate 421,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:03
+3431166,Associate 421,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:03
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:05
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:06
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:21:08
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:12
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:12
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:21:15
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:18
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:21:18
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:18
+3555214,Associate 210,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:19
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:21:19
+3555214,Associate 210,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:19
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:21
+3754033,Associate 206,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:22
+3754033,Associate 206,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:23
+3597415,Associate 43,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:21:25
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:28
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:28
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:28
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:34
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:34
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:21:34
+3643684,Associate 145,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:34
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:35
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:21:39
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:39
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:39
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 7:21:42
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:50
+3555214,Associate 210,Production,HighJump,Warehouse,Putaway,2025-10-15 7:21:52
+3555214,Associate 210,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:21:52
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:21:52
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 7:21:53
+3644003,Associate 193,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:22:00
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:00
+3630299,Associate 195,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:22:00
+3437215,Associate 352,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:22:00
+3616397,Associate 88,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:22:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:22:00
+3431166,Associate 421,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:22:05
+3555214,Associate 210,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:22:05
+3555214,Associate 210,Production,HighJump,Warehouse,Putaway,2025-10-15 7:22:05
+3431166,Associate 421,Production,HighJump,Warehouse,Putaway,2025-10-15 7:22:06
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:06
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:12
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:23
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:29
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:31
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:32
+3627294,Associate 189,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:22:35
+3627294,Associate 189,Production,HighJump,Warehouse,Putaway,2025-10-15 7:22:36
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:44
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:45
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:51
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:52
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:22:55
+3431166,Associate 421,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:23:00
+3382633,Associate 226,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:23:00
+3620558,Associate 122,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:23:00
+3627294,Associate 189,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:23:00
+3555214,Associate 210,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:23:00
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:00
+3626490,Associate 279,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:23:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:00
+3600128,Associate 237,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:03
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:04
+3600128,Associate 237,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:08
+3597990,Associate 238,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:23:12
+3597990,Associate 238,Production,HighJump,Warehouse,Putaway,2025-10-15 7:23:13
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:25
+3754377,Associate 326,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:23:25
+3754377,Associate 326,Production,HighJump,Warehouse,Putaway,2025-10-15 7:23:25
+3629539,Associate 115,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:26
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:29
+3201689,Associate 289,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:30
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:30
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:23:31
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:23:31
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:32
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:33
+3201689,Associate 289,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:36
+3612455,Associate 144,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:23:37
+3612455,Associate 144,Production,HighJump,Warehouse,Putaway,2025-10-15 7:23:37
+3501705,Associate 185,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:41
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:41
+3501705,Associate 185,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:44
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:47
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:48
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:48
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:23:50
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:23:50
+3629306,Associate 81,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:55
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:23:57
+3628397,Associate 203,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:24:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:24:00
+3707371,Associate 349,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:24:00
+3497049,Associate 186,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:24:00
+3567233,Associate 231,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:24:00
+3629606,Associate 297,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:24:00
+3597990,Associate 238,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:24:00
+1011716,Associate 73,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:24:00
+3629306,Associate 81,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:24:00
+3627546,Associate 66,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:24:00
+3597415,Associate 43,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:24:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:24:01
+3754376,Associate 190,Production,HighJump,Warehouse,Putaway,2025-10-15 7:24:04
+3754376,Associate 190,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:24:04
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:08
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:08
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:09
+3754377,Associate 326,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:24:13
+3754377,Associate 326,Production,HighJump,Warehouse,Putaway,2025-10-15 7:24:13
+3602207,Associate 89,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:18
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:20
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:23
+3631177,Associate 340,Production,HighJump,Kitting,Stacker,2025-10-15 7:24:23
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:25
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:30
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:34
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:38
+3320603,Associate 6,Production,Badgr,Site Support,Kit Label Printer,2025-10-15 7:24:41
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:24:44
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:48
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:24:57
+3611363,Associate 104,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3754376,Associate 190,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:25:00
+3632041,Associate 134,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:25:00
+3548049,Associate 108,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3602908,Associate 221,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:25:00
+3600128,Associate 237,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3629112,Associate 223,Production,HighJump,Kitting,Time Off Task,2025-10-15 7:25:00
+3630421,Associate 372,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+1011716,Associate 73,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3616397,Associate 88,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3629539,Associate 115,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:25:00
+3643684,Associate 145,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3201689,Associate 289,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3501681,Associate 158,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3626214,Associate 68,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3754377,Associate 326,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:25:00
+3559247,Associate 191,Production,Pick to Light,Assembly,Time Off Task,2025-10-15 7:25:00
+3549587,Associate 51,Warehouse,HighJump,Warehouse,Time Off Task,2025-10-15 7:25:00
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:16
+3643605,Associate 422,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:25:19
+3602207,Associate 89,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:20
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:26
+3555214,Associate 210,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:25:28
+3555214,Associate 210,Production,HighJump,Warehouse,Putaway,2025-10-15 7:25:29
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:37
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:38
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:40
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:43
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:43
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:48
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:48
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:25:58
+3501705,Associate 185,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3388596,Associate 7,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:26:00
+3626052,Associate 168,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3602207,Associate 89,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3632041,Associate 134,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3629287,Associate 120,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3629104,Associate 96,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3612455,Associate 144,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:26:00
+3517559,Associate 176,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3555214,Associate 210,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:26:00
+3626214,Associate 68,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3597155,Associate 110,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3626656,Associate 100,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3629539,Associate 115,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3382633,Associate 226,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:26:00
+3754033,Associate 206,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3631177,Associate 340,Production,HighJump,Kitting,Transition Time,2025-10-15 7:26:00
+2853212,Associate 283,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3353774,Associate 319,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:26:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Transition Time,2025-10-15 7:26:00
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:04
+3431166,Associate 421,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:26:15
+3431166,Associate 421,Production,HighJump,Warehouse,Putaway,2025-10-15 7:26:15
+3562423,Associate 95,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:19
+3602207,Associate 89,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:21
+3562423,Associate 95,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:30
+3246096,Associate 161,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:26:31
+3608118,Associate 233,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:32
+1010899,Associate 440,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:26:36
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:38
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:41
+3602207,Associate 89,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:44
+3609517,Associate 368,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:26:45
+3628397,Associate 203,Production,HighJump,Warehouse,Putaway,2025-10-15 7:26:46
+3628397,Associate 203,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:26:46
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:52
+3616802,Associate 434,Quality,Badgr,FSQ,Assembly Line Auditor,2025-10-15 7:26:53
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:26:59
+3486422,Associate 362,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:27:00
+3431166,Associate 421,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:27:00
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:03
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:03
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:08
+3597990,Associate 238,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:27:08
+3597990,Associate 238,Production,HighJump,Warehouse,Putaway,2025-10-15 7:27:08
+3039864,Associate 16,Quality,Badgr,FSQ,Quality Lead,2025-10-15 7:27:08
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:17
+3602207,Associate 89,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:17
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:18
+3501681,Associate 158,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:20
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:22
+3497887,Associate 137,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:23
+3644003,Associate 193,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:27:23
+3644003,Associate 193,Production,HighJump,Warehouse,Putaway,2025-10-15 7:27:23
+3497887,Associate 137,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:24
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:27
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:37
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:38
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:53
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:58
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:27:58
+3597990,Associate 238,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:28:00
+3644003,Associate 193,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:28:00
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:03
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:16
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:19
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:26
+3608118,Associate 233,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:27
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:28
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:35
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:35
+3634752,Associate 429,Fulfillment Training,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:28:42
+3431124,Associate 408,Production,Badgr,HR/Admin,Enter Production Floor,2025-10-15 7:28:42
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:42
+3213223,Associate 102,Production,Badgr,HR/Admin,Exit Production Floor,2025-10-15 7:28:46
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:28:46
+3548049,Associate 108,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:47
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:47
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:53
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Replenishment,2025-10-15 7:28:57
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:59
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:28:59
+3599457,Associate 9,Warehouse,HighJump,Warehouse,Transition Time,2025-10-15 7:29:00
+3627294,Associate 189,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:29:00
+3627294,Associate 189,Production,HighJump,Warehouse,Putaway,2025-10-15 7:29:00
+3628397,Associate 203,Production,HighJump,Warehouse,Transition Time,2025-10-15 7:29:00
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:03
+3621957,Associate 83,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:04
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:05
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:06
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:08
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:08
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:09
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:11
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Putaway,2025-10-15 7:29:12
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:13
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:15
+3629606,Associate 297,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:16
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:22
+3616397,Associate 88,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:22
+3626214,Associate 68,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:23
+3622114,Associate 30,Warehouse,HighJump,Warehouse,Inventory,2025-10-15 7:29:24
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:24
+3611363,Associate 104,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:27
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:27
+3597155,Associate 110,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:37
+3634506,Associate 202,Production,HighJump,Warehouse,Putaway,2025-10-15 7:29:39
+3634506,Associate 202,Production,HighJump,Warehouse,Replenishment,2025-10-15 7:29:39
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:40
+3338477,Associate 225,Shipping,Badgr,Shipping,Loader,2025-10-15 7:29:43
+3627546,Associate 66,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:47
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:47
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:53
+1011716,Associate 73,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:53
+3559247,Associate 191,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:54
+3629287,Associate 120,Production,Pick to Light,Assembly,Picker,2025-10-15 7:29:57
+3627546,Associate 66,Production,Compliance,Compliance,Time Off Task,2025-10-15 7:06:57
