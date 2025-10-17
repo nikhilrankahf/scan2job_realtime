@@ -124,22 +124,10 @@ def metric_tile(
     else:
         dot = "🟡"; events = "Clock, Scan"
 
-    # Single expander header includes title/count and freshness; content has dropdown + table
+    # Single expander header includes title/count and freshness; content shows default breakdown table
     header_text = f"{title} — {total_associates}    {dot} Freshness {freshness_text} · Events: {events}"
     with st.expander(header_text, expanded=False):
-        group_options_map = {
-            "Hiring Department": "job_department",
-            "Work Department": "work_department",
-            "Work Position": "work_position",
-        }
-        group_labels = list(group_options_map.keys())
-        chosen_label = st.selectbox(
-            "Breakdown by",
-            options=group_labels,
-            index=0,
-            key=f"metric_tile_group_{title}",
-        )
-        group_col = group_options_map[chosen_label]
+        group_col = "job_department"
         if group_col in subset.columns:
             breakdown_df = (
                 subset.fillna({group_col: "—"})
@@ -147,9 +135,9 @@ def metric_tile(
                 .sort_values(ascending=False)
                 .reset_index()
             )
-            breakdown_df.columns = [chosen_label, "Associates"]
+            breakdown_df.columns = ["Hiring Department", "Associates"]
         else:
-            breakdown_df = pd.DataFrame({chosen_label: [], "Associates": []})
+            breakdown_df = pd.DataFrame({"Hiring Department": [], "Associates": []})
         st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
