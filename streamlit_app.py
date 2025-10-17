@@ -172,28 +172,7 @@ def compute_presence_flags(df: pd.DataFrame) -> pd.DataFrame:
 people_df = compute_presence_flags(get_live_associate_rows())
 last_update = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-# Cached metric counts and breakdowns (avoid hammering DB)
-@st.cache_data(ttl=30)
-def get_metric_summaries(df: pd.DataFrame) -> dict:
-    metrics = {
-        "on_floor": df[df["on_floor"]],
-        "in_position": df[df["in_position"]],
-        "unscanned": df[df["unscanned"]],
-    }
-    result = {}
-    for key, subset in metrics.items():
-        count = int(subset.shape[0])
-        breakdown = (
-            subset.fillna({"wd_department": "—"})
-            .groupby("wd_department")["associate_id"].count()
-            .sort_values(ascending=False)
-            .reset_index()
-            .rename(columns={"wd_department": "Department", "associate_id": "Headcount"})
-        )
-        result[key] = {"count": count, "breakdown": breakdown}
-    return result
-
-metric_summaries = get_metric_summaries(people_df)
+# (Cleaned) No global cached summaries; tile derives its own view
 
 # Filters / privacy
 with st.sidebar:
