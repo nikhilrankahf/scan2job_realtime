@@ -108,32 +108,24 @@ def metric_tile(
         unsafe_allow_html=True,
     )
 
-    st.markdown(
-        f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin:0 0 8px 0'>{total_associates}</div>",
-        unsafe_allow_html=True,
-    )
-
-    # Collapsible breakdown within tile (default collapsed)
-    with st.expander("Breakdown", expanded=False):
-        if group_options is None:
-            group_options = {"Job Department": "wd_department", "Sub-Department": "scanned_department"}
-        group_display_names = list(group_options.keys())
-        default_index = group_display_names.index(default_group) if default_group in group_display_names else 0
-        chosen_display = st.selectbox(
-            "Group by",
-            options=group_display_names,
-            index=default_index,
-            key=f"metric_tile_breakdown_{title}",
+    # Number (left) and accordion (right)
+    num_col, accord_col = st.columns([6, 1])
+    with num_col:
+        st.markdown(
+            f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin:0 0 8px 0'>{total_associates}</div>",
+            unsafe_allow_html=True,
         )
-        group_col = group_options[chosen_display]
-        if group_col in subset.columns:
+    with accord_col:
+        # Collapsed by default; opens to show Job Department breakdown
+        with st.expander("", expanded=False):
             breakdown_df = (
-                subset.groupby(group_col)["associate_id"].nunique().sort_values(ascending=False).reset_index()
+                subset.fillna({"wd_department": "—"})
+                .groupby("wd_department")["associate_id"].nunique()
+                .sort_values(ascending=False)
+                .reset_index()
             )
-            breakdown_df.columns = [chosen_display, "Associates"]
-        else:
-            breakdown_df = pd.DataFrame({chosen_display: [], "Associates": []})
-        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+            breakdown_df.columns = ["Job Department", "Associates"]
+            st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # Rules (edit thresholds to your SLOs)
 FLOOR_WINDOW_MIN = 10   # "On floor" if clock OR scan event seen in last X minutes
