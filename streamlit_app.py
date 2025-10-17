@@ -192,11 +192,23 @@ with left:
         "work_department_group": "Work Department Group",
         "scanned_in_count": "Associates Scanned-in",
     })
-    st.dataframe(
-        dept_table,
-        use_container_width=True,
-        hide_index=True
-    )
+    # Render each group as an accordion row with drilldown by Work Department
+    for _, row in dept_table.iterrows():
+        group_name = row["Work Department Group"]
+        group_total = int(row["Associates Scanned-in"])
+        with st.expander(f"{group_name} — {group_total}", expanded=False):
+            sub = work_grouped[(work_grouped["scanned_in"]) & (work_grouped["work_department_group"] == group_name)]
+            sub_table = (
+                sub.fillna({"work_department": "—"})
+                .groupby("work_department")["associate_id"].nunique()
+                .sort_values(ascending=False)
+                .reset_index()
+            )
+            sub_table = sub_table.rename(columns={
+                "work_department": "Work Department",
+                "associate_id": "Associates",
+            })
+            st.dataframe(sub_table, use_container_width=True, hide_index=True)
 
 # RIGHT: Vertically stacked tiles using reusable component
 with right:
