@@ -124,28 +124,33 @@ def metric_tile(
     else:
         dot = "🟡"; events = "Clock, Scan"
 
-    # Precompute breakdown table
-    breakdown_df = (
-        subset.fillna({"job_department": "—"})
-        .groupby("job_department")["associate_id"].nunique()
-        .sort_values(ascending=False)
-        .reset_index()
-    )
-    breakdown_df.columns = ["Hiring Department", "Associates"]
-    
-    header_left, header_right = st.columns([1, 1])
-    with header_left:
-        st.markdown(f"**{title} — {total_associates}**")
-    with header_right:
-        r1, r2 = st.columns([5, 1])
-        with r1:
-            st.markdown(
-                f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>{dot} Freshness {freshness_text} · Events: {events}</div>",
-                unsafe_allow_html=True,
+    # Single expander header includes title/count and freshness; content has dropdown + table
+    header_text = f"{title} — {total_associates}    {dot} Freshness {freshness_text} · Events: {events}"
+    with st.expander(header_text, expanded=False):
+        group_options_map = {
+            "Hiring Department": "job_department",
+            "Work Department": "work_department",
+            "Work Position": "work_position",
+        }
+        group_labels = list(group_options_map.keys())
+        chosen_label = st.selectbox(
+            "Breakdown by",
+            options=group_labels,
+            index=0,
+            key=f"metric_tile_group_{title}",
+        )
+        group_col = group_options_map[chosen_label]
+        if group_col in subset.columns:
+            breakdown_df = (
+                subset.fillna({group_col: "—"})
+                .groupby(group_col)["associate_id"].nunique()
+                .sort_values(ascending=False)
+                .reset_index()
             )
-        with r2:
-            with st.expander("▾", expanded=False):
-                st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+            breakdown_df.columns = [chosen_label, "Associates"]
+        else:
+            breakdown_df = pd.DataFrame({chosen_label: [], "Associates": []})
+        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
 
