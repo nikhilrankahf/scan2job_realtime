@@ -200,17 +200,20 @@ pretty = filtered[[
     "last_activity_ts":"Last Activity Timestamp",
 })
 
-# Inline filters above the table
-f1, f2, f3 = st.columns(3)
-with f1:
-    id_q = st.text_input("Id contains", "").strip()
-    name_q = st.text_input("Name contains", "").strip()
-with f2:
-    hiring_q = st.text_input("Hiring Dept contains", "").strip()
-    work_dept_q = st.text_input("Work Dept contains", "").strip()
-with f3:
-    work_pos_q = st.text_input("Work Position contains", "").strip()
-    scanned_choice = st.selectbox("Scanned In", ["(any)", "Yes", "No"], index=0)
+# Compact filter icon (expander) aligned above the table (top-right)
+controls_left, controls_right = st.columns([1, 1])
+with controls_right:
+    with st.expander("🔍 Filters", expanded=False):
+        f1, f2, f3 = st.columns(3)
+        with f1:
+            id_q = st.text_input("Id contains", "").strip()
+            name_q = st.text_input("Name contains", "").strip()
+        with f2:
+            hiring_q = st.text_input("Hiring Dept contains", "").strip()
+            work_dept_q = st.text_input("Work Dept contains", "").strip()
+        with f3:
+            work_pos_q = st.text_input("Work Position contains", "").strip()
+            scanned_choice = st.selectbox("Scanned In", ["(any)", "Yes", "No"], index=0)
 
 filtered_pretty = pretty.copy()
 if id_q:
