@@ -124,16 +124,7 @@ def metric_tile(
     else:
         dot = "🟡"; events = "Clock, Scan"
 
-    header_left, header_right = st.columns([1, 1])
-    with header_left:
-        st.markdown(f"**{title} — {total_associates}**")
-    with header_right:
-        st.markdown(
-            f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>{dot} Freshness {freshness_text} · Events: {events}</div>",
-            unsafe_allow_html=True,
-        )
-
-    # Inline breakdown table within the same tile (no separate expander)
+    # Precompute breakdown table
     breakdown_df = (
         subset.fillna({"job_department": "—"})
         .groupby("job_department")["associate_id"].nunique()
@@ -141,7 +132,20 @@ def metric_tile(
         .reset_index()
     )
     breakdown_df.columns = ["Hiring Department", "Associates"]
-    st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+    
+    header_left, header_right = st.columns([1, 1])
+    with header_left:
+        st.markdown(f"**{title} — {total_associates}**")
+    with header_right:
+        r1, r2 = st.columns([5, 1])
+        with r1:
+            st.markdown(
+                f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>{dot} Freshness {freshness_text} · Events: {events}</div>",
+                unsafe_allow_html=True,
+            )
+        with r2:
+            with st.expander("▾", expanded=False):
+                st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
 
@@ -266,6 +270,15 @@ if scanned_choice != "(any)":
 
 # Dynamic title with count inline with filters
 title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
+try:
+    latest_ts_tbl = pd.to_datetime(filtered_pretty["Last Activity Timestamp"]).max()
+    latest_ts_label = latest_ts_tbl.strftime("%I:%M:%S%p").lstrip("0").lower() if pd.notna(latest_ts_tbl) else "—"
+except Exception:
+    latest_ts_label = "—"
+st.markdown(
+    f"<div style='color:#6b7280; margin:-6px 0 6px 0'>🟢 Freshness 7:30am - {latest_ts_label} · Events: Clock, Scan</div>",
+    unsafe_allow_html=True,
+)
 
 st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
