@@ -253,8 +253,9 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
 
     # LEFT: Scanned-In Breakdown with per-row drilldown to sub-departments (work departments)
     with lcol:
-        st.subheader("Scanned-In Breakdown")
         scanned_df = df[(df.get("scanned_in", False)) & (~ignore_mask)].copy()
+        scanned_total = int(scanned_df["associate_id"].nunique()) if not scanned_df.empty else 0
+        st.subheader(f"Scanned-in Breakdown ({scanned_total})")
         if scanned_df.empty:
             st.info("No scanned-in associates.")
         else:
@@ -305,9 +306,10 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
-        st.subheader("Non-Scanned Breakdown")
         non_scanned_mask = df.get("on_floor", False) & (~df.get("scanned_in", False))
         non_scanned_df = df[non_scanned_mask].copy()
+        non_scanned_total = int(non_scanned_df["associate_id"].nunique()) if not non_scanned_df.empty else 0
+        st.subheader(f"Non-Scanned Breakdown ({non_scanned_total})")
         if non_scanned_df.empty:
             st.info("No non-scanned associates.")
         else:
