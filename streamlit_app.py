@@ -224,7 +224,8 @@ render_department_cards(people_df)
 def render_mid_breakdowns(df: pd.DataFrame) -> None:
     # Ignore Compliance and Time Card punch work departments
     work_dept_series = df.get("work_department", pd.Series([None] * len(df))).astype(str)
-    ignore_mask = work_dept_series.str.casefold().eq("compliance") | work_dept_series.str.lower().str.contains("time card")
+    work_dept_clean = work_dept_series.str.strip()
+    ignore_mask = work_dept_clean.str.casefold().eq("compliance") | work_dept_clean.str.lower().str.contains("time card")
 
     # Mapping from Work Department -> Job Department (group)
     map_work_to_job = {
@@ -234,6 +235,13 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         "FSQ": "Quality",
         "Sanitation": "Sanitation",
         "Shipping": "Shipping",
+        # Sub-departments that belong to Production
+        "Assembly": "Production",
+        "Kitting": "Production",
+        "Site Support": "Production",
+        # Common admin sub-departments treated as Other at the job level
+        "Admin": "Other",
+        "HR/Admin": "Other",
     }
     # Sub-departments for expansion (by Job Department)
     subdepts_by_job = {
@@ -250,7 +258,8 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         if scanned_df.empty:
             st.info("No scanned-in associates.")
         else:
-            scanned_df["job_group"] = scanned_df["work_department"].map(map_work_to_job).fillna("Other")
+            scanned_df["work_department_clean"] = scanned_df["work_department"].astype(str).str.strip()
+            scanned_df["job_group"] = scanned_df["work_department_clean"].map(map_work_to_job).fillna("Other")
             # Order departments to match On Floor Headcount tiles
             try:
                 onfloor_order = (
@@ -269,9 +278,13 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 .rename(columns={"job_group": "Department", "associate_id": "Associates"})
             )
             if onfloor_order:
-                # Keep only present departments, in that specific order
-                by_group["Department"] = pd.Categorical(by_group["Department"], categories=onfloor_order, ordered=True)
-                by_group = by_group.sort_values(["Department"], na_position="last")
+                # Build a stable order that follows the tile order and appends any others at the end ("Other" last)
+                order_map = {d: i for i, d in enumerate(onfloor_order)}
+                def order_key(d: str) -> int:
+                    base = order_map.get(d, len(order_map) + 1)
+                    # push Other to the very end
+                    return base if d != "Other" else 10_000
+                by_group = by_group.sort_values(key=lambda s: s.map(order_key))
             else:
                 by_group = by_group.sort_values("Associates", ascending=False)
 
@@ -280,18 +293,18 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 dept = str(row["Department"]) 
                 cnt = int(row["Associates"]) 
                 valid_subs = subdepts_by_job.get(dept, [])
-                sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department"].isin(valid_subs))]
+                sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department_clean"].isin(valid_subs))]
                 if not valid_subs or sub.empty:
                     # No sub-departments to drill; render static row
                     st.markdown(f"**{dept}** — {cnt}")
                 else:
                     with st.expander(f"{dept} — {cnt}", expanded=False):
                         sub_table = (
-                            sub.fillna({"work_department": "—"})
-                            .groupby("work_department")["associate_id"].nunique()
+                            sub.fillna({"work_department_clean": "—"})
+                            .groupby("work_department_clean")["associate_id"].nunique()
                             .sort_values(ascending=False)
                             .reset_index()
-                            .rename(columns={"work_department": "Sub-Department", "associate_id": "Associates"})
+                            .rename(columns={"work_department_clean": "Sub-Department", "associate_id": "Associates"})
                         )
                         st.dataframe(sub_table, use_container_width=True, hide_index=True)
 
