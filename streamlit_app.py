@@ -174,7 +174,7 @@ left, right = st.columns([1.2, 1.0])
 
 # LEFT: Department table (current scanned headcount) with optional sub-dept drill
 with left:
-    st.subheader("Department-level Scanned Count")
+    st.subheader("Work Department Group Scanned Count")
     # Apply grouping to Work Department
     work_grouped = people_df.copy()
     work_grouped["work_department_group"] = work_grouped["work_department"].map(WORK_DEPT_GROUP_MAP).fillna(
@@ -211,7 +211,7 @@ with left:
 
 # RIGHT: Vertically stacked tiles using reusable component
 with right:
-    st.subheader("Live Tiles")
+    st.subheader("Live floor funnel")
     metric_tile(
         people_df,
         title="On Floor",
