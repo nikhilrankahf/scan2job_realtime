@@ -341,70 +341,7 @@ with st.sidebar:
 # ---------------------------
 left, right = st.columns([1.2, 1.0])
 
-# LEFT: Department table (current scanned headcount) with optional sub-dept drill
-with left:
-    st.subheader("Work Department Group Scanned Count")
-    # Apply grouping to Work Department
-    work_grouped = people_df.copy()
-    work_grouped["work_department_group"] = work_grouped["work_department"].map(WORK_DEPT_GROUP_MAP).fillna(
-        work_grouped["work_department"].fillna("—")
-    )
-    dept_table = (
-        work_grouped[work_grouped["scanned_in"]]
-        .groupby("work_department_group")["associate_id"].nunique()
-        .rename("scanned_in_count")
-        .reset_index()
-        .sort_values("scanned_in_count", ascending=False)
-    )
-    dept_table = dept_table.rename(columns={
-        "work_department_group": "Work Department Group",
-        "scanned_in_count": "Associates Scanned-in",
-    })
-    # Render each group as an accordion row with drilldown by Work Department
-    for _, row in dept_table.iterrows():
-        group_name = row["Work Department Group"]
-        group_total = int(row["Associates Scanned-in"])
-        with st.expander(f"{group_name} — {group_total}", expanded=False):
-            sub = work_grouped[(work_grouped["scanned_in"]) & (work_grouped["work_department_group"] == group_name)]
-            sub_table = (
-                sub.fillna({"work_department": "—"})
-                .groupby("work_department")["associate_id"].nunique()
-                .sort_values(ascending=False)
-                .reset_index()
-            )
-            sub_table = sub_table.rename(columns={
-                "work_department": "Work Department",
-                "associate_id": "Associates",
-            })
-            st.dataframe(sub_table, use_container_width=True, hide_index=True)
-
-# RIGHT: Vertically stacked tiles using reusable component
-with right:
-    st.subheader("Live floor funnel")
-    metric_tile(
-        people_df,
-        title="On Floor",
-        group_options=None,
-        default_group="Job Department",
-        floor_window_min=0,
-        inpos_window_min=0,
-    )
-    metric_tile(
-        people_df,
-        title="Scanned In",
-        group_options=None,
-        default_group="Job Department",
-        floor_window_min=0,
-        inpos_window_min=0,
-    )
-    metric_tile(
-        people_df,
-        title="Unscanned",
-        group_options=None,
-        default_group="Job Department",
-        floor_window_min=0,
-        inpos_window_min=0,
-    )
+# LEFT and RIGHT sections intentionally left empty per request to remove previous sections
 
     
 
