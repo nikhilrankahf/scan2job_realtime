@@ -102,14 +102,14 @@ def metric_tile(
     subset = df[df[flag_col]] if flag_col in df.columns else df.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
 
-    # Header with freshness on the right
-    now_local = datetime.now()
+    # Header with freshness on the right (static reference 07:30 local time)
+    reference_time = datetime.now().replace(hour=7, minute=30, second=0, microsecond=0)
     latest_ts = subset["last_activity_ts"].max() if "last_activity_ts" in subset.columns else pd.NaT
     if pd.isna(latest_ts):
         freshness_text = "—"
     else:
-        delta = now_local - pd.to_datetime(latest_ts)
-        seconds = int(delta.total_seconds())
+        delta = reference_time - pd.to_datetime(latest_ts)
+        seconds = abs(int(delta.total_seconds()))
         if seconds < 60:
             freshness_text = f"{seconds}s"
         elif seconds < 3600:
@@ -128,18 +128,20 @@ def metric_tile(
     with header_left:
         st.markdown(f"**{title} — {total_associates}**")
     with header_right:
-        st.markdown(f"<div style='text-align:right'>{dot} Freshness {freshness_text} · Events: {events}</div>", unsafe_allow_html=True)
-
-    # Expander shows department table
-    with st.expander("Breakdown", expanded=False):
-        breakdown_df = (
-            subset.fillna({"job_department": "—"})
-            .groupby("job_department")["associate_id"].nunique()
-            .sort_values(ascending=False)
-            .reset_index()
+        st.markdown(
+            f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>{dot} Freshness {freshness_text} · Events: {events}</div>",
+            unsafe_allow_html=True,
         )
-        breakdown_df.columns = ["Hiring Department", "Associates"]
-        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+
+    # Inline breakdown table within the same tile (no separate expander)
+    breakdown_df = (
+        subset.fillna({"job_department": "—"})
+        .groupby("job_department")["associate_id"].nunique()
+        .sort_values(ascending=False)
+        .reset_index()
+    )
+    breakdown_df.columns = ["Hiring Department", "Associates"]
+    st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
 
