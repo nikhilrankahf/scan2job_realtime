@@ -138,19 +138,22 @@ def metric_tile(
     else:
         events = "Clock, Scan"
 
-    # Title line and secondary freshness note (smaller, muted)
-    header_cols = st.columns([1, 1])
-    with header_cols[0]:
-        st.markdown(f"**{title} — {total_associates}**")
-    with header_cols[1]:
-        st.markdown(
-            f"<div style='text-align:right; font-size:0.85rem; color:#6b7280'>Freshness {freshness_text} · Events: {events}</div>",
-            unsafe_allow_html=True,
+    # Single expander header acts as the tile; content includes dropdown and table
+    header_text = f"{title} — {total_associates} (Freshness {freshness_text} · Events: {events})"
+    with st.expander(header_text, expanded=False):
+        group_options_map = {
+            "Hiring Department": "job_department",
+            "Work Department": "work_department",
+            "Work Position": "work_position",
+        }
+        group_labels = list(group_options_map.keys())
+        chosen_label = st.selectbox(
+            "Breakdown by",
+            options=group_labels,
+            index=0,
+            key=f"metric_tile_group_{title}",
         )
-
-    # Expander with default breakdown table
-    with st.expander("Breakdown", expanded=False):
-        group_col = "job_department"
+        group_col = group_options_map[chosen_label]
         if group_col in subset.columns:
             breakdown_df = (
                 subset.fillna({group_col: "—"})
@@ -158,9 +161,9 @@ def metric_tile(
                 .sort_values(ascending=False)
                 .reset_index()
             )
-            breakdown_df.columns = ["Hiring Department", "Associates"]
+            breakdown_df.columns = [chosen_label, "Associates"]
         else:
-            breakdown_df = pd.DataFrame({"Hiring Department": [], "Associates": []})
+            breakdown_df = pd.DataFrame({chosen_label: [], "Associates": []})
         st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
