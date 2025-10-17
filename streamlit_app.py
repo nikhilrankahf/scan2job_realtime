@@ -53,7 +53,7 @@ def render_department_cards(df: pd.DataFrame) -> None:
     # Section header with total on-floor headcount in brackets (match subheader style)
     total_on_floor = int(on_floor_df["associate_id"].nunique())
     st.subheader(f"On Floor Headcount ({total_on_floor})")
-    st.caption(f"Last updated at {now_time}")
+    st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
     st.markdown(
@@ -422,10 +422,6 @@ if scanned_choice != "(any)":
 # Dynamic title with count inline with filters
 title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
 st.caption("Last updated at 15 Oct, 7:32:13am")
-st.markdown(
-    "<div style='font-size:0.85rem; color:#6b7280; margin:-6px 0 6px 0'>Freshness 1m · Events: Clock, Scan</div>",
-    unsafe_allow_html=True,
-)
 
 st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
