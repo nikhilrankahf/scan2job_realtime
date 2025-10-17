@@ -139,7 +139,7 @@ def metric_tile(
         events = "Clock, Scan"
 
     # Single expander header includes title/count and freshness; content shows default breakdown table
-    header_text = f"{title} — {total_associates}    <span style='font-size:0.85rem; color:#6b7280'>Freshness {freshness_text} · Events: {events}</span>"
+    header_text = f"{title} — {total_associates}  (Freshness {freshness_text} · Events: {events})"
     with st.expander(header_text, expanded=False):
         group_col = "job_department"
         if group_col in subset.columns:
