@@ -50,8 +50,15 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     # Latest record per associate (for stable department display)
     df_sorted = df.sort_values(["ASSOCIATE_ID","START_TIME_LOCAL"]).dropna(subset=["ASSOCIATE_ID"])  # type: ignore
     latest_idx = df_sorted.groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].idxmax()
-    latest = df_sorted.loc[latest_idx, ["ASSOCIATE_ID","Name","JOB_DEPARTMENT"]].rename(columns={
-        "ASSOCIATE_ID":"associate_id","Name":"associate_name","JOB_DEPARTMENT":"job_department",
+    latest = df_sorted.loc[latest_idx, [
+        "ASSOCIATE_ID","Name","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL"
+    ]].rename(columns={
+        "ASSOCIATE_ID":"associate_id",
+        "Name":"associate_name",
+        "JOB_DEPARTMENT":"job_department",
+        "WORK_DEPARTMENT":"work_department",
+        "WORK_POSITION":"work_position",
+        "START_TIME_LOCAL":"last_activity_ts",
     })
 
     # Flags by associate (any record matching condition)
@@ -177,15 +184,20 @@ with right:
 # 4) BOTTOM: PEOPLE TABLE (detail)
 # ---------------------------
 st.markdown("---")
-st.subheader("Associates")
+st.subheader("Last Activity")
 filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
 pretty = filtered[[
-    "associate_id","associate_name","job_department","on_floor","scanned_in","unscanned"
+    "associate_id","associate_name","job_department","scanned_in","work_department","work_position","last_activity_ts"
 ]].rename(columns={
-    "associate_id":"ID","associate_name":"Name","job_department":"Job Department",
-    "on_floor":"On Floor","scanned_in":"Scanned In","unscanned":"Unscanned"
+    "associate_id":"Id",
+    "associate_name":"Name",
+    "job_department":"Hiring Department",
+    "scanned_in":"Scanned In",
+    "work_department":"Work Department",
+    "work_position":"Work Position",
+    "last_activity_ts":"Last Activity Timestamp",
 })
-st.dataframe(pretty.sort_values(["Job Department","Name"]), use_container_width=True, hide_index=True)
+st.dataframe(pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
