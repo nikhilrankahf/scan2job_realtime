@@ -50,6 +50,10 @@ def render_department_cards(df: pd.DataFrame) -> None:
 
     now_time = datetime.now().strftime("%H:%M:%S")
 
+    # Section header and single timestamp (moved out of individual cards)
+    st.subheader("On Floor Headcount")
+    st.caption(f"Last updated at {now_time}")
+
     # Lightweight CSS for horizontal cards with scroll
     st.markdown(
         """
@@ -58,7 +62,7 @@ def render_department_cards(df: pd.DataFrame) -> None:
         .dept-card { min-width: 180px; background:#ffffff; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.08); padding:12px 14px; }
         .dept-title { font-weight:600; font-size:0.95rem; margin:0 0 4px 0; }
         .dept-count { font-size:28px; font-weight:700; margin:0 0 6px 0; }
-        .dept-caption { color:#6b7280; font-size:0.85rem; margin:0; }
+        /* per-card caption removed; timestamp shown under section header */
         </style>
         """,
         unsafe_allow_html=True,
@@ -72,7 +76,6 @@ def render_department_cards(df: pd.DataFrame) -> None:
             f"<div class='dept-card'>"
             f"<div class='dept-title'>{dept}</div>"
             f"<div class='dept-count'>{cnt}</div>"
-            f"<div class='dept-caption'>Last updated at {now_time}</div>"
             f"</div>"
         )
     cards_html_parts.append("</div>")
