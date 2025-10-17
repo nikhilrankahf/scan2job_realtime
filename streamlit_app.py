@@ -419,9 +419,72 @@ if scanned_choice != "(any)":
     val = scanned_choice == "Yes"
     filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
 
+
 # Dynamic title with count inline with filters
 title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
 st.caption("Last updated at 15 Oct, 7:32:13am")
+
+# New controls row: search, quick toggles, department dropdown, clear button
+ctrl_search_col, ctrl_toggles_col, ctrl_dept_col, ctrl_clear_col = st.columns([3, 5, 3, 2])
+with ctrl_search_col:
+    search_q = st.text_input(
+        "Search",
+        value=st.session_state.get("search_q", ""),
+        key="search_q",
+        placeholder="Search ID, Name, or keyword…",
+    )
+with ctrl_toggles_col:
+    tg1, tg2, tg3, tg4 = st.columns(4)
+    with tg1:
+        flt_not_scanned = st.toggle("Not Scanned-In", value=st.session_state.get("flt_not_scanned", False), key="flt_not_scanned")
+    with tg2:
+        flt_scanned_only = st.toggle("Scanned-In Only", value=st.session_state.get("flt_scanned_only", False), key="flt_scanned_only")
+    with tg3:
+        flt_clocked_only = st.toggle("Clocked-In Only", value=st.session_state.get("flt_clocked_only", False), key="flt_clocked_only")
+    with tg4:
+        flt_not_clocked = st.toggle("Not Clocked-In", value=st.session_state.get("flt_not_clocked", False), key="flt_not_clocked")
+with ctrl_dept_col:
+    dept_options = ["(any)"] + sorted(pretty["Hiring Department"].dropna().astype(str).unique().tolist())
+    dept_pick = st.selectbox("Department", options=dept_options, index=0, key="dept_pick")
+with ctrl_clear_col:
+    if st.button("Clear All Filters"):
+        # Reset new controls
+        st.session_state["search_q"] = ""
+        st.session_state["flt_not_scanned"] = False
+        st.session_state["flt_scanned_only"] = False
+        st.session_state["flt_clocked_only"] = False
+        st.session_state["flt_not_clocked"] = False
+        st.session_state["dept_pick"] = "(any)"
+        # Reset legacy expander filters (if present)
+        for legacy_key, default_val in [
+            ("Id contains", ""),
+            ("Name contains", ""),
+            ("Hiring Dept contains", ""),
+            ("Work Dept contains", ""),
+            ("Work Position contains", ""),
+            ("Scanned In", "(any)"),
+        ]:
+            if legacy_key in st.session_state:
+                st.session_state[legacy_key] = default_val
+        st.experimental_rerun()
+
+# Apply new controls to the table
+if search_q:
+    mask_any = filtered_pretty.astype(str).apply(lambda c: c.str.contains(search_q, case=False, na=False))
+    filtered_pretty = filtered_pretty[mask_any.any(axis=1)]
+
+if flt_scanned_only:
+    filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == True]
+elif flt_not_scanned:
+    filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == False]
+
+if flt_clocked_only:
+    filtered_pretty = filtered_pretty[filtered_pretty["Clocked In"] == True]
+elif flt_not_clocked:
+    filtered_pretty = filtered_pretty[filtered_pretty["Clocked In"] == False]
+
+if dept_pick != "(any)":
+    filtered_pretty = filtered_pretty[filtered_pretty["Hiring Department"] == dept_pick]
 
 st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
