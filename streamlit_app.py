@@ -18,8 +18,8 @@ def _set_query_param_t():
 # ---------------------------
 # 0) PAGE & REFRESH
 # ---------------------------
-st.set_page_config(page_title="Live Floor Tracking", layout="wide")
-st.title("Live Floor Tracking")
+st.set_page_config(page_title="Scan2Job Live Floor Tracking", layout="wide")
+st.title("Scan2Job Live Floor Tracking")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
@@ -130,15 +130,16 @@ def metric_tile(
         else:
             freshness_text = f"{seconds // 3600}h"
 
+    # Events note (no color signal; visually deemphasized later)
     if title == "On Floor":
-        dot = "🟢"; events = "Clock, Scan"
+        events = "Clock, Scan"
     elif title == "Scanned In":
-        dot = "🟢"; events = "Scan"
+        events = "Scan"
     else:
-        dot = "🟡"; events = "Clock, Scan"
+        events = "Clock, Scan"
 
     # Single expander header includes title/count and freshness; content shows default breakdown table
-    header_text = f"{title} — {total_associates}    {dot} Freshness {freshness_text} · Events: {events}"
+    header_text = f"{title} — {total_associates}    <span style='font-size:0.85rem; color:#6b7280'>Freshness {freshness_text} · Events: {events}</span>"
     with st.expander(header_text, expanded=False):
         group_col = "job_department"
         if group_col in subset.columns:
