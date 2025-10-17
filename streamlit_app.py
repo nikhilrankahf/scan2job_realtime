@@ -233,7 +233,12 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         "Fulfillment Training": "Fulfillment Training",
         "FSQ": "Quality",
         "Sanitation": "Sanitation",
-        "Shipping": "Sanitation",
+        "Shipping": "Shipping",
+    }
+    # Sub-departments for expansion (by Job Department)
+    subdepts_by_job = {
+        "Production": ["Assembly", "Kitting", "Site Support"],
+        "Other": ["Admin", "HR/Admin"],
     }
 
     lcol, rcol = st.columns([1, 1])
@@ -246,26 +251,49 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
             st.info("No scanned-in associates.")
         else:
             scanned_df["job_group"] = scanned_df["work_department"].map(map_work_to_job).fillna("Other")
+            # Order departments to match On Floor Headcount tiles
+            try:
+                onfloor_order = (
+                    df[df["on_floor"]]
+                    .fillna({"job_department": "—"})
+                    .groupby("job_department")["associate_id"].nunique()
+                    .sort_values(ascending=False)
+                    .index
+                    .tolist()
+                )
+            except Exception:
+                onfloor_order = []
+
             by_group = (
-                scanned_df.groupby("job_group")["associate_id"].nunique()
-                .sort_values(ascending=False)
-                .reset_index()
+                scanned_df.groupby("job_group")["associate_id"].nunique().reset_index()
                 .rename(columns={"job_group": "Department", "associate_id": "Associates"})
             )
-            # Render expandable rows
+            if onfloor_order:
+                # Keep only present departments, in that specific order
+                by_group["Department"] = pd.Categorical(by_group["Department"], categories=onfloor_order, ordered=True)
+                by_group = by_group.sort_values(["Department"], na_position="last")
+            else:
+                by_group = by_group.sort_values("Associates", ascending=False)
+
+            # Render rows: expandable only when there are sub-departments
             for _, row in by_group.iterrows():
                 dept = str(row["Department"]) 
                 cnt = int(row["Associates"]) 
-                with st.expander(f"{dept} — {cnt}", expanded=False):
-                    sub = scanned_df[scanned_df["job_group"] == dept]
-                    sub_table = (
-                        sub.fillna({"work_department": "—"})
-                        .groupby("work_department")["associate_id"].nunique()
-                        .sort_values(ascending=False)
-                        .reset_index()
-                        .rename(columns={"work_department": "Sub-Department", "associate_id": "Associates"})
-                    )
-                    st.dataframe(sub_table, use_container_width=True, hide_index=True)
+                valid_subs = subdepts_by_job.get(dept, [])
+                sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department"].isin(valid_subs))]
+                if not valid_subs or sub.empty:
+                    # No sub-departments to drill; render static row
+                    st.markdown(f"**{dept}** — {cnt}")
+                else:
+                    with st.expander(f"{dept} — {cnt}", expanded=False):
+                        sub_table = (
+                            sub.fillna({"work_department": "—"})
+                            .groupby("work_department")["associate_id"].nunique()
+                            .sort_values(ascending=False)
+                            .reset_index()
+                            .rename(columns={"work_department": "Sub-Department", "associate_id": "Associates"})
+                        )
+                        st.dataframe(sub_table, use_container_width=True, hide_index=True)
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
