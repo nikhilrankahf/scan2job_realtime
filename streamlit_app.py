@@ -257,6 +257,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         scanned_df = df[(df.get("scanned_in", False)) & (~ignore_mask)].copy()
         scanned_total = int(scanned_df["associate_id"].nunique()) if not scanned_df.empty else 0
         st.subheader(f"Scanned-in Breakdown ({scanned_total})")
+        st.caption("Last updated at 15 Oct, 7:32:13am")
         if scanned_df.empty:
             st.info("No scanned-in associates.")
         else:
@@ -311,6 +312,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         non_scanned_df = df[non_scanned_mask].copy()
         non_scanned_total = int(non_scanned_df["associate_id"].nunique()) if not non_scanned_df.empty else 0
         st.subheader(f"Non-Scanned Breakdown ({non_scanned_total})")
+        st.caption("Last updated at 15 Oct, 7:32:13am")
         if non_scanned_df.empty:
             st.info("No non-scanned associates.")
         else:
@@ -396,6 +398,7 @@ if scanned_choice != "(any)":
 
 # Dynamic title with count inline with filters
 title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
+st.caption("Last updated at 15 Oct, 7:32:13am")
 st.markdown(
     "<div style='font-size:0.85rem; color:#6b7280; margin:-6px 0 6px 0'>Freshness 1m · Events: Clock, Scan</div>",
     unsafe_allow_html=True,
