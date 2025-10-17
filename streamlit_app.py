@@ -152,6 +152,29 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     people_df["on_floor"] = people_df["associate_id"].astype(str).isin(on_floor_ids)
     people_df["scanned_in"] = people_df["associate_id"].astype(str).isin(scanned_ids)
     people_df["unscanned"] = people_df["associate_id"].astype(str).isin(unscanned_ids)
+
+    # Compute 'clocked_in' using full event history: latest Workday 'Punch in' with no later 'Punch out'
+    try:
+        src_lower = df["SOURCE"].astype(str).str.casefold()
+        pos_lower = df["WORK_POSITION"].astype(str).str.casefold()
+        wd_df = df[src_lower.eq("workday")].copy()
+        wd_df["START_TIME_LOCAL"] = pd.to_datetime(wd_df["START_TIME_LOCAL"], errors="coerce")
+        punch_in_ts = (
+            wd_df[pos_lower[wd_df.index].eq("punch in")]
+            .groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].max()
+        )
+        punch_out_ts = (
+            wd_df[pos_lower[wd_df.index].eq("punch out")]
+            .groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].max()
+        )
+        union_idx = punch_in_ts.index.union(punch_out_ts.index)
+        in_ts = punch_in_ts.reindex(union_idx)
+        out_ts = punch_out_ts.reindex(union_idx)
+        clocked_series = in_ts.notna() & (out_ts.isna() | (in_ts > out_ts))
+        clocked_ids = set(clocked_series[clocked_series].index.astype(str))
+        people_df["clocked_in"] = people_df["associate_id"].astype(str).isin(clocked_ids)
+    except Exception:
+        people_df["clocked_in"] = False
     return people_df
 
 # ---------------------------
@@ -352,13 +375,13 @@ filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
 pretty = filtered[[
-    "associate_id","associate_name","job_department","shift_type","shift_cohort","scanned_in","work_department","work_position","last_activity_ts"
+    "associate_id","associate_name","job_department","shift_type","clocked_in","scanned_in","work_department","work_position","last_activity_ts"
 ]].rename(columns={
     "associate_id":"Id",
     "associate_name":"Name",
     "job_department":"Hiring Department",
     "shift_type":"Shift Type",
-    "shift_cohort":"Shift Cohort",
+    "clocked_in":"Clocked In",
     "scanned_in":"Scanned In",
     "work_department":"Work Department",
     "work_position":"Work Position",
