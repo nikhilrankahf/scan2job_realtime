@@ -24,6 +24,59 @@ st.title("Scan2Job Live Floor Tracking")
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
 st.caption("Data as of 7:29:57")
+
+# ---------------------------
+# TOP: DEPARTMENT CARDS (On Floor by Hiring Department)
+# ---------------------------
+def render_department_cards(df: pd.DataFrame) -> None:
+    """Render a horizontal row of cards showing On Floor counts by hiring department.
+
+    Uses df columns: associate_id, job_department, on_floor.
+    """
+    try:
+        on_floor_df = df[df["on_floor"]].copy()
+    except Exception:
+        on_floor_df = df.copy()
+
+    if on_floor_df.empty:
+        return
+
+    card_counts = (
+        on_floor_df.fillna({"job_department": "—"})
+        .groupby("job_department")["associate_id"].nunique()
+        .sort_values(ascending=False)
+        .reset_index()
+    )
+
+    now_time = datetime.now().strftime("%H:%M:%S")
+
+    # Lightweight CSS for horizontal cards with scroll
+    st.markdown(
+        """
+        <style>
+        .dept-cards { display:flex; gap:12px; overflow-x:auto; padding:6px 2px 10px 2px; margin: -6px 0 6px 0; }
+        .dept-card { min-width: 180px; background:#ffffff; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.08); padding:12px 14px; }
+        .dept-title { font-weight:600; font-size:0.95rem; margin:0 0 4px 0; }
+        .dept-count { font-size:28px; font-weight:700; margin:0 0 6px 0; }
+        .dept-caption { color:#6b7280; font-size:0.85rem; margin:0; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    cards_html_parts = ["<div class='dept-cards'>"]
+    for _, row in card_counts.iterrows():
+        dept = str(row["job_department"])  # Hiring department
+        cnt = int(row["associate_id"])     # Unique associates on floor
+        cards_html_parts.append(
+            f"<div class='dept-card'>"
+            f"<div class='dept-title'>{dept}</div>"
+            f"<div class='dept-count'>{cnt}</div>"
+            f"<div class='dept-caption'>Last updated at {now_time}</div>"
+            f"</div>"
+        )
+    cards_html_parts.append("</div>")
+    st.markdown("".join(cards_html_parts), unsafe_allow_html=True)
 st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
@@ -158,6 +211,8 @@ def metric_tile(
 # 2) READ / TRANSFORM
 # ---------------------------
 people_df = load_associates_from_csv()
+# NEW: Render department cards at top
+render_department_cards(people_df)
 last_update = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # CSV-driven model; tiles derive their own view
