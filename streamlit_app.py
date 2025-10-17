@@ -178,19 +178,6 @@ with left:
         use_container_width=True,
         hide_index=True
     )
-    # Simple “dropdown” drill: pick a department and show its sub-rows
-    picked_dept = st.selectbox("Drill into sub-department", ["(none)"] + dept_table["department"].tolist())
-    if picked_dept != "(none)":
-        st.caption(f"Associates scanned in {picked_dept}")
-        drill = people_df[people_df["scanned_department"].fillna("—") == picked_dept]
-        st.dataframe(
-            drill[["associate_id","associate_name","wd_department","scanned_department",
-                   "work_position","staleness_s"]].rename(columns={
-                "associate_id":"ID","associate_name":"Name","wd_department":"Hiring Dept",
-                "scanned_department":"Scanned Dept","work_position":"Work Position","staleness_s":"Stale (s)"
-            }),
-            use_container_width=True, hide_index=True
-        )
 
 # RIGHT: Vertically stacked tiles using reusable component
 with right:
