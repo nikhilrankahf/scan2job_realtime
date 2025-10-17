@@ -103,29 +103,17 @@ def metric_tile(
     flag_col = title_to_flag[title]
     subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
-    st.markdown(
-        f"<div style='font-size:1.25rem; font-weight:700; margin:0 0 6px 0'>{title}</div>",
-        unsafe_allow_html=True,
-    )
 
-    # Number (left) and accordion (right)
-    num_col, accord_col = st.columns([6, 1])
-    with num_col:
-        st.markdown(
-            f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin:0 0 8px 0'>{total_associates}</div>",
-            unsafe_allow_html=True,
+    # Single expander: header shows title and headcount; expanding reveals department table
+    with st.expander(f"{title} — {total_associates}", expanded=False):
+        breakdown_df = (
+            subset.fillna({"wd_department": "—"})
+            .groupby("wd_department")["associate_id"].nunique()
+            .sort_values(ascending=False)
+            .reset_index()
         )
-    with accord_col:
-        # Collapsed by default; opens to show Job Department breakdown
-        with st.expander("", expanded=False):
-            breakdown_df = (
-                subset.fillna({"wd_department": "—"})
-                .groupby("wd_department")["associate_id"].nunique()
-                .sort_values(ascending=False)
-                .reset_index()
-            )
-            breakdown_df.columns = ["Job Department", "Associates"]
-            st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+        breakdown_df.columns = ["Job Department", "Associates"]
+        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # Rules (edit thresholds to your SLOs)
 FLOOR_WINDOW_MIN = 10   # "On floor" if clock OR scan event seen in last X minutes
