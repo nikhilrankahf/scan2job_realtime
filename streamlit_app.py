@@ -23,8 +23,7 @@ st.title("Scan2Job Live Floor Tracking")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
-_now_time = datetime.now().strftime("%H:%M:%S")
-st.caption(f"Data as of {_now_time}")
+st.caption("Data as of 7:29:57")
 st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
@@ -290,13 +289,8 @@ if scanned_choice != "(any)":
 
 # Dynamic title with count inline with filters
 title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
-try:
-    latest_ts_tbl = pd.to_datetime(filtered_pretty["Last Activity Timestamp"]).max()
-    latest_ts_label = latest_ts_tbl.strftime("%I:%M:%S%p").lstrip("0").lower() if pd.notna(latest_ts_tbl) else "—"
-except Exception:
-    latest_ts_label = "—"
 st.markdown(
-    f"<div style='color:#6b7280; margin:-6px 0 6px 0'>🟢 Freshness 7:30am - {latest_ts_label} · Events: Clock, Scan</div>",
+    "<div style='font-size:0.85rem; color:#6b7280; margin:-6px 0 6px 0'>Freshness 1m · Events: Clock, Scan</div>",
     unsafe_allow_html=True,
 )
 
