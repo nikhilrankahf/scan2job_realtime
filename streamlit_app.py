@@ -103,9 +103,12 @@ def metric_tile(
     flag_col = title_to_flag[title]
     subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
-    st.markdown(f"**{title}**")
     st.markdown(
-        f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin: 0 0 12px 0'>{total_associates}</div>",
+        f"<div style='font-size:1.25rem; font-weight:700; margin:0 0 6px 0'>{title}</div>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin:0 0 12px 0'>{total_associates}</div>",
         unsafe_allow_html=True,
     )
 
