@@ -260,7 +260,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         else:
             scanned_df["work_department_clean"] = scanned_df["work_department"].astype(str).str.strip()
             scanned_df["job_group"] = scanned_df["work_department_clean"].map(map_work_to_job).fillna("Other")
-            # Order departments to match On Floor Headcount tiles
+            # Order and ensure presence of all departments shown in On Floor Headcount
             try:
                 onfloor_order = (
                     df[df["on_floor"]]
@@ -273,21 +273,15 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
             except Exception:
                 onfloor_order = []
 
-            by_group = (
+            counts_df = (
                 scanned_df.groupby("job_group")["associate_id"].nunique().reset_index()
                 .rename(columns={"job_group": "Department", "associate_id": "Associates"})
             )
             if onfloor_order:
-                # Build a stable order that follows the tile order and appends any others at the end ("Other" last)
-                order_map = {d: i for i, d in enumerate(onfloor_order)}
-                def order_key(val: str) -> int:
-                    name = str(val)
-                    base = order_map.get(name, len(order_map) + 1)
-                    # push Other to the very end
-                    return base if name != "Other" else 10_000
-                by_group = by_group.sort_values(by="Department", key=lambda s: s.map(order_key))
+                template_df = pd.DataFrame({"Department": onfloor_order})
+                by_group = template_df.merge(counts_df, on="Department", how="left").fillna({"Associates": 0})
             else:
-                by_group = by_group.sort_values("Associates", ascending=False)
+                by_group = counts_df.sort_values("Associates", ascending=False)
 
             # Render rows: expandable only when there are sub-departments
             for _, row in by_group.iterrows():
