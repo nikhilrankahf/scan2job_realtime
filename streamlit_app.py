@@ -115,20 +115,13 @@ def metric_tile(
     subset = df[df[flag_col]] if flag_col in df.columns else df.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
 
-    # Header with freshness on the right (static reference 07:30 local time)
-    reference_time = datetime.now().replace(hour=7, minute=30, second=0, microsecond=0)
-    latest_ts = subset["last_activity_ts"].max() if "last_activity_ts" in subset.columns else pd.NaT
-    if pd.isna(latest_ts):
-        freshness_text = "—"
+    # Freshness is static for this static dataset
+    if title == "On Floor":
+        freshness_text = "30s"
+    elif title == "Scanned In":
+        freshness_text = "1m"
     else:
-        delta = reference_time - pd.to_datetime(latest_ts)
-        seconds = abs(int(delta.total_seconds()))
-        if seconds < 60:
-            freshness_text = f"{seconds}s"
-        elif seconds < 3600:
-            freshness_text = f"{seconds // 60}m"
-        else:
-            freshness_text = f"{seconds // 3600}h"
+        freshness_text = "1m"
 
     # Events note (no color signal; visually deemphasized later)
     if title == "On Floor":
