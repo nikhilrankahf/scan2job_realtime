@@ -184,7 +184,6 @@ with right:
 # 4) BOTTOM: PEOPLE TABLE (detail)
 # ---------------------------
 st.markdown("---")
-st.subheader("Latest Associate Activity")
 filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
@@ -200,9 +199,10 @@ pretty = filtered[[
     "last_activity_ts":"Last Activity Timestamp",
 })
 
-# Compact filter icon (expander) aligned above the table (top-right)
-controls_left, controls_right = st.columns([1, 1])
-with controls_right:
+# Title + compact filter icon (top row)
+title_left, title_right = st.columns([1, 1])
+title_placeholder = title_left.empty()
+with title_right:
     with st.expander("🔍 Filters", expanded=False):
         f1, f2, f3 = st.columns(3)
         with f1:
@@ -229,6 +229,9 @@ if work_pos_q:
 if scanned_choice != "(any)":
     val = scanned_choice == "Yes"
     filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
+
+# Dynamic title with count inline with filters
+title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
 
 st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
