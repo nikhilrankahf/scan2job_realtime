@@ -217,6 +217,74 @@ def metric_tile(
 people_df = load_associates_from_csv()
 # NEW: Render department cards at top
 render_department_cards(people_df)
+
+# ---------------------------
+# MIDDLE: SCANNED / NON-SCANNED BREAKDOWNS (NEW SECTION)
+# ---------------------------
+def render_mid_breakdowns(df: pd.DataFrame) -> None:
+    # Ignore Compliance and Time Card punch work departments
+    work_dept_series = df.get("work_department", pd.Series([None] * len(df))).astype(str)
+    ignore_mask = work_dept_series.str.casefold().eq("compliance") | work_dept_series.str.lower().str.contains("time card")
+
+    # Mapping from Work Department -> Job Department (group)
+    map_work_to_job = {
+        "Production": "Production",
+        "Warehouse": "Warehouse",
+        "Fulfillment Training": "Fulfillment Training",
+        "FSQ": "Quality",
+        "Sanitation": "Sanitation",
+        "Shipping": "Sanitation",
+    }
+
+    lcol, rcol = st.columns([1, 1])
+
+    # LEFT: Scanned-In Breakdown with per-row drilldown to sub-departments (work departments)
+    with lcol:
+        st.subheader("Scanned-In Breakdown")
+        scanned_df = df[(df.get("scanned_in", False)) & (~ignore_mask)].copy()
+        if scanned_df.empty:
+            st.info("No scanned-in associates.")
+        else:
+            scanned_df["job_group"] = scanned_df["work_department"].map(map_work_to_job).fillna("Other")
+            by_group = (
+                scanned_df.groupby("job_group")["associate_id"].nunique()
+                .sort_values(ascending=False)
+                .reset_index()
+                .rename(columns={"job_group": "Department", "associate_id": "Associates"})
+            )
+            # Render expandable rows
+            for _, row in by_group.iterrows():
+                dept = str(row["Department"]) 
+                cnt = int(row["Associates"]) 
+                with st.expander(f"{dept} — {cnt}", expanded=False):
+                    sub = scanned_df[scanned_df["job_group"] == dept]
+                    sub_table = (
+                        sub.fillna({"work_department": "—"})
+                        .groupby("work_department")["associate_id"].nunique()
+                        .sort_values(ascending=False)
+                        .reset_index()
+                        .rename(columns={"work_department": "Sub-Department", "associate_id": "Associates"})
+                    )
+                    st.dataframe(sub_table, use_container_width=True, hide_index=True)
+
+    # RIGHT: Non-Scanned Breakdown (simple table by job department)
+    with rcol:
+        st.subheader("Non-Scanned Breakdown")
+        non_scanned_mask = df.get("on_floor", False) & (~df.get("scanned_in", False))
+        non_scanned_df = df[non_scanned_mask].copy()
+        if non_scanned_df.empty:
+            st.info("No non-scanned associates.")
+        else:
+            table = (
+                non_scanned_df.fillna({"job_department": "—"})
+                .groupby("job_department")["associate_id"].nunique()
+                .sort_values(ascending=False)
+                .reset_index()
+                .rename(columns={"job_department": "Job Department", "associate_id": "Associates"})
+            )
+            st.dataframe(table, use_container_width=True, hide_index=True)
+
+render_mid_breakdowns(people_df)
 last_update = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # CSV-driven model; tiles derive their own view
