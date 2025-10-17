@@ -54,7 +54,7 @@ WORK_DEPT_GROUP_MAP = {
 def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv") -> pd.DataFrame:
     df = pd.read_csv(csv_path)
     # Ensure expected columns exist
-    expected_cols = {"ASSOCIATE_ID","Name","JOB_DEPARTMENT","SOURCE","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL"}
+    expected_cols = {"ASSOCIATE_ID","Name","JOB_DEPARTMENT","SOURCE","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE","SHIFT_COHORT"}
     missing = expected_cols.difference(df.columns)
     if missing:
         raise ValueError(f"CSV missing columns: {sorted(missing)}")
@@ -64,7 +64,7 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     df_sorted = df.sort_values(["ASSOCIATE_ID","START_TIME_LOCAL"]).dropna(subset=["ASSOCIATE_ID"])  # type: ignore
     latest_idx = df_sorted.groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].idxmax()
     latest = df_sorted.loc[latest_idx, [
-        "ASSOCIATE_ID","Name","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL"
+        "ASSOCIATE_ID","Name","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE","SHIFT_COHORT"
     ]].rename(columns={
         "ASSOCIATE_ID":"associate_id",
         "Name":"associate_name",
@@ -72,6 +72,8 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
         "WORK_DEPARTMENT":"work_department",
         "WORK_POSITION":"work_position",
         "START_TIME_LOCAL":"last_activity_ts",
+        "SHIFT_TYPE":"shift_type",
+        "SHIFT_COHORT":"shift_cohort",
     })
 
     # Flags by associate (any record matching condition)
@@ -245,11 +247,13 @@ filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
 pretty = filtered[[
-    "associate_id","associate_name","job_department","scanned_in","work_department","work_position","last_activity_ts"
+    "associate_id","associate_name","job_department","shift_type","shift_cohort","scanned_in","work_department","work_position","last_activity_ts"
 ]].rename(columns={
     "associate_id":"Id",
     "associate_name":"Name",
     "job_department":"Hiring Department",
+    "shift_type":"Shift Type",
+    "shift_cohort":"Shift Cohort",
     "scanned_in":"Scanned In",
     "work_department":"Work Department",
     "work_position":"Work Position",
