@@ -66,6 +66,88 @@ def get_live_associate_rows() -> pd.DataFrame:
     df["staleness_s"] = (datetime.now(timezone.utc) - df["last_activity_ts"]).dt.total_seconds().round().astype(int)
     return df
 
+# ---------------------------
+# Metric Tile Component
+# ---------------------------
+def _inject_metric_tile_css() -> None:
+    st.markdown(
+        """
+        <style>
+        .metric-card { background: #ffffff; border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.08); padding: 16px; margin-bottom: 16px; }
+        .metric-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+        .metric-title { font-weight: 700; font-size: 1rem; margin: 0; }
+        .big-total { font-size: 48px; font-weight: 600; line-height: 1.1; margin: 6px 0 10px 0; }
+        .metric-updated { text-align: right; color: #6b7280; font-size: 0.8rem; margin-top: 6px; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+def _compute_flags_for_tile(df: pd.DataFrame, floor_window_min: int, inpos_window_min: int) -> pd.DataFrame:
+    now = datetime.now(timezone.utc)
+    out = df.copy()
+    if "scanned_department" not in out.columns:
+        out["scanned_department"] = pd.Series([None] * len(out))
+    out["last_activity_ts"] = pd.to_datetime(out["last_activity_ts"], utc=True)
+    on_floor = (
+        (out["has_clock"].fillna(False) | out["has_scan"].fillna(False)) &
+        ((now - out["last_activity_ts"]) <= timedelta(minutes=floor_window_min))
+    )
+    in_position = (
+        out["scanned_department"].notna() &
+        ((now - out["last_activity_ts"]) <= timedelta(minutes=inpos_window_min))
+    )
+    out["on_floor"] = on_floor
+    out["in_position"] = in_position
+    out["unscanned"] = on_floor & (~in_position)
+    return out
+
+def metric_tile(
+    df: pd.DataFrame,
+    title: str,
+    group_options: dict[str, str] | None = None,
+    default_group: str = "Job Department",
+    floor_window_min: int = 10,
+    inpos_window_min: int = 5,
+) -> None:
+    _inject_metric_tile_css()
+    if group_options is None:
+        group_options = {"Job Department": "wd_department", "Sub-Department": "scanned_department"}
+    filtered = _compute_flags_for_tile(df, floor_window_min=floor_window_min, inpos_window_min=inpos_window_min)
+    title_to_flag = {"On Floor": "on_floor", "Scanned In": "in_position", "Unscanned": "unscanned"}
+    if title not in title_to_flag:
+        raise ValueError("title must be one of 'On Floor' | 'Scanned In' | 'Unscanned'")
+    flag_col = title_to_flag[title]
+    subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
+    total_associates = int(subset["associate_id"].nunique())
+    st.markdown("<div class='metric-card'>", unsafe_allow_html=True)
+    header_cols = st.columns([1, 1])
+    with header_cols[0]:
+        st.markdown(f"<div class='metric-header'><div class='metric-title'>{title}</div></div>", unsafe_allow_html=True)
+    with header_cols[1]:
+        group_display_names = list(group_options.keys())
+        default_index = group_display_names.index(default_group) if default_group in group_display_names else 0
+        chosen_display = st.selectbox(
+            "Breakdown",
+            options=group_display_names,
+            index=default_index,
+            key=f"metric_tile_breakdown_{title}",
+        )
+    st.markdown(f"<div class='big-total'>{total_associates}</div>", unsafe_allow_html=True)
+    group_col = group_options[chosen_display]
+    if group_col not in subset.columns:
+        breakdown_df = pd.DataFrame({chosen_display: [], "Associates": []})
+    else:
+        breakdown_df = (
+            subset.groupby(group_col)["associate_id"].nunique().sort_values(ascending=False).reset_index()
+        )
+        breakdown_df.columns = [chosen_display, "Associates"]
+    with st.expander("Breakdown details"):
+        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+    now_local = datetime.now().strftime("%H:%M:%S")
+    st.markdown(f"<div class='metric-updated'>Last updated {now_local}</div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
 # Rules (edit thresholds to your SLOs)
 FLOOR_WINDOW_MIN = 10   # "On floor" if clock OR scan event seen in last X minutes
 IN_POSITION_WINDOW_MIN = 5  # "In-position" if scanned into a valid position in last Y minutes
@@ -164,37 +246,33 @@ with left:
             use_container_width=True, hide_index=True
         )
 
-# RIGHT: Vertically stacked tiles
+# RIGHT: Vertically stacked tiles using reusable component
 with right:
     st.subheader("Live Tiles")
-
-    # Minimal CSS for card styling and large numbers
-    st.markdown(
-        """
-        <style>
-        .tile-card {background: #ffffff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 16px;}
-        .tile-title {font-size: 1.0rem; font-weight: 600; margin: 0 0 6px 0;}
-        .tile-number {font-size: 2.2rem; font-weight: 700; margin: 0 0 8px 0;}
-        </style>
-        """,
-        unsafe_allow_html=True,
+    metric_tile(
+        people_df,
+        title="On Floor",
+        group_options={"Job Department": "wd_department", "Sub-Department": "scanned_department"},
+        default_group="Job Department",
+        floor_window_min=FLOOR_WINDOW_MIN,
+        inpos_window_min=IN_POSITION_WINDOW_MIN,
     )
-
-    def render_tile(title: str, metric_key: str):
-        summary = metric_summaries[metric_key]
-        count = summary["count"]
-        breakdown = summary["breakdown"]
-        with st.container():
-            st.markdown("<div class='tile-card'>", unsafe_allow_html=True)
-            st.markdown(f"<div class='tile-title'>{title}</div>", unsafe_allow_html=True)
-            st.markdown(f"<div class='tile-number'>{count}</div>", unsafe_allow_html=True)
-            with st.expander("Hiring department breakdown"):
-                st.dataframe(breakdown, use_container_width=True, hide_index=True)
-            st.markdown("</div>", unsafe_allow_html=True)
-
-    render_tile("On Floor", "on_floor")
-    render_tile("Scanned In", "in_position")
-    render_tile("Unscanned", "unscanned")
+    metric_tile(
+        people_df,
+        title="Scanned In",
+        group_options={"Job Department": "wd_department", "Sub-Department": "scanned_department"},
+        default_group="Job Department",
+        floor_window_min=FLOOR_WINDOW_MIN,
+        inpos_window_min=IN_POSITION_WINDOW_MIN,
+    )
+    metric_tile(
+        people_df,
+        title="Unscanned",
+        group_options={"Job Department": "wd_department", "Sub-Department": "scanned_department"},
+        default_group="Job Department",
+        floor_window_min=FLOOR_WINDOW_MIN,
+        inpos_window_min=IN_POSITION_WINDOW_MIN,
+    )
 
     st.caption(f"Data as of **{last_update}** (local time)")
     st.caption("P95 freshness (placeholder): 40–60s · Completeness (placeholder): 95–97%")
