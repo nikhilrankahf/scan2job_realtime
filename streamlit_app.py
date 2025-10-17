@@ -304,10 +304,17 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 .rename(columns={"job_group": "Department", "associate_id": "Associates"})
             )
             if onfloor_order:
-                template_df = pd.DataFrame({"Department": onfloor_order})
+                ordered_depts = list(onfloor_order)
+                if "Other" not in ordered_depts:
+                    ordered_depts.append("Other")
+                template_df = pd.DataFrame({"Department": ordered_depts})
                 by_group = template_df.merge(counts_df, on="Department", how="left").fillna({"Associates": 0})
             else:
-                by_group = counts_df.sort_values("Associates", ascending=False)
+                present = [d for d in counts_df["Department"].astype(str).unique().tolist() if d != "Other"]
+                present.sort()
+                ordered_depts = present + ["Other"]
+                template_df = pd.DataFrame({"Department": ordered_depts})
+                by_group = template_df.merge(counts_df, on="Department", how="left").fillna({"Associates": 0})
 
             # Render rows: expandable only when there are sub-departments
             for _, row in by_group.iterrows():
