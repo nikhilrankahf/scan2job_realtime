@@ -91,8 +91,8 @@ def _compute_flags_for_tile(df: pd.DataFrame, floor_window_min: int, inpos_windo
 def metric_tile(
     df: pd.DataFrame,
     title: str,
-    group_options: dict[str, str] | None = None,  # unused in minimal view
-    default_group: str = "Job Department",        # unused in minimal view
+    group_options: dict[str, str] | None = None,
+    default_group: str = "Job Department",
     floor_window_min: int = 10,
     inpos_window_min: int = 5,
 ) -> None:
@@ -103,39 +103,37 @@ def metric_tile(
     flag_col = title_to_flag[title]
     subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
-    header_left, header_right = st.columns([1, 1])
-    with header_left:
-        st.markdown(
-            f"<div style='font-size:1.25rem; font-weight:700; margin:0 0 6px 0'>{title}</div>",
-            unsafe_allow_html=True,
-        )
-    with header_right:
-        if group_options is None:
-            group_options = {"Job Department": "wd_department", "Sub-Department": "scanned_department"}
-        group_display_names = list(group_options.keys())
-        default_index = group_display_names.index(default_group) if default_group in group_display_names else 0
-        chosen_display = st.selectbox(
-            "Breakdown",
-            options=group_display_names,
-            index=default_index,
-            key=f"metric_tile_breakdown_{title}",
-        )
+    st.markdown(
+        f"<div style='font-size:1.25rem; font-weight:700; margin:0 0 6px 0'>{title}</div>",
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin:0 0 8px 0'>{total_associates}</div>",
         unsafe_allow_html=True,
     )
 
-    group_col = group_options[chosen_display]
-    if group_col in subset.columns:
-        breakdown_df = (
-            subset.groupby(group_col)["associate_id"].nunique().sort_values(ascending=False).reset_index()
+    # Collapsible breakdown within tile (default collapsed)
+    with st.expander("Breakdown", expanded=False):
+        if group_options is None:
+            group_options = {"Job Department": "wd_department", "Sub-Department": "scanned_department"}
+        group_display_names = list(group_options.keys())
+        default_index = group_display_names.index(default_group) if default_group in group_display_names else 0
+        chosen_display = st.selectbox(
+            "Group by",
+            options=group_display_names,
+            index=default_index,
+            key=f"metric_tile_breakdown_{title}",
         )
-        breakdown_df.columns = [chosen_display, "Associates"]
-    else:
-        breakdown_df = pd.DataFrame({chosen_display: [], "Associates": []})
-
-    st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
+        group_col = group_options[chosen_display]
+        if group_col in subset.columns:
+            breakdown_df = (
+                subset.groupby(group_col)["associate_id"].nunique().sort_values(ascending=False).reset_index()
+            )
+            breakdown_df.columns = [chosen_display, "Associates"]
+        else:
+            breakdown_df = pd.DataFrame({chosen_display: [], "Associates": []})
+        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # Rules (edit thresholds to your SLOs)
 FLOOR_WINDOW_MIN = 10   # "On floor" if clock OR scan event seen in last X minutes
