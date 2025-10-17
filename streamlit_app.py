@@ -38,6 +38,19 @@ time.sleep(REFRESH_SEC * 0.0)  # no-op; keep it simple. Use st_autorefresh if yo
 
 SCANNED_SOURCES = {"Badgr", "HighJump", "Pick to Light"}
 
+# Mapping of WORK_DEPARTMENT to Work Department Group for reporting
+WORK_DEPT_GROUP_MAP = {
+    "Admin": "Admin",
+    "HR/Admin": "Admin",
+    "Assembly": "Production",
+    "Kitting": "Production",
+    "Prep": "Production",
+    "Site Support": "Production",
+    "Warehouse": "Warehouse",
+    "Shipping": "Shipping",
+    "FSQ": "Quality",
+}
+
 @st.cache_data(ttl=30)
 def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv") -> pd.DataFrame:
     df = pd.read_csv(csv_path)
@@ -163,16 +176,20 @@ left, right = st.columns([1.2, 1.0])
 # LEFT: Department table (current scanned headcount) with optional sub-dept drill
 with left:
     st.subheader("Department-level Scanned Count")
+    # Apply grouping to Work Department
+    work_grouped = people_df.copy()
+    work_grouped["work_department_group"] = work_grouped["work_department"].map(WORK_DEPT_GROUP_MAP).fillna(
+        work_grouped["work_department"].fillna("—")
+    )
     dept_table = (
-        people_df[people_df["scanned_in"]]
-        .fillna({"job_department": "—"})
-        .groupby("job_department")["associate_id"].nunique()
+        work_grouped[work_grouped["scanned_in"]]
+        .groupby("work_department_group")["associate_id"].nunique()
         .rename("scanned_in_count")
         .reset_index()
         .sort_values("scanned_in_count", ascending=False)
     )
     dept_table = dept_table.rename(columns={
-        "job_department": "Hiring Department",
+        "work_department_group": "Work Department Group",
         "scanned_in_count": "Associates Scanned-in",
     })
     st.dataframe(
