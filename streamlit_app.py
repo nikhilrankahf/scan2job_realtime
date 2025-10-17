@@ -295,11 +295,11 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 cnt = int(row["Associates"]) 
                 valid_subs = subdepts_by_job.get(dept, [])
                 sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department_clean"].isin(valid_subs))]
-                if not valid_subs or sub.empty:
-                    # No sub-departments to drill; render static row
-                    st.markdown(f"**{dept}** — {cnt}")
-                else:
-                    with st.expander(f"{dept} — {cnt}", expanded=False):
+                with st.expander(f"{dept} — {cnt}", expanded=False):
+                    if sub.empty:
+                        # Uniform UX: show department itself as the single row when no sub-departments
+                        sub_table = pd.DataFrame({"Sub-Department": [dept], "Associates": [cnt]})
+                    else:
                         sub_table = (
                             sub.fillna({"work_department_clean": "—"})
                             .groupby("work_department_clean")["associate_id"].nunique()
@@ -307,7 +307,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                             .reset_index()
                             .rename(columns={"work_department_clean": "Sub-Department", "associate_id": "Associates"})
                         )
-                        st.dataframe(sub_table, use_container_width=True, hide_index=True)
+                    st.dataframe(sub_table, use_container_width=True, hide_index=True)
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
