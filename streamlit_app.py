@@ -111,8 +111,6 @@ def metric_tile(
     inpos_window_min: int = 5,
 ) -> None:
     _inject_metric_tile_css()
-    if group_options is None:
-        group_options = {"Job Department": "wd_department", "Sub-Department": "scanned_department"}
     filtered = _compute_flags_for_tile(df, floor_window_min=floor_window_min, inpos_window_min=inpos_window_min)
     title_to_flag = {"On Floor": "on_floor", "Scanned In": "in_position", "Unscanned": "unscanned"}
     if title not in title_to_flag:
@@ -121,31 +119,8 @@ def metric_tile(
     subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
     st.markdown("<div class='metric-card'>", unsafe_allow_html=True)
-    header_cols = st.columns([1, 1])
-    with header_cols[0]:
-        st.markdown(f"<div class='metric-header'><div class='metric-title'>{title}</div></div>", unsafe_allow_html=True)
-    with header_cols[1]:
-        group_display_names = list(group_options.keys())
-        default_index = group_display_names.index(default_group) if default_group in group_display_names else 0
-        chosen_display = st.selectbox(
-            "Breakdown",
-            options=group_display_names,
-            index=default_index,
-            key=f"metric_tile_breakdown_{title}",
-        )
+    st.markdown(f"<div class='metric-header'><div class='metric-title'>{title}</div></div>", unsafe_allow_html=True)
     st.markdown(f"<div class='big-total'>{total_associates}</div>", unsafe_allow_html=True)
-    group_col = group_options[chosen_display]
-    if group_col not in subset.columns:
-        breakdown_df = pd.DataFrame({chosen_display: [], "Associates": []})
-    else:
-        breakdown_df = (
-            subset.groupby(group_col)["associate_id"].nunique().sort_values(ascending=False).reset_index()
-        )
-        breakdown_df.columns = [chosen_display, "Associates"]
-    with st.expander("Breakdown details"):
-        st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
-    now_local = datetime.now().strftime("%H:%M:%S")
-    st.markdown(f"<div class='metric-updated'>Last updated {now_local}</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 # Rules (edit thresholds to your SLOs)
