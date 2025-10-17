@@ -67,22 +67,8 @@ def get_live_associate_rows() -> pd.DataFrame:
     return df
 
 # ---------------------------
-# Metric Tile Component
+# Metric Tile Component (minimal: title + headcount)
 # ---------------------------
-def _inject_metric_tile_css() -> None:
-    st.markdown(
-        """
-        <style>
-        .metric-card { background: #ffffff; border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.08); padding: 16px; margin-bottom: 16px; }
-        .metric-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-        .metric-title { font-weight: 700; font-size: 1rem; margin: 0; }
-        .big-total { font-size: 48px; font-weight: 600; line-height: 1.1; margin: 6px 0 10px 0; }
-        .metric-updated { text-align: right; color: #6b7280; font-size: 0.8rem; margin-top: 6px; }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
 def _compute_flags_for_tile(df: pd.DataFrame, floor_window_min: int, inpos_window_min: int) -> pd.DataFrame:
     now = datetime.now(timezone.utc)
     out = df.copy()
@@ -105,12 +91,11 @@ def _compute_flags_for_tile(df: pd.DataFrame, floor_window_min: int, inpos_windo
 def metric_tile(
     df: pd.DataFrame,
     title: str,
-    group_options: dict[str, str] | None = None,
-    default_group: str = "Job Department",
+    group_options: dict[str, str] | None = None,  # unused in minimal view
+    default_group: str = "Job Department",        # unused in minimal view
     floor_window_min: int = 10,
     inpos_window_min: int = 5,
 ) -> None:
-    _inject_metric_tile_css()
     filtered = _compute_flags_for_tile(df, floor_window_min=floor_window_min, inpos_window_min=inpos_window_min)
     title_to_flag = {"On Floor": "on_floor", "Scanned In": "in_position", "Unscanned": "unscanned"}
     if title not in title_to_flag:
@@ -118,10 +103,11 @@ def metric_tile(
     flag_col = title_to_flag[title]
     subset = filtered[filtered[flag_col]] if flag_col in filtered.columns else filtered.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
-    st.markdown("<div class='metric-card'>", unsafe_allow_html=True)
-    st.markdown(f"<div class='metric-header'><div class='metric-title'>{title}</div></div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='big-total'>{total_associates}</div>", unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown(f"**{title}**")
+    st.markdown(
+        f"<div style='font-size:48px; font-weight:600; line-height:1.1; margin: 0 0 12px 0'>{total_associates}</div>",
+        unsafe_allow_html=True,
+    )
 
 # Rules (edit thresholds to your SLOs)
 FLOOR_WINDOW_MIN = 10   # "On floor" if clock OR scan event seen in last X minutes
