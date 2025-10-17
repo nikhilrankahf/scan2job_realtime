@@ -23,7 +23,7 @@ st.title("Scan2Job Live Floor Tracking")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
-st.caption("Data as of 7:29:57")
+# Removed per request: top-level fixed timestamp
 
 # ---------------------------
 # TOP: DEPARTMENT CARDS (On Floor by Hiring Department)
@@ -50,8 +50,9 @@ def render_department_cards(df: pd.DataFrame) -> None:
 
     now_time = datetime.now().strftime("%H:%M:%S")
 
-    # Section header and single timestamp (moved out of individual cards)
-    st.markdown("<div class='dept-section-header'>On Floor Headcount</div>", unsafe_allow_html=True)
+    # Section header with total on-floor headcount in brackets (match subheader style)
+    total_on_floor = int(on_floor_df["associate_id"].nunique())
+    st.subheader(f"On Floor Headcount ({total_on_floor})")
     st.caption(f"Last updated at {now_time}")
 
     # Lightweight CSS for horizontal cards with scroll
