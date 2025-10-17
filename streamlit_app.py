@@ -184,7 +184,7 @@ with right:
 # 4) BOTTOM: PEOPLE TABLE (detail)
 # ---------------------------
 st.markdown("---")
-st.subheader("Last Activity")
+st.subheader("Latest Associate Activity")
 filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
@@ -200,4 +200,29 @@ pretty = filtered[[
     "last_activity_ts":"Last Activity Timestamp",
 })
 st.dataframe(pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
+
+# Column filters
+with st.expander("Filter table", expanded=False):
+    filter_cols = ["Id","Name","Hiring Department","Scanned In","Work Department","Work Position"]
+    user_filters = {}
+    f1, f2, f3 = st.columns(3)
+    with f1:
+        user_filters["Id"] = st.text_input("Id contains", "").strip()
+        user_filters["Name"] = st.text_input("Name contains", "").strip()
+    with f2:
+        user_filters["Hiring Department"] = st.text_input("Hiring Dept contains", "").strip()
+        user_filters["Work Department"] = st.text_input("Work Dept contains", "").strip()
+    with f3:
+        user_filters["Work Position"] = st.text_input("Work Position contains", "").strip()
+        scanned_choice = st.selectbox("Scanned In", ["(any)", "Yes", "No"], index=0)
+
+    filtered_pretty = pretty.copy()
+    for col, substr in user_filters.items():
+        if substr:
+            filtered_pretty = filtered_pretty[filtered_pretty[col].astype(str).str.contains(substr, case=False, na=False)]
+    if scanned_choice != "(any)":
+        val = scanned_choice == "Yes"
+        filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
+
+    st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
