@@ -18,12 +18,13 @@ def _set_query_param_t():
 # ---------------------------
 # 0) PAGE & REFRESH
 # ---------------------------
-st.set_page_config(page_title="Live Floor Presence", layout="wide")
-st.title("Live Floor Presence")
+st.set_page_config(page_title="Live Floor Tracking", layout="wide")
+st.title("Live Floor Tracking")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
-st.caption(f"Data updates every {REFRESH_SEC}s")
+_now_time = datetime.now().strftime("%H:%M:%S")
+st.caption(f"Data as of {_now_time}")
 st_autorefresh = st.experimental_rerun if False else None
 _ = getattr(st, "data_editor", getattr(st, "experimental_data_editor", None))  # noqa: just to ensure Streamlit >=1.31
 
@@ -101,8 +102,36 @@ def metric_tile(
     subset = df[df[flag_col]] if flag_col in df.columns else df.iloc[0:0]
     total_associates = int(subset["associate_id"].nunique())
 
-    # Single expander: header shows title and headcount; expanding reveals department table
-    with st.expander(f"{title} — {total_associates}", expanded=False):
+    # Header with freshness on the right
+    now_local = datetime.now()
+    latest_ts = subset["last_activity_ts"].max() if "last_activity_ts" in subset.columns else pd.NaT
+    if pd.isna(latest_ts):
+        freshness_text = "—"
+    else:
+        delta = now_local - pd.to_datetime(latest_ts)
+        seconds = int(delta.total_seconds())
+        if seconds < 60:
+            freshness_text = f"{seconds}s"
+        elif seconds < 3600:
+            freshness_text = f"{seconds // 60}m"
+        else:
+            freshness_text = f"{seconds // 3600}h"
+
+    if title == "On Floor":
+        dot = "🟢"; events = "Clock, Scan"
+    elif title == "Scanned In":
+        dot = "🟢"; events = "Scan"
+    else:
+        dot = "🟡"; events = "Clock, Scan"
+
+    header_left, header_right = st.columns([1, 1])
+    with header_left:
+        st.markdown(f"**{title} — {total_associates}**")
+    with header_right:
+        st.markdown(f"<div style='text-align:right'>{dot} Freshness {freshness_text} · Events: {events}</div>", unsafe_allow_html=True)
+
+    # Expander shows department table
+    with st.expander("Breakdown", expanded=False):
         breakdown_df = (
             subset.fillna({"job_department": "—"})
             .groupby("job_department")["associate_id"].nunique()
@@ -143,6 +172,10 @@ with left:
         .reset_index()
         .sort_values("scanned_in_count", ascending=False)
     )
+    dept_table = dept_table.rename(columns={
+        "job_department": "Hiring Department",
+        "scanned_in_count": "Associates Scanned-in",
+    })
     st.dataframe(
         dept_table,
         use_container_width=True,
@@ -177,8 +210,7 @@ with right:
         inpos_window_min=0,
     )
 
-    st.caption(f"Data as of **{last_update}** (local time)")
-    st.caption("P95 freshness (placeholder): 40–60s · Completeness (placeholder): 95–97%")
+    
 
 # ---------------------------
 # 4) BOTTOM: PEOPLE TABLE (detail)
