@@ -280,11 +280,12 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
             if onfloor_order:
                 # Build a stable order that follows the tile order and appends any others at the end ("Other" last)
                 order_map = {d: i for i, d in enumerate(onfloor_order)}
-                def order_key(d: str) -> int:
-                    base = order_map.get(d, len(order_map) + 1)
+                def order_key(val: str) -> int:
+                    name = str(val)
+                    base = order_map.get(name, len(order_map) + 1)
                     # push Other to the very end
-                    return base if d != "Other" else 10_000
-                by_group = by_group.sort_values(key=lambda s: s.map(order_key))
+                    return base if name != "Other" else 10_000
+                by_group = by_group.sort_values(by="Department", key=lambda s: s.map(order_key))
             else:
                 by_group = by_group.sort_values("Associates", ascending=False)
 
