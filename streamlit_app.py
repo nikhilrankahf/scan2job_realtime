@@ -199,30 +199,33 @@ pretty = filtered[[
     "work_position":"Work Position",
     "last_activity_ts":"Last Activity Timestamp",
 })
-st.dataframe(pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
-# Column filters
-with st.expander("Filter table", expanded=False):
-    filter_cols = ["Id","Name","Hiring Department","Scanned In","Work Department","Work Position"]
-    user_filters = {}
-    f1, f2, f3 = st.columns(3)
-    with f1:
-        user_filters["Id"] = st.text_input("Id contains", "").strip()
-        user_filters["Name"] = st.text_input("Name contains", "").strip()
-    with f2:
-        user_filters["Hiring Department"] = st.text_input("Hiring Dept contains", "").strip()
-        user_filters["Work Department"] = st.text_input("Work Dept contains", "").strip()
-    with f3:
-        user_filters["Work Position"] = st.text_input("Work Position contains", "").strip()
-        scanned_choice = st.selectbox("Scanned In", ["(any)", "Yes", "No"], index=0)
+# Inline filters above the table
+f1, f2, f3 = st.columns(3)
+with f1:
+    id_q = st.text_input("Id contains", "").strip()
+    name_q = st.text_input("Name contains", "").strip()
+with f2:
+    hiring_q = st.text_input("Hiring Dept contains", "").strip()
+    work_dept_q = st.text_input("Work Dept contains", "").strip()
+with f3:
+    work_pos_q = st.text_input("Work Position contains", "").strip()
+    scanned_choice = st.selectbox("Scanned In", ["(any)", "Yes", "No"], index=0)
 
-    filtered_pretty = pretty.copy()
-    for col, substr in user_filters.items():
-        if substr:
-            filtered_pretty = filtered_pretty[filtered_pretty[col].astype(str).str.contains(substr, case=False, na=False)]
-    if scanned_choice != "(any)":
-        val = scanned_choice == "Yes"
-        filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
+filtered_pretty = pretty.copy()
+if id_q:
+    filtered_pretty = filtered_pretty[filtered_pretty["Id"].astype(str).str.contains(id_q, case=False, na=False)]
+if name_q:
+    filtered_pretty = filtered_pretty[filtered_pretty["Name"].astype(str).str.contains(name_q, case=False, na=False)]
+if hiring_q:
+    filtered_pretty = filtered_pretty[filtered_pretty["Hiring Department"].astype(str).str.contains(hiring_q, case=False, na=False)]
+if work_dept_q:
+    filtered_pretty = filtered_pretty[filtered_pretty["Work Department"].astype(str).str.contains(work_dept_q, case=False, na=False)]
+if work_pos_q:
+    filtered_pretty = filtered_pretty[filtered_pretty["Work Position"].astype(str).str.contains(work_pos_q, case=False, na=False)]
+if scanned_choice != "(any)":
+    val = scanned_choice == "Yes"
+    filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
 
-    st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
+st.dataframe(filtered_pretty.sort_values(["Hiring Department","Name"]), use_container_width=True, hide_index=True)
 
