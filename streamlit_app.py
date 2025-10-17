@@ -109,7 +109,7 @@ def metric_tile(
             .sort_values(ascending=False)
             .reset_index()
         )
-        breakdown_df.columns = ["Job Department", "Associates"]
+        breakdown_df.columns = ["Hiring Department", "Associates"]
         st.dataframe(breakdown_df, use_container_width=True, hide_index=True)
 
 # No legacy clock/scan rules; CSV defines the categories
