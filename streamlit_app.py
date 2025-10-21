@@ -164,12 +164,8 @@ def render_department_cards(df: pd.DataFrame) -> None:
         f"{_win_txt}.  \n\n"
         "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    # Use native subheader styling to match other sections, then append icon in a narrow column
-    col_t, col_i = st.columns([0.97, 0.03])
-    with col_t:
-        st.subheader(f"On Floor Headcount ({total_on_floor})")
-    with col_i:
-        render_header_with_info(title_text="", info_md=info_md)
+    # Use native subheader styling to match other sections
+    st.subheader(f"On Floor Headcount ({total_on_floor})")
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
