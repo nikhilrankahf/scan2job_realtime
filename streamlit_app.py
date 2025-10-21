@@ -1,5 +1,6 @@
 # app.py
 import time
+import hashlib
 from datetime import datetime, timedelta, timezone
 import pandas as pd
 import streamlit as st
@@ -27,6 +28,32 @@ def _password_gate() -> None:
     timeout_min = int(st.secrets.get("APP_PASSWORD_TIMEOUT_MIN", 30))
     now = datetime.now()
 
+    expected = str(st.secrets.get("APP_PASSWORD", ""))
+    token = hashlib.sha256(expected.encode()).hexdigest()[:16] if expected else ""
+
+    # Check URL auth token + timestamp to persist across full page reloads
+    try:
+        qp = st.experimental_get_query_params()
+    except Exception:
+        qp = {}
+    qp_auth = (qp.get("auth", [""]) or [""])[0]
+    qp_asu = (qp.get("asu", [""]) or [""])[0]
+    try:
+        qp_asu_ts = int(qp_asu)
+    except Exception:
+        qp_asu_ts = 0
+
+    if token and qp_auth == token and qp_asu_ts > 0:
+        if (now - datetime.fromtimestamp(qp_asu_ts)) <= timedelta(minutes=timeout_min):
+            st.session_state["__authed"] = True
+            st.session_state["__auth_ts"] = now
+            # refresh sliding window in URL
+            try:
+                st.experimental_set_query_params(auth=token, asu=str(int(time.time())))
+            except Exception:
+                pass
+            return
+
     # If already authed, enforce idle timeout using last auth timestamp
     if st.session_state.get("__authed", False) and st.session_state.get("__auth_ts") is not None:
         if (now - st.session_state["__auth_ts"]) <= timedelta(minutes=timeout_min):
@@ -42,10 +69,15 @@ def _password_gate() -> None:
         pw = st.text_input("Password", type="password")
         ok = st.form_submit_button("Login")
     if ok:
-        expected = str(st.secrets.get("APP_PASSWORD", ""))
         if pw and pw == expected:
             st.session_state["__authed"] = True
             st.session_state["__auth_ts"] = now
+            # Persist auth in URL so full reloads don't re-prompt within timeout
+            if token:
+                try:
+                    st.experimental_set_query_params(auth=token, asu=str(int(time.time())))
+                except Exception:
+                    pass
             st.success("Access granted")
             st.rerun()
         else:
