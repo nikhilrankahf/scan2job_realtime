@@ -33,11 +33,16 @@ def _password_gate() -> None:
 
     # Check URL auth token + timestamp to persist across full page reloads
     try:
-        qp = st.experimental_get_query_params()
+        qp = st.query_params
     except Exception:
         qp = {}
-    qp_auth = (qp.get("auth", [""]) or [""])[0]
-    qp_asu = (qp.get("asu", [""]) or [""])[0]
+    # st.query_params behaves like a dict of strings; handle lists defensively
+    def _first(val):
+        if isinstance(val, list):
+            return val[0] if val else ""
+        return val if isinstance(val, str) else ""
+    qp_auth = _first(qp.get("auth", ""))
+    qp_asu = _first(qp.get("asu", ""))
     try:
         qp_asu_ts = int(qp_asu)
     except Exception:
@@ -49,7 +54,8 @@ def _password_gate() -> None:
             st.session_state["__auth_ts"] = now
             # refresh sliding window in URL
             try:
-                st.experimental_set_query_params(auth=token, asu=str(int(time.time())))
+                st.query_params["auth"] = token
+                st.query_params["asu"] = str(int(time.time()))
             except Exception:
                 pass
             return
@@ -75,7 +81,8 @@ def _password_gate() -> None:
             # Persist auth in URL so full reloads don't re-prompt within timeout
             if token:
                 try:
-                    st.experimental_set_query_params(auth=token, asu=str(int(time.time())))
+                    st.query_params["auth"] = token
+                    st.query_params["asu"] = str(int(time.time()))
                 except Exception:
                     pass
             st.success("Access granted")
