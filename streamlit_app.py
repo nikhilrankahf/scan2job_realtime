@@ -21,6 +21,27 @@ def _set_query_param_t():
 st.set_page_config(page_title="Scan2Job Live Floor Tracking", layout="wide")
 st.title("Scan2Job Live Floor Tracking")
 
+# -------- Quick single-password gate (demo) --------
+def _password_gate() -> None:
+    if st.session_state.get("__authed", False):
+        return
+    st.write("")
+    st.info("This app is protected. Enter the access password to continue.")
+    with st.form("__auth_form", clear_on_submit=False):
+        pw = st.text_input("Password", type="password")
+        ok = st.form_submit_button("Login")
+    if ok:
+        expected = str(st.secrets.get("APP_PASSWORD", ""))
+        if pw and pw == expected:
+            st.session_state["__authed"] = True
+            st.success("Access granted")
+            st.rerun()
+        else:
+            st.error("Incorrect password")
+    st.stop()
+
+_password_gate()
+
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
 # Removed per request: top-level fixed timestamp
