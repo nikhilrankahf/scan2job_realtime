@@ -97,12 +97,10 @@ _password_gate()
 # Helper: Header with micro info icon + popover
 # ---------------------------
 def render_header_with_info(title_text: str, info_md: str) -> None:
-    # Minimal CSS for micro icon and header row
+    # Minimal CSS for micro icon only (title uses native Streamlit subheader styling)
     st.markdown(
         """
         <style>
-          .hdr-row { display:flex; align-items:center; gap:8px; margin: 0 0 6px 0; }
-          .hdr-title { font-weight:700; font-size:1.125rem; line-height:1.2; }
           .hdr-info {
             font-size:12px; color:#6b7280;
             display:inline-flex; align-items:center; justify-content:center;
@@ -116,10 +114,11 @@ def render_header_with_info(title_text: str, info_md: str) -> None:
         unsafe_allow_html=True,
     )
 
-    # Render title + micro icon; the popover opens from the icon label
-    col_title, col_icon = st.columns([1, 0.08])
+    # Two columns: left = native subheader, right = micro icon
+    col_title, col_icon = st.columns([0.97, 0.03])
     with col_title:
-        st.markdown(f"<div class='hdr-row'><span class='hdr-title'>{title_text}</span></div>", unsafe_allow_html=True)
+        if title_text:
+            st.subheader(title_text)
     with col_icon:
         with st.popover("i", use_container_width=False):  # click to open
             st.markdown(info_md)
@@ -165,7 +164,12 @@ def render_department_cards(df: pd.DataFrame) -> None:
         f"{_win_txt}.  \n\n"
         "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    render_header_with_info(title_text=f"On Floor Headcount ({total_on_floor})", info_md=info_md)
+    # Use native subheader styling to match other sections, then append icon in a narrow column
+    col_t, col_i = st.columns([0.97, 0.03])
+    with col_t:
+        st.subheader(f"On Floor Headcount ({total_on_floor})")
+    with col_i:
+        render_header_with_info(title_text="", info_md=info_md)
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
