@@ -156,7 +156,7 @@ def render_department_cards(df: pd.DataFrame) -> None:
 
     # Section header with total on-floor headcount in brackets (match subheader style)
     total_on_floor = int(on_floor_df["associate_id"].nunique())
-    # Keep existing header text but lay it out inline with the icon
+    # Render dynamic title with inline micro-info icon
     _window = globals().get("FLOOR_WINDOW_MIN", None)
     _win_txt = f" within the last **{_window} minutes**" if _window else ""
     info_md = (
@@ -165,14 +165,7 @@ def render_department_cards(df: pd.DataFrame) -> None:
         f"{_win_txt}.  \n\n"
         "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    st.markdown("""
-        <div style='display:flex; align-items:center; gap:8px; margin:0 0 6px 0;'>
-          <span style='font-weight:700; font-size:1.125rem; line-height:1.2;'>On Floor Headcount (""" + str(total_on_floor) + ")</span>
-          <span id='hdr_info_mount'></span>
-        </div>
-    """, unsafe_allow_html=True)
-    # Mount the popover icon immediately below; visually sits inline due to preceding flex row
-    render_header_with_info(title_text="", info_md=info_md)
+    render_header_with_info(title_text=f"On Floor Headcount ({total_on_floor})", info_md=info_md)
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
