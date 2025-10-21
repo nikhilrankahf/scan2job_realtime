@@ -23,8 +23,19 @@ st.title("Scan2Job Live Floor Tracking")
 
 # -------- Quick single-password gate (demo) --------
 def _password_gate() -> None:
-    if st.session_state.get("__authed", False):
-        return
+    # Session timeout (minutes); change via secrets if desired
+    timeout_min = int(st.secrets.get("APP_PASSWORD_TIMEOUT_MIN", 30))
+    now = datetime.now()
+
+    # If already authed, enforce idle timeout using last auth timestamp
+    if st.session_state.get("__authed", False) and st.session_state.get("__auth_ts") is not None:
+        if (now - st.session_state["__auth_ts"]) <= timedelta(minutes=timeout_min):
+            # Sliding window: refresh timestamp on activity/rerun
+            st.session_state["__auth_ts"] = now
+            return
+        # Timed out → require login again
+        st.session_state["__authed"] = False
+
     st.write("")
     st.info("This app is protected. Enter the access password to continue.")
     with st.form("__auth_form", clear_on_submit=False):
@@ -34,6 +45,7 @@ def _password_gate() -> None:
         expected = str(st.secrets.get("APP_PASSWORD", ""))
         if pw and pw == expected:
             st.session_state["__authed"] = True
+            st.session_state["__auth_ts"] = now
             st.success("Access granted")
             st.rerun()
         else:
