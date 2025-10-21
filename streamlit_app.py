@@ -93,6 +93,38 @@ def _password_gate() -> None:
 
 _password_gate()
 
+# ---------------------------
+# Helper: Header with micro info icon + popover
+# ---------------------------
+def render_header_with_info(title_text: str, info_md: str) -> None:
+    # Minimal CSS for micro icon and header row
+    st.markdown(
+        """
+        <style>
+          .hdr-row { display:flex; align-items:center; gap:8px; margin: 0 0 6px 0; }
+          .hdr-title { font-weight:700; font-size:1.125rem; line-height:1.2; }
+          .hdr-info {
+            font-size:13px; color:#6b7280;
+            display:inline-flex; align-items:center; justify-content:center;
+            width:16px; height:16px; border-radius:50%;
+            border:1px solid rgba(0,0,0,0.15);
+            cursor:pointer; user-select:none;
+          }
+          .hdr-info:focus { outline:2px solid #9ca3af; outline-offset:2px; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Render title + micro icon; the popover opens from the icon label
+    col_title, col_icon, _ = st.columns([0.0, 0.0, 1], vertical_alignment="center")
+    with col_title:
+        st.markdown(f"<div class='hdr-row'><span class='hdr-title'>{title_text}</span></div>", unsafe_allow_html=True)
+    with col_icon:
+        with st.popover("i", use_container_width=False):  # click to open
+            st.markdown(info_md)
+        st.markdown("<div class='hdr-info' aria-label='How this is calculated' tabindex='0'></div>", unsafe_allow_html=True)
+
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
 # Removed per request: top-level fixed timestamp
@@ -124,7 +156,19 @@ def render_department_cards(df: pd.DataFrame) -> None:
 
     # Section header with total on-floor headcount in brackets (match subheader style)
     total_on_floor = int(on_floor_df["associate_id"].nunique())
-    st.subheader(f"On Floor Headcount ({total_on_floor})")
+    # --- augmented header with micro-info icon (no other layout changes) ---
+    _window = globals().get("FLOOR_WINDOW_MIN", None)
+    _win_txt = f" within the last **{_window} minutes**" if _window else ""
+    render_header_with_info(
+        title_text=f"On Floor Headcount ({total_on_floor})",
+        info_md=(
+            "**What this shows**  \n"
+            "Count of **unique associates** who have an **active clock and/or scan event**"
+            f"{_win_txt}.  \n\n"
+            "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
+        ),
+    )
+    # --- end augmented header ---
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
