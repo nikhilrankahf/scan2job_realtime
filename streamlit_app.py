@@ -117,7 +117,7 @@ def render_header_with_info(title_text: str, info_md: str) -> None:
     )
 
     # Render title + micro icon; the popover opens from the icon label
-    col_title, col_icon, _ = st.columns([0.0, 0.0, 1], vertical_alignment="center")
+    col_title, col_icon = st.columns([1, 0.08])
     with col_title:
         st.markdown(f"<div class='hdr-row'><span class='hdr-title'>{title_text}</span></div>", unsafe_allow_html=True)
     with col_icon:
@@ -156,19 +156,18 @@ def render_department_cards(df: pd.DataFrame) -> None:
 
     # Section header with total on-floor headcount in brackets (match subheader style)
     total_on_floor = int(on_floor_df["associate_id"].nunique())
-    # --- augmented header with micro-info icon (no other layout changes) ---
+    # Keep existing header and append micro icon to the same line
+    st.subheader(f"On Floor Headcount ({total_on_floor})")
     _window = globals().get("FLOOR_WINDOW_MIN", None)
     _win_txt = f" within the last **{_window} minutes**" if _window else ""
-    render_header_with_info(
-        title_text=f"On Floor Headcount ({total_on_floor})",
-        info_md=(
-            "**What this shows**  \n"
-            "Count of **unique associates** who have an **active clock and/or scan event**"
-            f"{_win_txt}.  \n\n"
-            "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
-        ),
+    info_md = (
+        "**What this shows**  \n"
+        "Count of **unique associates** who have an **active clock and/or scan event**"
+        f"{_win_txt}.  \n\n"
+        "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    # --- end augmented header ---
+    # Render tiny icon right under the header, aligned near it
+    render_header_with_info(title_text="", info_md=info_md)
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
