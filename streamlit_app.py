@@ -169,34 +169,32 @@ def render_on_floor_header_with_popover(title_text: str, body_text: str):
     st.markdown(
         """
         <style>
-          .ofh-info { position:relative; display:inline-block; margin-left:8px; }
-          .ofh-info > summary {
+          details.ofh-info-inline { position:relative; display:inline-block; margin-left:8px; }
+          details.ofh-info-inline > summary {
             list-style:none; display:inline-flex; align-items:center; justify-content:center;
             width:16px; height:16px; border-radius:50%; border:1px solid rgba(0,0,0,0.18);
             font-size:11px; font-weight:600; color:#6b7280; background:#fff; cursor:pointer; user-select:none;
             padding:0; margin:0;
           }
-          .ofh-info > summary::-webkit-details-marker { display:none; }
-          .ofh-pop { position:absolute; top:22px; left:0; z-index:50; background:#fff;
+          details.ofh-info-inline > summary::-webkit-details-marker { display:none; }
+          details.ofh-info-inline .ofh-pop { position:absolute; top:22px; left:0; z-index:50; background:#fff;
             border:1px solid rgba(0,0,0,0.12); box-shadow:0 8px 24px rgba(0,0,0,0.12);
             border-radius:8px; padding:10px 12px; min-width:260px; max-width:360px; font-size:0.875rem; line-height:1.3; color:#111827; display:none; }
-          .ofh-info[open] .ofh-pop { display:block; }
-          .ofh-pop:before { content:""; position:absolute; top:-6px; left:10px; width:10px; height:10px; transform:rotate(45deg);
+          details.ofh-info-inline[open] .ofh-pop { display:block; }
+          details.ofh-info-inline .ofh-pop:before { content:""; position:absolute; top:-6px; left:10px; width:10px; height:10px; transform:rotate(45deg);
             background:#fff; border-left:1px solid rgba(0,0,0,0.12); border-top:1px solid rgba(0,0,0,0.12); }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
-    # Render native subheader (exact theme size/weight), then inline details right after
-    st.subheader(title_text)
+    # Render heading and inline icon in a single block so they stay on the same line
+    safe_title = title_text.replace("<","&lt;").replace(">","&gt;")
     st.markdown(
-        f"""
-        <details class='ofh-info' aria-label='How this is calculated'>
-          <summary aria-label='Open calculation info' title='How it’s calculated'>i</summary>
-          <div class='ofh-pop'>{body_text}</div>
-        </details>
-        """,
+        f"""### {safe_title} <details class='ofh-info-inline' aria-label='How this is calculated'>
+<summary aria-label='Open calculation info' title='How it’s calculated'>i</summary>
+<div class='ofh-pop'>{body_text}</div>
+</details>""",
         unsafe_allow_html=True,
     )
 
