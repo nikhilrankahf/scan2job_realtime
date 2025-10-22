@@ -124,6 +124,38 @@ def render_header_with_info(title_text: str, info_md: str) -> None:
             st.markdown(info_md)
         st.markdown("<div class='hdr-info' aria-label='How this is calculated' tabindex='0'></div>", unsafe_allow_html=True)
 
+# ---------------------------
+# Helper: On Floor header with inline micro icon
+# ---------------------------
+def render_on_floor_header_with_icon(title_text: str):
+    st.markdown(
+        """
+        <style>
+          .ofh-row { display: inline-flex; align-items: baseline; gap: 6px; }
+          .ofh-title { font-weight: 700; font-size: 1.125rem; line-height: 1.2; }
+          .ofh-icon {
+            font-size: 13px; color: #6b7280;
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 16px; height: 16px; border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.18);
+            text-decoration: none;
+            cursor: pointer; user-select: none;
+          }
+          .ofh-icon:focus { outline: 2px solid #9ca3af; outline-offset: 2px; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f"""
+        <div class="ofh-row">
+          <span class="ofh-title">{title_text}</span>
+          <a class="ofh-icon" role="button" aria-label="More info" href="javascript:void(0)">i</a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
 # Removed per request: top-level fixed timestamp
@@ -164,8 +196,8 @@ def render_department_cards(df: pd.DataFrame) -> None:
         f"{_win_txt}.  \n\n"
         "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    # Use native subheader styling to match other sections
-    st.subheader(f"On Floor Headcount ({total_on_floor})")
+    # Replace single header line with dynamic title + inline icon
+    render_on_floor_header_with_icon(title_text=f"On Floor Headcount ({total_on_floor})")
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
