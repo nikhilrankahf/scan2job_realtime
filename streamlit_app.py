@@ -540,6 +540,8 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                         # No sub-departments: show department summary only
                         st.dataframe(pd.DataFrame({"Sub-Department": [dept], "Associates": [cnt]}), use_container_width=True, hide_index=True)
                     else:
+                        # Header at the department level for the sub-department listings
+                        st.markdown("**Sub-Department**")
                         sub_counts = (
                             sub.fillna({"work_department_clean": "—"})
                             .groupby("work_department_clean")["associate_id"].nunique()
@@ -567,8 +569,6 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                                 st.markdown(f"**{sname}** — {scount}")
                             else:
                                 with st.expander(f"{sname} — {scount}", expanded=False):
-                                    # Header label for the sub-department level
-                                    st.markdown("**Sub-Department**")
                                     line_table = (
                                         sub_df.assign(line=sub_df.get("line").astype(str).str.strip().replace({"": "—", "None": "—"}))
                                         .groupby("line")["associate_id"].nunique()
