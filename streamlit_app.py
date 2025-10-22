@@ -150,13 +150,15 @@ def render_on_floor_header_with_icon(title_text: str):
     )
     safe_title = title_text.replace("<","&lt;").replace(">","&gt;")
     st.markdown(
-        f"""<h3 style='margin:0 0 6px 0;'>
+        f"""
+        <h3>
           {safe_title}
           <details class='ofh-pop'>
             <summary aria-label='How is it calculated'>i</summary>
             <div class='ofh-card'>How is it calculated - count of unique associates with a clock and/or scan event</div>
           </details>
-        </h3>""",
+        </h3>
+        """,
         unsafe_allow_html=True,
     )
 
