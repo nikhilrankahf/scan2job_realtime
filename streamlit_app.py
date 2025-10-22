@@ -170,7 +170,7 @@ def render_on_floor_header_with_popover(title_text: str, body_text: str):
         """
         <style>
           .ofh-wrap { display:inline-flex; align-items:center; gap:8px; position:relative; }
-          .ofh-title { font-weight:700; font-size:1.125rem; line-height:1.2; }
+          .ofh-title { font-weight:600; font-size:1.2rem; line-height:1.2; }
           .ofh-info { position:relative; display:inline-block; }
           .ofh-info > summary {
             list-style:none;
