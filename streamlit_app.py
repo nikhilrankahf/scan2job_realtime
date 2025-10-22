@@ -687,7 +687,7 @@ if scanned_choice != "(any)":
 # Dynamic title with count inline with filters + info icon
 render_on_floor_header_with_popover(
     title_text=f"Latest Associate Activity ({len(filtered_pretty)})",
-    body_text="Placeholder: explanation of Latest Associate Activity.",
+    body_text="Last associate activity received and processed by Scan2Job",
 )
 st.caption("Last updated at 15 Oct, 7:32:13am")
 
