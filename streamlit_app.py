@@ -160,6 +160,60 @@ def render_on_floor_header_with_icon(title_text: str):
         unsafe_allow_html=True,
     )
 
+# ---------------------------
+# Helper: On Floor header with custom HTML/CSS popover
+# ---------------------------
+def render_on_floor_header_with_popover(title_text: str, body_text: str):
+    st.markdown(
+        """
+        <style>
+          .ofh-wrap { display:inline-flex; align-items:center; gap:8px; position:relative; }
+          .ofh-title { font-weight:700; font-size:1.125rem; line-height:1.2; }
+          .ofh-info { position:relative; display:inline-block; }
+          .ofh-info > summary {
+            list-style:none;
+            display:inline-flex; align-items:center; justify-content:center;
+            width:16px; height:16px; border-radius:50%;
+            border:1px solid rgba(0,0,0,0.18);
+            font-size:11px; font-weight:600; color:#6b7280;
+            background:#fff; cursor:pointer; user-select:none;
+            margin:0; padding:0;
+          }
+          .ofh-info > summary::-webkit-details-marker { display:none; }
+          .ofh-pop {
+            position:absolute; top:22px; left:0; z-index:50;
+            background:#fff; border:1px solid rgba(0,0,0,0.12);
+            box-shadow:0 8px 24px rgba(0,0,0,0.12);
+            border-radius:8px; padding:10px 12px; min-width:260px; max-width:360px;
+            font-size:0.875rem; line-height:1.3; color:#111827;
+            display:none;
+          }
+          .ofh-info[open] .ofh-pop { display:block; }
+          .ofh-pop:before {
+            content:""; position:absolute; top:-6px; left:10px;
+            width:10px; height:10px; transform:rotate(45deg);
+            background:#fff; border-left:1px solid rgba(0,0,0,0.12);
+            border-top:1px solid rgba(0,0,0,0.12);
+          }
+          .ofh-info:focus-within summary { outline:2px solid #9ca3af; outline-offset:2px; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        f"""
+        <div class=\"ofh-wrap\">
+          <span class=\"ofh-title\">{title_text}</span>
+          <details class=\"ofh-info\" aria-label=\"How this is calculated\">
+            <summary aria-label=\"Open calculation info\" title=\"How it’s calculated\">i</summary>
+            <div class=\"ofh-pop\">{body_text}</div>
+          </details>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
 # Removed per request: top-level fixed timestamp
@@ -200,8 +254,11 @@ def render_department_cards(df: pd.DataFrame) -> None:
         f"{_win_txt}.  \n\n"
         "*Notes:* Clock = timekeeping event; Scan = area/position scan. Badge tests and events outside the window are excluded."
     )
-    # Replace single header line with dynamic title + inline icon
-    render_on_floor_header_with_icon(title_text=f"On Floor Headcount ({total_on_floor})")
+    # Replace single header line with dynamic title + inline micro popover
+    render_on_floor_header_with_popover(
+        title_text=f"On Floor Headcount ({total_on_floor})",
+        body_text="How is it calculated - count of unique associates with a clock and/or scan event",
+    )
     st.caption("Last updated at 15 Oct, 7:32:13am")
 
     # Lightweight CSS for horizontal cards with scroll
