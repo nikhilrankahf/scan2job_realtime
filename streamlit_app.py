@@ -557,7 +557,11 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                             has_line = False
                             if line_series is not None:
                                 ls = line_series.astype(str).str.strip()
-                                has_line = ls.ne("").& ls.ne("None").& ls.ne("—").any() if len(ls) else False
+                                if len(ls):
+                                    has_line = ls.ne("") & ls.ne("None") & ls.ne("—")
+                                    has_line = bool(has_line.any())
+                                else:
+                                    has_line = False
                             if not has_line:
                                 # Flat row: no nested expander
                                 st.markdown(f"**{sname}** — {scount}")
