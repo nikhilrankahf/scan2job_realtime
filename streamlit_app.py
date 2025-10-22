@@ -485,7 +485,10 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
     with lcol:
         scanned_df = df[(df.get("scanned_in", False)) & (~ignore_mask)].copy()
         scanned_total = int(scanned_df["associate_id"].nunique()) if not scanned_df.empty else 0
-        st.subheader(f"Scanned-in Breakdown ({scanned_total})")
+        render_on_floor_header_with_popover(
+            title_text=f"Scanned-in Breakdown ({scanned_total})",
+            body_text="Placeholder: explanation of Scanned-in Breakdown.",
+        )
         st.caption("Last updated at 15 Oct, 7:32:13am")
         if scanned_df.empty:
             st.info("No scanned-in associates.")
@@ -547,7 +550,10 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         non_scanned_mask = df.get("on_floor", False) & (~df.get("scanned_in", False))
         non_scanned_df = df[non_scanned_mask].copy()
         non_scanned_total = int(non_scanned_df["associate_id"].nunique()) if not non_scanned_df.empty else 0
-        st.subheader(f"Non-Scanned Breakdown ({non_scanned_total})")
+        render_on_floor_header_with_popover(
+            title_text=f"Non-Scanned Breakdown ({non_scanned_total})",
+            body_text="Placeholder: explanation of Non-Scanned Breakdown.",
+        )
         st.caption("Last updated at 15 Oct, 7:32:13am")
         if non_scanned_df.empty:
             st.info("No non-scanned associates.")
@@ -633,8 +639,11 @@ if scanned_choice != "(any)":
     filtered_pretty = filtered_pretty[filtered_pretty["Scanned In"] == val]
 
 
-# Dynamic title with count inline with filters
-title_placeholder.subheader(f"Latest Associate Activity ({len(filtered_pretty)})")
+# Dynamic title with count inline with filters + info icon
+render_on_floor_header_with_popover(
+    title_text=f"Latest Associate Activity ({len(filtered_pretty)})",
+    body_text="Placeholder: explanation of Latest Associate Activity.",
+)
 st.caption("Last updated at 15 Oct, 7:32:13am")
 
 # New controls row: search, quick toggles, department dropdown, clear button
