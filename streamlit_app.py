@@ -146,12 +146,13 @@ def render_on_floor_header_with_icon(title_text: str):
         """,
         unsafe_allow_html=True,
     )
-    # Render with markdown h3 so font matches other subheaders exactly
-    safe_title = title_text.replace("<", "&lt;").replace(">", "&gt;")
-    st.markdown(
-        f"### {safe_title} <a class='ofh-icon' role='button' aria-label='More info' href='javascript:void(0)'>i</a>",
-        unsafe_allow_html=True,
-    )
+    # Two columns: left = subheader (matches section headers), right = compact popover trigger
+    left, right = st.columns([0.97, 0.03])
+    with left:
+        st.subheader(title_text)
+    with right:
+        with st.popover("ⓘ", use_container_width=False):
+            st.markdown("How is it calculated - count of unique associates with a clock and/or scan event")
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
@@ -254,7 +255,19 @@ WORK_DEPT_GROUP_MAP = {
 def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv") -> pd.DataFrame:
     df = pd.read_csv(csv_path)
     # Ensure expected columns exist
-    expected_cols = {"ASSOCIATE_ID","Name","JOB_DEPARTMENT","SOURCE","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE","SHIFT_COHORT"}
+    # New CSV schema: ASSOCIATE_ID, ASSOCIATE_NAME, SHIFT_TYPE, JOB_DEPARTMENT, SOURCE, WORK_DEPARTMENT,
+    # WORK_POSITION, LINE, BAY, LOCATION, START_TIME_LOCAL
+    # We only require the fields the app uses.
+    expected_cols = {
+        "ASSOCIATE_ID",
+        "ASSOCIATE_NAME",
+        "SHIFT_TYPE",
+        "JOB_DEPARTMENT",
+        "SOURCE",
+        "WORK_DEPARTMENT",
+        "WORK_POSITION",
+        "START_TIME_LOCAL",
+    }
     missing = expected_cols.difference(df.columns)
     if missing:
         raise ValueError(f"CSV missing columns: {sorted(missing)}")
@@ -264,16 +277,15 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     df_sorted = df.sort_values(["ASSOCIATE_ID","START_TIME_LOCAL"]).dropna(subset=["ASSOCIATE_ID"])  # type: ignore
     latest_idx = df_sorted.groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].idxmax()
     latest = df_sorted.loc[latest_idx, [
-        "ASSOCIATE_ID","Name","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE","SHIFT_COHORT"
+        "ASSOCIATE_ID","ASSOCIATE_NAME","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE"
     ]].rename(columns={
         "ASSOCIATE_ID":"associate_id",
-        "Name":"associate_name",
+        "ASSOCIATE_NAME":"associate_name",
         "JOB_DEPARTMENT":"job_department",
         "WORK_DEPARTMENT":"work_department",
         "WORK_POSITION":"work_position",
         "START_TIME_LOCAL":"last_activity_ts",
         "SHIFT_TYPE":"shift_type",
-        "SHIFT_COHORT":"shift_cohort",
     })
 
     # Flags by associate (any record matching condition)
