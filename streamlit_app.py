@@ -169,49 +169,33 @@ def render_on_floor_header_with_popover(title_text: str, body_text: str):
     st.markdown(
         """
         <style>
-          .ofh-wrap { display:inline-flex; align-items:center; gap:8px; position:relative; }
-          .ofh-title { font-weight:600; font-size:1.2rem; line-height:1.2; }
-          .ofh-info { position:relative; display:inline-block; }
+          .ofh-info { position:relative; display:inline-block; margin-left:8px; }
           .ofh-info > summary {
-            list-style:none;
-            display:inline-flex; align-items:center; justify-content:center;
-            width:16px; height:16px; border-radius:50%;
-            border:1px solid rgba(0,0,0,0.18);
-            font-size:11px; font-weight:600; color:#6b7280;
-            background:#fff; cursor:pointer; user-select:none;
-            margin:0; padding:0;
+            list-style:none; display:inline-flex; align-items:center; justify-content:center;
+            width:16px; height:16px; border-radius:50%; border:1px solid rgba(0,0,0,0.18);
+            font-size:11px; font-weight:600; color:#6b7280; background:#fff; cursor:pointer; user-select:none;
+            padding:0; margin:0;
           }
           .ofh-info > summary::-webkit-details-marker { display:none; }
-          .ofh-pop {
-            position:absolute; top:22px; left:0; z-index:50;
-            background:#fff; border:1px solid rgba(0,0,0,0.12);
-            box-shadow:0 8px 24px rgba(0,0,0,0.12);
-            border-radius:8px; padding:10px 12px; min-width:260px; max-width:360px;
-            font-size:0.875rem; line-height:1.3; color:#111827;
-            display:none;
-          }
+          .ofh-pop { position:absolute; top:22px; left:0; z-index:50; background:#fff;
+            border:1px solid rgba(0,0,0,0.12); box-shadow:0 8px 24px rgba(0,0,0,0.12);
+            border-radius:8px; padding:10px 12px; min-width:260px; max-width:360px; font-size:0.875rem; line-height:1.3; color:#111827; display:none; }
           .ofh-info[open] .ofh-pop { display:block; }
-          .ofh-pop:before {
-            content:""; position:absolute; top:-6px; left:10px;
-            width:10px; height:10px; transform:rotate(45deg);
-            background:#fff; border-left:1px solid rgba(0,0,0,0.12);
-            border-top:1px solid rgba(0,0,0,0.12);
-          }
-          .ofh-info:focus-within summary { outline:2px solid #9ca3af; outline-offset:2px; }
+          .ofh-pop:before { content:""; position:absolute; top:-6px; left:10px; width:10px; height:10px; transform:rotate(45deg);
+            background:#fff; border-left:1px solid rgba(0,0,0,0.12); border-top:1px solid rgba(0,0,0,0.12); }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
+    # Render native subheader (exact theme size/weight), then inline details right after
+    st.subheader(title_text)
     st.markdown(
         f"""
-        <div class=\"ofh-wrap\">
-          <span class=\"ofh-title\">{title_text}</span>
-          <details class=\"ofh-info\" aria-label=\"How this is calculated\">
-            <summary aria-label=\"Open calculation info\" title=\"How it’s calculated\">i</summary>
-            <div class=\"ofh-pop\">{body_text}</div>
-          </details>
-        </div>
+        <details class='ofh-info' aria-label='How this is calculated'>
+          <summary aria-label='Open calculation info' title='How it’s calculated'>i</summary>
+          <div class='ofh-pop'>{body_text}</div>
+        </details>
         """,
         unsafe_allow_html=True,
     )
