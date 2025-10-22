@@ -328,9 +328,12 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     # Latest record per associate (for stable department display)
     df_sorted = df.sort_values(["ASSOCIATE_ID","START_TIME_LOCAL"]).dropna(subset=["ASSOCIATE_ID"])  # type: ignore
     latest_idx = df_sorted.groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].idxmax()
-    latest = df_sorted.loc[latest_idx, [
+    latest_cols = [
         "ASSOCIATE_ID","ASSOCIATE_NAME","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE"
-    ]].rename(columns={
+    ]
+    if "LINE" in df_sorted.columns:
+        latest_cols.append("LINE")
+    latest = df_sorted.loc[latest_idx, latest_cols].rename(columns={
         "ASSOCIATE_ID":"associate_id",
         "ASSOCIATE_NAME":"associate_name",
         "JOB_DEPARTMENT":"job_department",
@@ -338,6 +341,7 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
         "WORK_POSITION":"work_position",
         "START_TIME_LOCAL":"last_activity_ts",
         "SHIFT_TYPE":"shift_type",
+        "LINE":"line",
     })
 
     # Flags by associate (any record matching condition)
@@ -487,7 +491,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         scanned_total = int(scanned_df["associate_id"].nunique()) if not scanned_df.empty else 0
         render_on_floor_header_with_popover(
             title_text=f"Scanned-in Breakdown ({scanned_total})",
-            body_text="Placeholder: explanation of Scanned-in Breakdown.",
+            body_text="Count of associates with a scan event via Badgr, Pick2Light, HighJump",
         )
         st.caption("Last updated at 15 Oct, 7:32:13am")
         if scanned_df.empty:
@@ -525,7 +529,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 template_df = pd.DataFrame({"Department": ordered_depts})
                 by_group = template_df.merge(counts_df, on="Department", how="left").fillna({"Associates": 0})
 
-            # Render rows: expandable only when there are sub-departments
+            # Render rows: Department → Sub-department (work_department) → Line
             for _, row in by_group.iterrows():
                 dept = str(row["Department"]) 
                 cnt = int(row["Associates"]) 
@@ -533,17 +537,40 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department_clean"].isin(valid_subs))]
                 with st.expander(f"{dept} — {cnt}", expanded=False):
                     if sub.empty:
-                        # Uniform UX: show department itself as the single row when no sub-departments
-                        sub_table = pd.DataFrame({"Sub-Department": [dept], "Associates": [cnt]})
+                        # No sub-departments: show department summary only
+                        st.dataframe(pd.DataFrame({"Sub-Department": [dept], "Associates": [cnt]}), use_container_width=True, hide_index=True)
                     else:
-                        sub_table = (
+                        sub_counts = (
                             sub.fillna({"work_department_clean": "—"})
                             .groupby("work_department_clean")["associate_id"].nunique()
                             .sort_values(ascending=False)
                             .reset_index()
                             .rename(columns={"work_department_clean": "Sub-Department", "associate_id": "Associates"})
                         )
-                    st.dataframe(sub_table, use_container_width=True, hide_index=True)
+                        # Iterate sub-departments
+                        for _, srow in sub_counts.iterrows():
+                            sname = str(srow["Sub-Department"]) 
+                            scount = int(srow["Associates"]) 
+                            sub_df = sub[sub["work_department_clean"] == sname]
+                            # Determine if there are any valid line values
+                            line_series = sub_df.get("line")
+                            has_line = False
+                            if line_series is not None:
+                                ls = line_series.astype(str).str.strip()
+                                has_line = ls.ne("").& ls.ne("None").& ls.ne("—").any() if len(ls) else False
+                            if not has_line:
+                                # Flat row: no nested expander
+                                st.markdown(f"**{sname}** — {scount}")
+                            else:
+                                with st.expander(f"{sname} — {scount}", expanded=False):
+                                    line_table = (
+                                        sub_df.assign(line=sub_df.get("line").astype(str).str.strip().replace({"": "—", "None": "—"}))
+                                        .groupby("line")["associate_id"].nunique()
+                                        .sort_values(ascending=False)
+                                        .reset_index()
+                                        .rename(columns={"associate_id": "Associates", "line": "Line"})
+                                    )
+                                    st.dataframe(line_table, use_container_width=True, hide_index=True)
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
@@ -552,7 +579,7 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         non_scanned_total = int(non_scanned_df["associate_id"].nunique()) if not non_scanned_df.empty else 0
         render_on_floor_header_with_popover(
             title_text=f"Non-Scanned Breakdown ({non_scanned_total})",
-            body_text="Placeholder: explanation of Non-Scanned Breakdown.",
+            body_text="Count of associates with a clock-in but no active scan event. Note: Clock-data has a minimum of 15 min latency due to Workday. Expect non-scanned associates to only start populating in 20 mins from start of the shift",
         )
         st.caption("Last updated at 15 Oct, 7:32:13am")
         if non_scanned_df.empty:
