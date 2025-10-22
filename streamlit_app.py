@@ -146,13 +146,10 @@ def render_on_floor_header_with_icon(title_text: str):
         """,
         unsafe_allow_html=True,
     )
+    # Render with markdown h3 so font matches other subheaders exactly
+    safe_title = title_text.replace("<", "&lt;").replace(">", "&gt;")
     st.markdown(
-        f"""
-        <div class="ofh-row">
-          <span class="ofh-title">{title_text}</span>
-          <a class="ofh-icon" role="button" aria-label="More info" href="javascript:void(0)">i</a>
-        </div>
-        """,
+        f"### {safe_title} <a class='ofh-icon' role='button' aria-label='More info' href='javascript:void(0)'>i</a>",
         unsafe_allow_html=True,
     )
 
