@@ -128,31 +128,37 @@ def render_header_with_info(title_text: str, info_md: str) -> None:
 # Helper: On Floor header with inline micro icon
 # ---------------------------
 def render_on_floor_header_with_icon(title_text: str):
+    # Inline heading with compact details popover to keep icon directly beside the title
     st.markdown(
         """
         <style>
-          .ofh-row { display: inline-flex; align-items: baseline; gap: 6px; }
-          .ofh-title { font-weight: 700; font-size: 1.125rem; line-height: 1.2; }
-          .ofh-icon {
-            font-size: 13px; color: #6b7280;
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 16px; height: 16px; border-radius: 50%;
-            border: 1px solid rgba(0,0,0,0.18);
-            text-decoration: none;
-            cursor: pointer; user-select: none;
+          .ofh-pop { display:inline-block; margin-left:6px; }
+          .ofh-pop summary {
+            list-style:none; cursor:pointer; user-select:none; display:inline-flex;
+            align-items:center; justify-content:center; width:16px; height:16px;
+            border-radius:50%; border:1px solid rgba(0,0,0,0.18); color:#6b7280; font-size:13px;
           }
-          .ofh-icon:focus { outline: 2px solid #9ca3af; outline-offset: 2px; }
+          .ofh-pop summary::-webkit-details-marker { display:none; }
+          .ofh-pop .ofh-card {
+            margin-top:6px; background:#fff; border:1px solid rgba(0,0,0,0.1);
+            box-shadow:0 2px 10px rgba(0,0,0,0.06); border-radius:6px; padding:8px 10px;
+            font-size:0.875rem; color:#374151; max-width:360px;
+          }
         </style>
         """,
         unsafe_allow_html=True,
     )
-    # Two columns: left = subheader (matches section headers), right = compact popover trigger
-    left, right = st.columns([0.97, 0.03])
-    with left:
-        st.subheader(title_text)
-    with right:
-        with st.popover("ⓘ", use_container_width=False):
-            st.markdown("How is it calculated - count of unique associates with a clock and/or scan event")
+    safe_title = title_text.replace("<","&lt;").replace(">","&gt;")
+    st.markdown(
+        f"""<h3 style='margin:0 0 6px 0;'>
+          {safe_title}
+          <details class='ofh-pop'>
+            <summary aria-label='How is it calculated'>i</summary>
+            <div class='ofh-card'>How is it calculated - count of unique associates with a clock and/or scan event</div>
+          </details>
+        </h3>""",
+        unsafe_allow_html=True,
+    )
 
 # Auto-refresh every N seconds (keeps code simple for v1)
 REFRESH_SEC = 5
