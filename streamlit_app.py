@@ -188,13 +188,18 @@ def render_on_floor_header_with_popover(title_text: str, body_text: str):
         unsafe_allow_html=True,
     )
 
-    # Render heading and inline icon in a single block so they stay on the same line
+    # Render heading and inline icon in one block. Use native h3 to match subheader size/weight.
     safe_title = title_text.replace("<","&lt;").replace(">","&gt;")
     st.markdown(
-        f"""### {safe_title} <details class='ofh-info-inline' aria-label='How this is calculated'>
-<summary aria-label='Open calculation info' title='How it’s calculated'>i</summary>
-<div class='ofh-pop'>{body_text}</div>
-</details>""",
+        f"""
+        <h3 style='margin:0 0 6px 0;'>
+          {safe_title}
+          <details class='ofh-info-inline' aria-label='How this is calculated'>
+            <summary aria-label='Open calculation info' title='How it’s calculated'>i</summary>
+            <div class='ofh-pop'>{body_text}</div>
+          </details>
+        </h3>
+        """,
         unsafe_allow_html=True,
     )
 
