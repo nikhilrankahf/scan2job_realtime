@@ -595,7 +595,9 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
         non_scanned_total = int(non_scanned_df["associate_id"].nunique()) if not non_scanned_df.empty else 0
         render_on_floor_header_with_popover(
             title_text=f"Non-Scanned Breakdown ({non_scanned_total})",
-            body_text="Count of associates by hiring department with a clock-in but no active scan event. Note: Clock-data has a minimum of 15 min latency due to Workday. Expect non-scanned associates to only start populating in 20 mins from start of the shift",
+            body_text="Count of associates by hiring department with a clock-in but no active scan event.<br/><br/>"
+                    "Note: Clock data has a minimum of 15 min latency due to Workday.<br/><br/>"
+                     "Expect non-scanned associates to start populating ~20 min after shift start.",
         )
         st.caption("Last updated at 15 Oct, 7:32:13am")
         if non_scanned_df.empty:
