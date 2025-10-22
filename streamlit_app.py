@@ -567,6 +567,8 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                                 st.markdown(f"**{sname}** — {scount}")
                             else:
                                 with st.expander(f"{sname} — {scount}", expanded=False):
+                                    # Header label for the sub-department level
+                                    st.markdown(f"**Sub-Department:** {sname}")
                                     line_table = (
                                         sub_df.assign(line=sub_df.get("line").astype(str).str.strip().replace({"": "—", "None": "—"}))
                                         .groupby("line")["associate_id"].nunique()
