@@ -560,8 +560,11 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                             if line_series is not None:
                                 ls = line_series.astype(str).str.strip()
                                 if len(ls):
-                                    has_line = ls.ne("") & ls.ne("None") & ls.ne("—")
-                                    has_line = bool(has_line.any())
+                                    ls_norm = ls.str.lower()
+                                    valid_mask = (
+                                        (ls_norm != "") & (ls_norm != "none") & (ls_norm != "—") & (ls_norm != "nan")
+                                    )
+                                    has_line = bool(valid_mask.any())
                                 else:
                                     has_line = False
                             if not has_line:
@@ -569,8 +572,15 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                                 st.markdown(f"**{sname}** — {scount}")
                             else:
                                 with st.expander(f"{sname} — {scount}", expanded=False):
+                                    # Normalize line values: blanks/None/—/nan -> "NA"
+                                    line_clean = (
+                                        sub_df.get("line")
+                                        .astype(str)
+                                        .str.strip()
+                                        .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
+                                    )
                                     line_table = (
-                                        sub_df.assign(line=sub_df.get("line").astype(str).str.strip().replace({"": "—", "None": "—"}))
+                                        sub_df.assign(line=line_clean)
                                         .groupby("line")["associate_id"].nunique()
                                         .sort_values(ascending=False)
                                         .reset_index()
