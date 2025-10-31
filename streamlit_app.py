@@ -578,35 +578,48 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                             st.markdown(f"**{sname}** — {scount}")
                         else:
                             with st.expander(f"{sname} — {scount}", expanded=False):
-                                # Normalize lines: blanks/None/—/nan -> NA
-                                line_clean = (
+                                # First show Line → headcount as rows; for each line with positions, provide a nested expander
+                                line_clean_series = (
                                     sub_df.get("line")
                                     .astype(str)
                                     .str.strip()
                                     .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
                                 )
-                                line_table = (
-                                    sub_df.assign(line=line_clean)
+                                line_counts = (
+                                    sub_df.assign(line=line_clean_series)
                                     .groupby("line")["associate_id"].nunique()
                                     .sort_values(ascending=False)
                                     .reset_index()
                                     .rename(columns={"associate_id": "Associates", "line": "Line"})
                                 )
-                                st.dataframe(line_table, use_container_width=True, hide_index=True)
-                                # Optional: Work Position breakdown under line (show as second table)
-                                pos_clean = (
-                                    sub_df.get("work_position")
-                                    .astype(str)
-                                    .str.strip()
-                                    .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
-                                )
-                                pos_table = (
-                                    sub_df.assign(line=line_clean, work_position=pos_clean)
-                                    .groupby(["line", "work_position"])["associate_id"].nunique()
-                                    .reset_index()
-                                    .rename(columns={"associate_id": "Associates", "work_position": "Work Position", "line": "Line"})
-                                )
-                                st.dataframe(pos_table.sort_values(["Line","Associates"], ascending=[True, False]), use_container_width=True, hide_index=True)
+                                for _, lrow in line_counts.iterrows():
+                                    line_name = str(lrow["Line"])  # may be 'NA'
+                                    lcount = int(lrow["Associates"])
+                                    line_mask = (line_clean_series == line_name)
+                                    line_df = sub_df[line_mask]
+                                    # Determine if work positions exist for this line
+                                    pos_series = line_df.get("work_position")
+                                    line_has_positions = False
+                                    if pos_series is not None and len(pos_series):
+                                        pos_norm = pos_series.astype(str).str.strip().str.lower()
+                                        line_has_positions = bool(((pos_norm != "") & (pos_norm != "none") & (pos_norm != "—") & (pos_norm != "nan")).any())
+                                    if not line_has_positions:
+                                        st.markdown(f"**{line_name}** — {lcount}")
+                                    else:
+                                        with st.expander(f"{line_name} — {lcount}", expanded=False):
+                                            pos_clean = (
+                                                pos_series.astype(str)
+                                                .str.strip()
+                                                .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
+                                            )
+                                            pos_table = (
+                                                line_df.assign(work_position=pos_clean)
+                                                .groupby("work_position")["associate_id"].nunique()
+                                                .sort_values(ascending=False)
+                                                .reset_index()
+                                                .rename(columns={"associate_id": "Associates", "work_position": "Work Position"})
+                                            )
+                                            st.dataframe(pos_table, use_container_width=True, hide_index=True)
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
