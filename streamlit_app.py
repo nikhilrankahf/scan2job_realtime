@@ -549,7 +549,8 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                     continue
                 # There are sub-level work departments; render department expander
                 with st.expander(f"{dept} — {cnt}", expanded=False):
-                    st.markdown("**Sub-Department**")
+                    # Section label at a lighter visual hierarchy than the items
+                    st.caption("Sub-Department")
                     # Build counts per sub-department (including NA)
                     sub_counts = (
                         group_df.assign(wd=wd_norm)
@@ -578,6 +579,8 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                             st.markdown(f"**{sname}** — {scount}")
                         else:
                             with st.expander(f"{sname} — {scount}", expanded=False):
+                                # Section label for the Line level, visually lighter than items
+                                st.caption("Line")
                                 # First show Line → headcount as rows; for each line with positions, provide a nested expander
                                 line_clean_series = (
                                     sub_df.get("line")
