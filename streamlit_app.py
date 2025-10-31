@@ -313,6 +313,7 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     expected_cols = {
         "ASSOCIATE_ID",
         "ASSOCIATE_NAME",
+        "SUPERVISOR_NAME",
         "SHIFT_TYPE",
         "JOB_DEPARTMENT",
         "SOURCE",
@@ -329,13 +330,14 @@ def load_associates_from_csv(csv_path: str = "Scan2Job Realtime Sample Data.csv"
     df_sorted = df.sort_values(["ASSOCIATE_ID","START_TIME_LOCAL"]).dropna(subset=["ASSOCIATE_ID"])  # type: ignore
     latest_idx = df_sorted.groupby("ASSOCIATE_ID")["START_TIME_LOCAL"].idxmax()
     latest_cols = [
-        "ASSOCIATE_ID","ASSOCIATE_NAME","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE"
+        "ASSOCIATE_ID","ASSOCIATE_NAME","SUPERVISOR_NAME","JOB_DEPARTMENT","WORK_DEPARTMENT","WORK_POSITION","START_TIME_LOCAL","SHIFT_TYPE"
     ]
     if "LINE" in df_sorted.columns:
         latest_cols.append("LINE")
     latest = df_sorted.loc[latest_idx, latest_cols].rename(columns={
         "ASSOCIATE_ID":"associate_id",
         "ASSOCIATE_NAME":"associate_name",
+        "SUPERVISOR_NAME":"supervisor_name",
         "JOB_DEPARTMENT":"job_department",
         "WORK_DEPARTMENT":"work_department",
         "WORK_POSITION":"work_position",
@@ -639,10 +641,11 @@ filtered = people_df.copy()
 if privacy:
     filtered = filtered.assign(associate_name="—")
 pretty = filtered[[
-    "associate_id","associate_name","job_department","shift_type","clocked_in","scanned_in","work_department","work_position","last_activity_ts"
+    "associate_id","associate_name","job_department","shift_type","supervisor_name","clocked_in","scanned_in","work_department","work_position","last_activity_ts"
 ]].rename(columns={
     "associate_id":"Id",
     "associate_name":"Name",
+    "supervisor_name":"Supervisor name",
     "job_department":"Hiring Department",
     "shift_type":"Shift Type",
     "clocked_in":"Clocked In",
