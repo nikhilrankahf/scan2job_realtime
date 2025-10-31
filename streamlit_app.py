@@ -531,64 +531,82 @@ def render_mid_breakdowns(df: pd.DataFrame) -> None:
                 template_df = pd.DataFrame({"Department": ordered_depts})
                 by_group = template_df.merge(counts_df, on="Department", how="left").fillna({"Associates": 0})
 
-            # Render rows: Department → Sub-department (work_department) → Line
+            # Render rows: Job Group → Work Department → Line → Work Position
             for _, row in by_group.iterrows():
                 dept = str(row["Department"]) 
                 cnt = int(row["Associates"]) 
-                valid_subs = subdepts_by_job.get(dept, [])
-                sub = scanned_df[(scanned_df["job_group"] == dept) & (scanned_df["work_department_clean"].isin(valid_subs))]
+                # All rows for this job group
+                group_df = scanned_df[scanned_df["job_group"] == dept]
+                # Determine work departments under this group; normalize blanks to NA for display
+                wd_norm = (
+                    group_df["work_department_clean"].astype(str).str.strip().replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
+                )
+                # Any work departments beyond NA and the group name itself?
+                wd_unique_non_na = sorted({w for w in wd_norm.unique().tolist() if w != "NA" and w != dept})
+                if not wd_unique_non_na:
+                    # No further work departments: show flat row at job group level
+                    st.markdown(f"**{dept}** — {cnt}")
+                    continue
+                # There are sub-level work departments; render department expander
                 with st.expander(f"{dept} — {cnt}", expanded=False):
-                    if sub.empty:
-                        # No sub-departments: show department summary only
-                        st.dataframe(pd.DataFrame({"Sub-Department": [dept], "Associates": [cnt]}), use_container_width=True, hide_index=True)
-                    else:
-                        # Header at the department level for the sub-department listings
-                        st.markdown("**Sub-Department**")
-                        sub_counts = (
-                            sub.fillna({"work_department_clean": "—"})
-                            .groupby("work_department_clean")["associate_id"].nunique()
-                            .sort_values(ascending=False)
-                            .reset_index()
-                            .rename(columns={"work_department_clean": "Sub-Department", "associate_id": "Associates"})
-                        )
-                        # Iterate sub-departments
-                        for _, srow in sub_counts.iterrows():
-                            sname = str(srow["Sub-Department"]) 
-                            scount = int(srow["Associates"]) 
-                            sub_df = sub[sub["work_department_clean"] == sname]
-                            # Determine if there are any valid line values
-                            line_series = sub_df.get("line")
-                            has_line = False
-                            if line_series is not None:
-                                ls = line_series.astype(str).str.strip()
-                                if len(ls):
-                                    ls_norm = ls.str.lower()
-                                    valid_mask = (
-                                        (ls_norm != "") & (ls_norm != "none") & (ls_norm != "—") & (ls_norm != "nan")
-                                    )
-                                    has_line = bool(valid_mask.any())
-                                else:
-                                    has_line = False
-                            if not has_line:
-                                # Flat row: no nested expander
-                                st.markdown(f"**{sname}** — {scount}")
+                    st.markdown("**Sub-Department**")
+                    # Build counts per sub-department (including NA)
+                    sub_counts = (
+                        group_df.assign(wd=wd_norm)
+                        .groupby("wd")["associate_id"].nunique()
+                        .sort_values(ascending=False)
+                        .reset_index()
+                        .rename(columns={"wd": "Sub-Department", "associate_id": "Associates"})
+                    )
+                    for _, srow in sub_counts.iterrows():
+                        sname = str(srow["Sub-Department"]) 
+                        scount = int(srow["Associates"]) 
+                        sub_df = group_df[wd_norm == sname]
+                        # Determine if there are any valid line values for this sub-department
+                        line_series = sub_df.get("line")
+                        has_line = False
+                        if line_series is not None:
+                            ls = line_series.astype(str).str.strip()
+                            if len(ls):
+                                ls_norm = ls.str.lower()
+                                valid_mask = (ls_norm != "") & (ls_norm != "none") & (ls_norm != "—") & (ls_norm != "nan")
+                                has_line = bool(valid_mask.any())
                             else:
-                                with st.expander(f"{sname} — {scount}", expanded=False):
-                                    # Normalize line values: blanks/None/—/nan -> "NA"
-                                    line_clean = (
-                                        sub_df.get("line")
-                                        .astype(str)
-                                        .str.strip()
-                                        .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
-                                    )
-                                    line_table = (
-                                        sub_df.assign(line=line_clean)
-                                        .groupby("line")["associate_id"].nunique()
-                                        .sort_values(ascending=False)
-                                        .reset_index()
-                                        .rename(columns={"associate_id": "Associates", "line": "Line"})
-                                    )
-                                    st.dataframe(line_table, use_container_width=True, hide_index=True)
+                                has_line = False
+                        if not has_line:
+                            # Flat row: no nested expander for line
+                            st.markdown(f"**{sname}** — {scount}")
+                        else:
+                            with st.expander(f"{sname} — {scount}", expanded=False):
+                                # Normalize lines: blanks/None/—/nan -> NA
+                                line_clean = (
+                                    sub_df.get("line")
+                                    .astype(str)
+                                    .str.strip()
+                                    .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
+                                )
+                                line_table = (
+                                    sub_df.assign(line=line_clean)
+                                    .groupby("line")["associate_id"].nunique()
+                                    .sort_values(ascending=False)
+                                    .reset_index()
+                                    .rename(columns={"associate_id": "Associates", "line": "Line"})
+                                )
+                                st.dataframe(line_table, use_container_width=True, hide_index=True)
+                                # Optional: Work Position breakdown under line (show as second table)
+                                pos_clean = (
+                                    sub_df.get("work_position")
+                                    .astype(str)
+                                    .str.strip()
+                                    .replace({"": "NA", "None": "NA", "—": "NA", "nan": "NA", "NaN": "NA"})
+                                )
+                                pos_table = (
+                                    sub_df.assign(line=line_clean, work_position=pos_clean)
+                                    .groupby(["line", "work_position"])["associate_id"].nunique()
+                                    .reset_index()
+                                    .rename(columns={"associate_id": "Associates", "work_position": "Work Position", "line": "Line"})
+                                )
+                                st.dataframe(pos_table.sort_values(["Line","Associates"], ascending=[True, False]), use_container_width=True, hide_index=True)
 
     # RIGHT: Non-Scanned Breakdown (simple table by job department)
     with rcol:
