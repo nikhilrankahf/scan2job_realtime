@@ -1,12 +1,10 @@
 ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WORK_POSITION,LINE,BAY,LOCATION,START_TIME_LOCAL,SUPERVISOR_NAME
 1010991,Eury Cantalizo,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:30:31,Deonnell Esprit
 3329048,Stephanie Maxime,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:31:00,Hendy Joseph
-1010991,Eury Cantalizo,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:31:00,Deonnell Esprit
 3480044,Derrick Davis,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:31:00,Hendy Joseph
 3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:31:51,Angel Santana German
 3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:31:51,Angel Santana German
 3626262,Jennifer Moreira,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:32:00,Francy Dussan
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:32:00,Angel Santana German
 3626239,Cristina Leal,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:33:00,Francy Dussan
 3627105,La-Tan Ates,Day Shift,Quality,Badgr,FSQ,Kitting Line Auditor,,,,2025-10-15 6:33:20,Jarmilla Rodriguez
 2934040,Donna Dickens,Day Shift,Quality,Badgr,FSQ,Kitting Line Auditor,,,,2025-10-15 6:33:32,Francy Dussan
@@ -14,15 +12,10 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3597415,Lamar Bryant,Day Shift,Warehouse,Workday,Timecard Punch,Punch Out,,,,2025-10-15 6:34:00,Angel Santana German
 3597415,Lamar Bryant,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:34:00,Angel Santana German
 3635133,Lucia Bautista,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:34:00,Francy Dussan
-3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:34:00,Angel Santana German
 3329048,Stephanie Maxime,Day Shift,Quality,Badgr,FSQ,Quality Lead,,,,2025-10-15 6:34:46,Hendy Joseph
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:35:00,Angel Santana German
 3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:35:32,Angel Santana German
-3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:36:00,Angel Santana German
 3625527,John Troche,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:36:12,Deonnell Esprit
 3625527,John Troche,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:36:12,Deonnell Esprit
-3625527,John Troche,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:37:00,Deonnell Esprit
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:37:00,Angel Santana German
 3612363,Saheed Gbadamosi,Day Shift,Quality,Badgr,FSQ,Assembly Line Auditor,,,,2025-10-15 6:37:12,Jarmilla Rodriguez
 3434648,Praise Onokpasa,Day Shift,Quality,Badgr,FSQ,Quality Lead,,,,2025-10-15 6:37:27,Francy Dussan
 3451269,George Muwanga,Day Shift,Quality,Badgr,FSQ,Discard Processing,,,,2025-10-15 6:37:54,Francy Dussan
@@ -32,7 +25,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:39:31,Angel Santana German
 3626239,Cristina Leal,Day Shift,Quality,Badgr,FSQ,Inbound Quality Inspector,,,,2025-10-15 6:39:38,Francy Dussan
 3545667,Wendy Rosas-Hernandez,Day Shift,Quality,Badgr,FSQ,Assembly Line Auditor,,,,2025-10-15 6:39:52,Francy Dussan
-3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:40:00,Angel Santana German
 2940281,Gwendolyn Rogers,Day Shift,Shipping,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:40:00,Kevin Mitchell
 3602526,Jeniffer Simms Johnson,Day Shift,Quality,Badgr,FSQ,Quality Lead,,,,2025-10-15 6:40:57,Francy Dussan
 2636851,Taliya Curry,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:41:00,Angel Santana German
@@ -47,15 +39,11 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Inventory,,,Kitting,2025-10-15 6:44:16,Angel Santana German
 3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:44:44,Angel Santana German
 3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:44:44,Angel Santana German
-3204983,George Romero,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:45:00,Angel Santana German
 3210952,Omar-Sharif Finch,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:46:31,Deonnell Esprit
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:49:00,Angel Santana German
 3501648,Jasmine Wimberly,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 6:49:41,Angel Santana German
 3210952,Omar-Sharif Finch,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 6:49:44,Deonnell Esprit
-3210952,Omar-Sharif Finch,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:50:00,Deonnell Esprit
 3232214,Terrell Horton,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:51:00,Deonnell Esprit
 2908391,Nancy Saahkem,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:51:00,Deonnell Esprit
-3501648,Jasmine Wimberly,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 6:53:00,Angel Santana German
 3549587,Warren Jones,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:54:00,Deonnell Esprit
 3501705,Santos Martinez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:55:00,Luz Garcia
 3707363,Rebecca Mackey,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:55:00,Geneva Mcclary
@@ -310,11 +298,9 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3466360,Irene Osayomore,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Tahira Fowler
 3353774,Grisandy Rodriguez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Abdul Malik
 2950801,Skarling Ovalles,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Tara Gilliard
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:58:00,Angel Santana German
 3599659,Sandra M Jimenez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Ronny Rodriguez
 3631951,Francisco De Jesus,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Maria Niell
 3400655,Manuel Chavez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Sheana Nesmith
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:58:00,Angel Santana German
 3509867,Jill Jackson,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Luz Garcia
 3625274,Maria Cango,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Luz Garcia
 3735392,Heribert Ruiz,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:58:00,Sheana Nesmith
@@ -354,7 +340,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3330897,Amany Kouame,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Vincent Davis
 3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Deonnell Esprit
 3631177,Claribel Ferreras,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Vincent Davis
-1010991,Eury Cantalizo,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 6:59:00,Deonnell Esprit
 2913808,Delmy Reyes,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Tara Gilliard
 3597948,Gladys Aldana,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Tara Gilliard
 3486879,Rahmata Barry,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 6:59:00,Tahira Fowler
@@ -462,8 +447,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3633340,Bionelly Polonia,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:00:00,Jalaya Green
 3404421,Emerson John,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:00:00,Ronny Rodriguez
 3622370,Rachel Rosario Carela,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:00:00,Hendy Joseph
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:00:00,Angel Santana German
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:00:00,Angel Santana German
 3609517,Francilia Agesilas-Francois,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:00:00,Ronny Rodriguez
 3431149,Davon Wiley,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:00:00,Ronny Rodriguez
 3620558,Luz Agudelo Alvarez,Day Shift,Production,Pick to Light,Assembly,Picker,99,7,AUTOMATION LINE,2025-10-15 7:00:28,Sheana Nesmith
@@ -618,7 +601,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Picker,3,1,MASTER LINE,2025-10-15 7:03:48,Ronny Rodriguez
 3622756,Edith Baldeon,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:04:00,Vincent Davis
 3629538,Deyvi Colon,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:04:00,Geneva Mcclary
-1010991,Eury Cantalizo,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:04:00,Deonnell Esprit
 3626224,Teilar Pita Henriquez,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:04:00,Jarmilla Rodriguez
 3483163,Joseph Gilme,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:04:00,Luz Garcia
 3628973,Devon Brown,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:04:00,Luz Garcia
@@ -662,7 +644,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3598052,Ronald Calderon,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:05:00,Francy Dussan
 3643605,Paloma Hiciano,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:05:00,Sheana Nesmith
 2976006,Cathy Wells,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:05:00,Brandon Klisch
-3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:05:00,Tahira Fowler
 3628182,Amanda Disla,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:05:00,Tahira Fowler
 3431409,Ambar Abad,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:05:00,Sheana Nesmith
 3626052,Maria Crespo,Day Shift,Production,Pick to Light,Assembly,Picker,3,9,MASTER LINE,2025-10-15 7:05:02,Maria Niell
@@ -775,7 +756,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3559239,Rood Pierre,Day Shift,Shipping,Badgr,Shipping,Loader,,,,2025-10-15 7:05:41,Kevin Mitchell
 3454347,Stanley Mayo,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:06:00,Ronny Rodriguez
 3721509,Adriana Merchan,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:06:00,Ronny Rodriguez
-3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:06:00,Ronny Rodriguez
 3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:06:05,Angel Santana German
 3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:06:05,Angel Santana German
 3632041,Ann Marie Campbell Woods,Day Shift,Production,Pick to Light,Assembly,Picker,3,13,GROCERY LINE,2025-10-15 7:06:06,Tahira Fowler
@@ -794,9 +774,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3626224,Teilar Pita Henriquez,Day Shift,Quality,Badgr,FSQ,Quality Lead,,,,2025-10-15 7:06:58,Jarmilla Rodriguez
 3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Picker,3,7,MASTER LINE,2025-10-15 7:06:58,Geneva Mcclary
 3634752,Snoop Carrington,Day Shift,Fulfillment Training,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:07:00,Nahshon Mcpherson
-3629606,Madeleiny Del Rosario,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:07:00,Maria Niell
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:07:00,Angel Santana German
-3210952,Omar-Sharif Finch,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:07:00,Deonnell Esprit
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:07:04,Jalaya Green
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:07:04,Jalaya Green
 3633723,Dolores Hernandez Margarin,Day Shift,Production,Badgr,HR/Admin,Enter Production Floor,,,,2025-10-15 7:07:06,Brandon Klisch
@@ -840,7 +817,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3622370,Rachel Rosario Carela,Day Shift,Quality,Badgr,FSQ,Inbound Quality Inspector,,,,2025-10-15 7:08:00,Hendy Joseph
 3628846,Amarilis Cabrera Toribio,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:08:00,Maria Niell
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,12,GROCERY LINE,2025-10-15 7:08:00,Tahira Fowler
-3628397,Antonio Pinheiro,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:08:00,Geneva Mcclary
 3631381,Alvaro Lazo,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:08:00,Maria Niell
 3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:08:01,Brandon Klisch
 3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:08:01,Brandon Klisch
@@ -857,9 +833,7 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Picker,7,2,MASTER LINE,2025-10-15 7:08:51,Ronny Rodriguez
 3603162,Camau Gaskin,Day Shift,Shipping,Badgr,HR/Admin,Enter Production Floor,,,,2025-10-15 7:08:56,Dorothea Davis
 3626656,Rocio Conde,Day Shift,Production,Pick to Light,Assembly,Picker,7,4,MASTER LINE,2025-10-15 7:08:58,Luz Garcia
-3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:09:00,Brandon Klisch
 3626656,Rocio Conde,Day Shift,Production,Pick to Light,Assembly,Picker,7,4,MASTER LINE,2025-10-15 7:09:00,Luz Garcia
-3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:09:00,Jalaya Green
 3629104,Margoth Palacios,Day Shift,Production,Pick to Light,Assembly,Picker,7,1,MASTER LINE,2025-10-15 7:09:03,Geneva Mcclary
 3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Picker,7,2,MASTER LINE,2025-10-15 7:09:09,Ronny Rodriguez
 3431379,Daneeq Chavers,Day Shift,Shipping,Badgr,Shipping,Loader,,,,2025-10-15 7:09:13,Dorothea Davis
@@ -889,8 +863,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3246113,Ashley Ortiz,Day Shift,Quality,Badgr,FSQ,Assembly Line Auditor,,,,2025-10-15 7:09:45,Francy Dussan
 2994919,Wendy Leon De Camacho,Day Shift,Shipping,Badgr,HR/Admin,Enter Production Floor,,,,2025-10-15 7:09:46,Owen Williams
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,15,GROCERY LINE,2025-10-15 7:09:59,Tara Gilliard
-3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:10:00,Luz Garcia
-3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:10:00,Ronny Rodriguez
 3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:10:09,Deonnell Esprit
 3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:10:09,Deonnell Esprit
 3353774,Grisandy Rodriguez,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:10:18,Abdul Malik
@@ -905,11 +877,7 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:10:56,Tahira Fowler
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,15,GROCERY LINE,2025-10-15 7:10:57,Tara Gilliard
 3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Inventory,,,Kitting,2025-10-15 7:10:58,Angel Santana German
-3517559,Carol Conway,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:11:00,Ronny Rodriguez
 2865325,Jasmine Alvarez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:11:00,Abdul Malik
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:11:00,Angel Santana German
-3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:11:00,Deonnell Esprit
-3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:11:00,Maria Niell
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,5,MASTER LINE,2025-10-15 7:11:04,Tahira Fowler
 3707363,Rebecca Mackey,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:11:05,Geneva Mcclary
 3602908,Alicia Paltin,Day Shift,Production,Pick to Light,Assembly,Picker,99,3,AUTOMATION LINE,2025-10-15 7:11:10,Brandon Klisch
@@ -921,8 +889,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:11:29,Deonnell Esprit
 3632363,Lamont Brisbon,Day Shift,Shipping,Badgr,Shipping,Loader,,,,2025-10-15 7:11:37,Dorothea Davis
 3608496,Ronald Kendricks,Day Shift,Shipping,Badgr,Shipping,Loader,,,,2025-10-15 7:11:37,Owen Williams
-3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:12:00,Deonnell Esprit
-3707363,Rebecca Mackey,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:12:00,Geneva Mcclary
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,15,GROCERY LINE,2025-10-15 7:12:08,Luz Garcia
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:12:10,Jalaya Green
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:12:10,Jalaya Green
@@ -943,11 +909,8 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Picker,1,6,MASTER LINE,2025-10-15 7:12:57,Luz Garcia
 3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Picker,1,6,MASTER LINE,2025-10-15 7:12:59,Luz Garcia
 3605013,Wesly Betance,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:13:00,Ronny Rodriguez
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:13:00,Angel Santana German
 3707371,Karen Fermin,Day Shift,Production,Pick to Light,Assembly,Picker,99,8,AUTOMATION LINE,2025-10-15 7:13:00,Jalaya Green
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:13:00,Angel Santana German
 3616802,Aneesah Johnson,Day Shift,Quality,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:13:00,Francy Dussan
-3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:13:00,Geneva Mcclary
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:13:01,Jalaya Green
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:13:01,Jalaya Green
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,14,GROCERY LINE,2025-10-15 7:13:11,Luz Garcia
@@ -968,10 +931,7 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:13:53,Ronny Rodriguez
 3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:13:53,Ronny Rodriguez
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,16,GROCERY LINE,2025-10-15 7:13:57,Maria Niell
-3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:14:00,Geneva Mcclary
-3754377,Dariel Cruz Gonzalez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:14:00,Tahira Fowler
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,14,GROCERY LINE,2025-10-15 7:14:00,Luz Garcia
-3707371,Karen Fermin,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:14:00,Jalaya Green
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:14:08,Jalaya Green
 3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:14:08,Jalaya Green
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,15,GROCERY LINE,2025-10-15 7:14:08,Luz Garcia
@@ -996,13 +956,9 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,15,GROCERY LINE,2025-10-15 7:14:51,Tara Gilliard
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:14:55,Ronny Rodriguez
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,14,GROCERY LINE,2025-10-15 7:14:59,Luz Garcia
-3628397,Antonio Pinheiro,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:15:00,Geneva Mcclary
-3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:15:00,Jalaya Green
 3425207,Marlon Garcia,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:15:00,Angel Santana German
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:15:00,Ronny Rodriguez
 3707363,Rebecca Mackey,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:15:00,Geneva Mcclary
-3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:15:00,Ronny Rodriguez
-3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:15:00,Ronny Rodriguez
 1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Picker,1,7,MASTER LINE,2025-10-15 7:15:04,Tara Gilliard
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,14,GROCERY LINE,2025-10-15 7:15:11,Tara Gilliard
 3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:15:15,Brandon Klisch
@@ -1017,10 +973,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:15:57,Ronny Rodriguez
 3629231,Vernetta Dash,Day Shift,Production,Badgr,HR/Admin,Enter Production Floor,,,,2025-10-15 7:15:57,Abdul Malik
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:15:58,Tahira Fowler
-3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:16:00,Luz Garcia
-3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:16:00,Brandon Klisch
-3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:16:00,Tahira Fowler
-3707363,Rebecca Mackey,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:16:00,Geneva Mcclary
 3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:16:11,Deonnell Esprit
 3707371,Karen Fermin,Day Shift,Production,Pick to Light,Assembly,Picker,99,8,AUTOMATION LINE,2025-10-15 7:16:20,Jalaya Green
 3567233,Mirna Ruiz,Day Shift,Production,Pick to Light,Assembly,Picker,99,1,AUTOMATION LINE,2025-10-15 7:16:28,Maria Niell
@@ -1036,11 +988,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,8,MASTER LINE,2025-10-15 7:16:58,Ronny Rodriguez
 3567233,Mirna Ruiz,Day Shift,Production,Pick to Light,Assembly,Picker,99,1,AUTOMATION LINE,2025-10-15 7:16:59,Maria Niell
 3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:16:59,Deonnell Esprit
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:17:00,Angel Santana German
-3567233,Mirna Ruiz,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:17:00,Maria Niell
-3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:17:00,Deonnell Esprit
-3425207,Marlon Garcia,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:17:00,Angel Santana German
-3707371,Karen Fermin,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:17:00,Jalaya Green
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:17:10,Ronny Rodriguez
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:17:11,Ronny Rodriguez
 3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:17:13,Geneva Mcclary
@@ -1060,14 +1007,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:17:54,Tahira Fowler
 3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Picker,3,2,MASTER LINE,2025-10-15 7:17:55,Ronny Rodriguez
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,8,MASTER LINE,2025-10-15 7:17:58,Ronny Rodriguez
-3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:18:00,Geneva Mcclary
-3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:18:00,Luz Garcia
-3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:18:00,Ronny Rodriguez
-3626656,Rocio Conde,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:18:00,Luz Garcia
-3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:18:00,Ronny Rodriguez
-3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:18:00,Geneva Mcclary
-3597990,Maria Vasquez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:18:00,Brandon Klisch
-3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:18:00,Deonnell Esprit
 1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Picker,1,7,MASTER LINE,2025-10-15 7:18:07,Tara Gilliard
 3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Picker,1,5,MASTER LINE,2025-10-15 7:18:08,Luz Garcia
 3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Picker,1,6,MASTER LINE,2025-10-15 7:18:14,Luz Garcia
@@ -1085,24 +1024,8 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Picker,1,7,MASTER LINE,2025-10-15 7:18:53,Tara Gilliard
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,15,GROCERY LINE,2025-10-15 7:18:54,Luz Garcia
 3638306,Christopher Amaya,Day Shift,Warehouse,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:19:00,Deonnell Esprit
-3629606,Madeleiny Del Rosario,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Maria Niell
-3101064,Eric Talmadge,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:19:00,Angel Santana German
-3630421,Owen Brown,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Sheana Nesmith
-3486422,Mariely Adames,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:19:00,Tara Gilliard
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:19:00,Angel Santana German
 3624066,Aaron Bell,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:19:00,Luz Garcia
-1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Tara Gilliard
-3629112,Estefita Sangama Tenazoa,Day Shift,Production,HighJump,Kitting,Transition Time,,,,2025-10-15 7:19:00,Maria Niell
-3353774,Grisandy Rodriguez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:19:00,Abdul Malik
-3626052,Maria Crespo,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Maria Niell
-3630299,Tania Ferraz De Almeida,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Vincent Davis
-3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Ronny Rodriguez
-3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Tahira Fowler
-3626490,Solangel Burgos De Rodriguez,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Tara Gilliard
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:19:00,Ronny Rodriguez
-3602908,Alicia Paltin,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Brandon Klisch
-3629104,Margoth Palacios,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Geneva Mcclary
-3611363,Maria Guamarrigra,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:19:00,Luz Garcia
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:19:06,Ronny Rodriguez
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,14,GROCERY LINE,2025-10-15 7:19:09,Luz Garcia
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,16,GROCERY LINE,2025-10-15 7:19:12,Maria Niell
@@ -1121,16 +1044,7 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,11,MASTER LINE,2025-10-15 7:19:44,Tahira Fowler
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,12,GROCERY LINE,2025-10-15 7:19:49,Tahira Fowler
 3431124,Miles Shawndell,Day Shift,Production,Badgr,HR/Admin,Exit Production Floor,,,,2025-10-15 7:19:50,Ronny Rodriguez
-3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Maria Niell
-3597990,Maria Vasquez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:20:00,Brandon Klisch
-3632041,Ann Marie Campbell Woods,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Tahira Fowler
-3101064,Eric Talmadge,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:20:00,Angel Santana German
-3501697,Christopher Jones,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:20:00,Angel Santana German
-3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Tara Gilliard
-3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Luz Garcia
 3512781,Sabrina Murray,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:20:00,Brian Alvarez
-3620558,Luz Agudelo Alvarez,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Sheana Nesmith
-3382633,Rexford Allen,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:20:00,Geneva Mcclary
 3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:20:01,Luz Garcia
 3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:20:01,Luz Garcia
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,17,GROCERY LINE,2025-10-15 7:20:04,Maria Niell
@@ -1152,11 +1066,7 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:20:58,Tahira Fowler
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:20:58,Ronny Rodriguez
 3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Picker,7,3,MASTER LINE,2025-10-15 7:20:59,Ronny Rodriguez
-3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:21:00,Tahira Fowler
 1010899,Dakeyeri Alvarez,Day Shift,Production,Workday,Timecard Punch,Punch In,,,,2025-10-15 7:21:00,Maria Niell
-3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:21:00,Tara Gilliard
-2819444,Keyon Bacon,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:21:00,Deonnell Esprit
-3634506,Tanya Landivar Cabrera,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:21:00,Jalaya Green
 3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Picker,3,14,GROCERY LINE,2025-10-15 7:21:00,Luz Garcia
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:21:01,Ronny Rodriguez
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:21:02,Ronny Rodriguez
@@ -1197,11 +1107,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:21:52,Ronny Rodriguez
 3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Inventory,,,Kitting,2025-10-15 7:21:53,Angel Santana German
 1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Picker,1,8,MASTER LINE,2025-10-15 7:22:00,Tara Gilliard
-3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:22:00,Luz Garcia
-3437215,Bienvenido Diaz Diaz,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:22:00,Deonnell Esprit
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:22:00,Angel Santana German
-3630299,Tania Ferraz De Almeida,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:22:00,Vincent Davis
-3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:22:00,Tahira Fowler
 3555214,Anderson Ramirez,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:22:05,Brandon Klisch
 3431166,Wilmer Betances,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:22:05,Geneva Mcclary
 3555214,Anderson Ramirez,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:22:05,Brandon Klisch
@@ -1219,14 +1124,8 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,16,GROCERY LINE,2025-10-15 7:22:51,Maria Niell
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:22:52,Ronny Rodriguez
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:22:55,Ronny Rodriguez
-3431166,Wilmer Betances,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:23:00,Geneva Mcclary
-3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:23:00,Geneva Mcclary
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:23:00,Ronny Rodriguez
-3626490,Solangel Burgos De Rodriguez,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:23:00,Tara Gilliard
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,17,GROCERY LINE,2025-10-15 7:23:00,Maria Niell
-3555214,Anderson Ramirez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:23:00,Brandon Klisch
-3382633,Rexford Allen,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:23:00,Geneva Mcclary
-3620558,Luz Agudelo Alvarez,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:23:00,Sheana Nesmith
 3600128,Alana Clarke Hack,Day Shift,Production,Pick to Light,Assembly,Picker,8,1,MASTER LINE,2025-10-15 7:23:03,Brandon Klisch
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,6,MASTER LINE,2025-10-15 7:23:04,Ronny Rodriguez
 3600128,Alana Clarke Hack,Day Shift,Production,Pick to Light,Assembly,Picker,8,1,MASTER LINE,2025-10-15 7:23:08,Brandon Klisch
@@ -1256,17 +1155,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3628397,Antonio Pinheiro,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:23:50,Geneva Mcclary
 3629306,Maria Martinez,Day Shift,Production,Pick to Light,Assembly,Picker,8,2,MASTER LINE,2025-10-15 7:23:55,Geneva Mcclary
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:23:57,Ronny Rodriguez
-3567233,Mirna Ruiz,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:24:00,Maria Niell
-3628397,Antonio Pinheiro,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:24:00,Geneva Mcclary
-3629606,Madeleiny Del Rosario,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:24:00,Maria Niell
-3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:24:00,Tara Gilliard
-3629306,Maria Martinez,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:24:00,Geneva Mcclary
-1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:24:00,Tara Gilliard
-3597990,Maria Vasquez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:24:00,Brandon Klisch
-3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:24:00,Ronny Rodriguez
-3707371,Karen Fermin,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:24:00,Jalaya Green
-3497049,Carmen Reyes,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:24:00,Jalaya Green
-3597415,Lamar Bryant,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:24:00,Angel Santana German
 3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:24:01,Angel Santana German
 3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:24:04,Ronny Rodriguez
 3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:24:04,Ronny Rodriguez
@@ -1287,25 +1175,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:24:44,Deonnell Esprit
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,12,GROCERY LINE,2025-10-15 7:24:48,Tahira Fowler
 3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Picker,7,3,MASTER LINE,2025-10-15 7:24:57,Ronny Rodriguez
-3632041,Ann Marie Campbell Woods,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:25:00,Tahira Fowler
-3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Ronny Rodriguez
-3602908,Alicia Paltin,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Brandon Klisch
-3629539,Yany Ventura Espinal,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:25:00,Geneva Mcclary
-3629112,Estefita Sangama Tenazoa,Day Shift,Production,HighJump,Kitting,Time Off Task,,,,2025-10-15 7:25:00,Maria Niell
-3630421,Owen Brown,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Sheana Nesmith
-3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Ronny Rodriguez
-1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Tara Gilliard
-3201689,Jose Lopez,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Tara Gilliard
-3754376,Teylor Montero,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:25:00,Ronny Rodriguez
-3600128,Alana Clarke Hack,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Brandon Klisch
-3611363,Maria Guamarrigra,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Luz Garcia
-3549587,Warren Jones,Day Shift,Warehouse,HighJump,Warehouse,Time Off Task,,,,2025-10-15 7:25:00,Deonnell Esprit
-3548049,Ladi Jacob,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Luz Garcia
-3643684,Belkis Sira,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Ronny Rodriguez
-3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Luz Garcia
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:25:00,Angel Santana German
-3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Time Off Task,,,,2025-10-15 7:25:00,Tahira Fowler
-3754377,Dariel Cruz Gonzalez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:25:00,Tahira Fowler
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,17,GROCERY LINE,2025-10-15 7:25:16,Maria Niell
 3643605,Paloma Hiciano,Day Shift,Production,Badgr,HR/Admin,Exit Production Floor,,,,2025-10-15 7:25:19,Sheana Nesmith
 3602207,Mirna Pitti Guerra,Day Shift,Production,Pick to Light,Assembly,Picker,8,8,MASTER LINE,2025-10-15 7:25:20,Tara Gilliard
@@ -1320,27 +1189,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Picker,1,16,GROCERY LINE,2025-10-15 7:25:48,Maria Niell
 3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Picker,7,2,MASTER LINE,2025-10-15 7:25:48,Ronny Rodriguez
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,15,GROCERY LINE,2025-10-15 7:25:58,Tara Gilliard
-3629287,Miguelina Ozoria Tavares,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Maria Niell
-3612455,Arturo Bedoya Lopez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:26:00,Brandon Klisch
-3631177,Claribel Ferreras,Day Shift,Production,HighJump,Kitting,Transition Time,,,,2025-10-15 7:26:00,Vincent Davis
-3626656,Rocio Conde,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Luz Garcia
-3629539,Yany Ventura Espinal,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Geneva Mcclary
-3622114,Eyi Essenam Djakpassou,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:26:00,Angel Santana German
-3501705,Santos Martinez,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Luz Garcia
-3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Geneva Mcclary
-3754033,Christian Checa,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Abdul Malik
-3517559,Carol Conway,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Ronny Rodriguez
-3602207,Mirna Pitti Guerra,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Tara Gilliard
-3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Tahira Fowler
-3555214,Anderson Ramirez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:26:00,Brandon Klisch
-3626214,Mirian Martinez De Guevara,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Ronny Rodriguez
-3629104,Margoth Palacios,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Geneva Mcclary
-3353774,Grisandy Rodriguez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:26:00,Abdul Malik
-3626052,Maria Crespo,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Maria Niell
-3382633,Rexford Allen,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Geneva Mcclary
-2853212,Carol Sparks,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Ronny Rodriguez
-3632041,Ann Marie Campbell Woods,Day Shift,Production,Pick to Light,Assembly,Transition Time,,,,2025-10-15 7:26:00,Tahira Fowler
-3388596,Cherida Pena Genao,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:26:00,Angel Santana German
 3611363,Maria Guamarrigra,Day Shift,Production,Pick to Light,Assembly,Picker,3,19,GROCERY LINE,2025-10-15 7:26:04,Luz Garcia
 3431166,Wilmer Betances,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:26:15,Geneva Mcclary
 3431166,Wilmer Betances,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:26:15,Geneva Mcclary
@@ -1359,8 +1207,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,11,MASTER LINE,2025-10-15 7:26:52,Tahira Fowler
 3616802,Aneesah Johnson,Day Shift,Quality,Badgr,FSQ,Assembly Line Auditor,,,,2025-10-15 7:26:53,Francy Dussan
 3616397,Walna Jeanty,Day Shift,Production,Pick to Light,Assembly,Picker,3,12,GROCERY LINE,2025-10-15 7:26:59,Tahira Fowler
-3431166,Wilmer Betances,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:27:00,Geneva Mcclary
-3486422,Mariely Adames,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:27:00,Tara Gilliard
 3611363,Maria Guamarrigra,Day Shift,Production,Pick to Light,Assembly,Picker,3,18,GROCERY LINE,2025-10-15 7:27:03,Luz Garcia
 3501681,Yosmery Rodriguez Perez,Day Shift,Production,Pick to Light,Assembly,Picker,1,5,MASTER LINE,2025-10-15 7:27:03,Luz Garcia
 3597990,Maria Vasquez,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:27:08,Brandon Klisch
@@ -1382,8 +1228,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 1011716,Marleny Cedeno,Day Shift,Production,Pick to Light,Assembly,Picker,1,7,MASTER LINE,2025-10-15 7:27:53,Tara Gilliard
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,14,GROCERY LINE,2025-10-15 7:27:58,Tara Gilliard
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:27:58,Tahira Fowler
-3644003,Bruce Butler,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:28:00,Luz Garcia
-3597990,Maria Vasquez,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:28:00,Brandon Klisch
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,5,MASTER LINE,2025-10-15 7:28:03,Tahira Fowler
 3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Picker,3,7,MASTER LINE,2025-10-15 7:28:16,Geneva Mcclary
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,6,MASTER LINE,2025-10-15 7:28:19,Tahira Fowler
@@ -1405,8 +1249,6 @@ ASSOCIATE_ID,ASSOCIATE_NAME,SHIFT_TYPE,JOB_DEPARTMENT,SOURCE,WORK_DEPARTMENT,WOR
 3627546,Juana Lilian Recio,Day Shift,Production,Pick to Light,Assembly,Picker,1,15,GROCERY LINE,2025-10-15 7:28:59,Tara Gilliard
 3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Replenishment,,,Kitting,2025-10-15 7:29:00,Geneva Mcclary
 3627294,Marelys Perez Espinosa,Day Shift,Production,HighJump,Warehouse,Putaway,,,Kitting,2025-10-15 7:29:00,Geneva Mcclary
-3628397,Antonio Pinheiro,Day Shift,Production,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:29:00,Geneva Mcclary
-3599457,Andre Crawford,Day Shift,Warehouse,HighJump,Warehouse,Transition Time,,,,2025-10-15 7:29:00,Angel Santana German
 3597155,Raquel Calderon,Day Shift,Production,Pick to Light,Assembly,Picker,3,7,MASTER LINE,2025-10-15 7:29:03,Geneva Mcclary
 3621957,Angelica Bonilla,Day Shift,Production,Pick to Light,Assembly,Picker,3,5,MASTER LINE,2025-10-15 7:29:04,Tahira Fowler
 3559247,Josselyn Olmino,Day Shift,Production,Pick to Light,Assembly,Picker,7,7,MASTER LINE,2025-10-15 7:29:05,Ronny Rodriguez
