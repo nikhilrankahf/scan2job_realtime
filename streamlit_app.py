@@ -679,7 +679,7 @@ pretty = filtered[[
 ]].rename(columns={
     "associate_id":"Id",
     "associate_name":"Name",
-    "supervisor_name":"Supervisor name",
+    "supervisor_name":"Supervisor Name",
     "job_department":"Hiring Department",
     "shift_type":"Shift Type",
     "clocked_in":"Clocked In",
