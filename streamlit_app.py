@@ -785,57 +785,56 @@ pre_window_minutes = 30
 post_window_minutes = 30
 schedule_cols = {"shift_start_local", "shift_end_local"}
 
-if not schedule_cols.issubset(set(filtered.columns)):
-    st.info("After-Shift Activity requires schedule fields 'shift_start_local' and 'shift_end_local'. No schedule detected.")
+# Build schedule series: use columns if present; else hardcode 7:00 → 17:30 on the date of last activity
+if schedule_cols.issubset(set(filtered.columns)):
+    shift_start_series = pd.to_datetime(filtered.get("shift_start_local"), errors="coerce")
+    shift_end_series = pd.to_datetime(filtered.get("shift_end_local"), errors="coerce")
 else:
-    # Parse schedule and last-activity timestamps
-    try:
-        shift_start_series = pd.to_datetime(filtered["shift_start_local"], errors="coerce")
-        shift_end_series = pd.to_datetime(filtered["shift_end_local"], errors="coerce")
-        last_ts_series = pd.to_datetime(filtered["last_activity_ts"], errors="coerce")
-    except Exception:
-        shift_start_series = pd.to_datetime(pd.Series([None] * len(filtered)), errors="coerce")
-        shift_end_series = pd.to_datetime(pd.Series([None] * len(filtered)), errors="coerce")
-        last_ts_series = pd.to_datetime(pd.Series([None] * len(filtered)), errors="coerce")
+    last_ts_series_tmp = pd.to_datetime(filtered["last_activity_ts"], errors="coerce")
+    base_date = last_ts_series_tmp.dt.normalize()
+    shift_start_series = base_date + pd.to_timedelta(7, unit="h")              # 07:00
+    shift_end_series = base_date + pd.to_timedelta(17*60 + 30, unit="m")       # 17:30
 
-    # Out-of-window = early OR late relative to the shift window
-    early_mask = last_ts_series < (shift_start_series - pd.to_timedelta(pre_window_minutes, unit="m"))
-    late_mask = last_ts_series >= (shift_end_series + pd.to_timedelta(post_window_minutes, unit="m"))
-    out_of_window_mask = early_mask | late_mask
+last_ts_series = pd.to_datetime(filtered["last_activity_ts"], errors="coerce")
 
-    after_ids = set(filtered.loc[out_of_window_mask, "associate_id"].astype(str))
-    after_pretty = pretty[pretty["Id"].astype(str).isin(after_ids)].copy()
+# Out-of-window = early OR late relative to the shift window
+early_mask = last_ts_series < (shift_start_series - pd.to_timedelta(pre_window_minutes, unit="m"))
+late_mask = last_ts_series >= (shift_end_series + pd.to_timedelta(post_window_minutes, unit="m"))
+out_of_window_mask = early_mask | late_mask
 
-    # Apply the same Filters (Expander)
-    ap = after_pretty
-    if 'id_q' in locals() and id_q:
-        ap = ap[ap["Id"].astype(str).str.contains(id_q, case=False, na=False)]
-    if 'name_q' in locals() and name_q:
-        ap = ap[ap["Name"].astype(str).str.contains(name_q, case=False, na=False)]
-    if 'hiring_q' in locals() and hiring_q:
-        ap = ap[ap["Hiring Department"].astype(str).str.contains(hiring_q, case=False, na=False)]
-    if 'work_dept_q' in locals() and work_dept_q:
-        ap = ap[ap["Work Department"].astype(str).str.contains(work_dept_q, case=False, na=False)]
-    if 'work_pos_q' in locals() and work_pos_q:
-        ap = ap[ap["Work Position"].astype(str).str.contains(work_pos_q, case=False, na=False)]
-    if 'scanned_choice' in locals() and scanned_choice != "(any)":
-        _val = scanned_choice == "Yes"
-        ap = ap[ap["Scanned In"] == _val]
+after_ids = set(filtered.loc[out_of_window_mask, "associate_id"].astype(str))
+after_pretty = pretty[pretty["Id"].astype(str).isin(after_ids)].copy()
 
-    # Apply the same Controls Row
-    if 'search_q' in locals() and search_q:
-        _mask_any = ap.astype(str).apply(lambda c: c.str.contains(search_q, case=False, na=False))
-        ap = ap[_mask_any.any(axis=1)]
-    if 'flt_not_scanned' in locals() and flt_not_scanned:
-        ap = ap[ap["Scanned In"] == False]
-    if 'flt_not_clocked' in locals() and flt_not_clocked:
-        ap = ap[ap["Clocked In"] == False]
-    if 'dept_pick' in locals() and dept_pick != "(any)":
-        ap = ap[ap["Hiring Department"] == dept_pick]
+# Apply the same Filters (Expander)
+ap = after_pretty
+if 'id_q' in locals() and id_q:
+    ap = ap[ap["Id"].astype(str).str.contains(id_q, case=False, na=False)]
+if 'name_q' in locals() and name_q:
+    ap = ap[ap["Name"].astype(str).str.contains(name_q, case=False, na=False)]
+if 'hiring_q' in locals() and hiring_q:
+    ap = ap[ap["Hiring Department"].astype(str).str.contains(hiring_q, case=False, na=False)]
+if 'work_dept_q' in locals() and work_dept_q:
+    ap = ap[ap["Work Department"].astype(str).str.contains(work_dept_q, case=False, na=False)]
+if 'work_pos_q' in locals() and work_pos_q:
+    ap = ap[ap["Work Position"].astype(str).str.contains(work_pos_q, case=False, na=False)]
+if 'scanned_choice' in locals() and scanned_choice != "(any)":
+    _val = scanned_choice == "Yes"
+    ap = ap[ap["Scanned In"] == _val]
 
-    render_on_floor_header_with_popover(
-        title_text=f"After-Shift Activity ({len(ap)})",
-        body_text=f"Events outside the shift window (before shift start − {pre_window_minutes} min or after shift end + {post_window_minutes} min). Excluded from On Floor.",
-    )
-    st.caption("Last updated at 15 Oct, 7:32:13am")
-    st.dataframe(ap.sort_values(["Hiring Department", "Name"]), use_container_width=True, hide_index=True)
+# Apply the same Controls Row
+if 'search_q' in locals() and search_q:
+    _mask_any = ap.astype(str).apply(lambda c: c.str.contains(search_q, case=False, na=False))
+    ap = ap[_mask_any.any(axis=1)]
+if 'flt_not_scanned' in locals() and flt_not_scanned:
+    ap = ap[ap["Scanned In"] == False]
+if 'flt_not_clocked' in locals() and flt_not_clocked:
+    ap = ap[ap["Clocked In"] == False]
+if 'dept_pick' in locals() and dept_pick != "(any)":
+    ap = ap[ap["Hiring Department"] == dept_pick]
+
+render_on_floor_header_with_popover(
+    title_text=f"After-Shift Activity ({len(ap)})",
+    body_text=f"Events outside the shift window (before shift start − {pre_window_minutes} min or after shift end + {post_window_minutes} min). Excluded from On Floor.",
+)
+st.caption("Last updated at 15 Oct, 7:32:13am")
+st.dataframe(ap.sort_values(["Hiring Department", "Name"]), use_container_width=True, hide_index=True)
